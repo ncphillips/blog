@@ -6,13 +6,12 @@ requireDir('./gulp', { recurse: true });
 
 // global settings
 settings = {
-  theme: "forestry-doc-theme",
+  theme: "hugo-blog-theme",
   //Your main javascipt files
   jsEntryPoints: ['main.js'],
   // only one of these
   SASSEntryPoint: 'main.scss'
 };
-
 
 // use the settings to set up convenience variables
 (function(settings){
