@@ -1,12 +1,11 @@
 var gulp = require('gulp'),
-      rename = require('gulp-rename'),
-      sass = require('gulp-sass'),
-      autoprefixer = require('gulp-autoprefixer'),
-      cleanCSS = require('gulp-clean-css'),
-      sourcemaps = require('gulp-sourcemaps'),
-      plumber = require('gulp-plumber'),
-      del = require('del');
-
+    rename = require('gulp-rename'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cleanCSS = require('gulp-clean-css'),
+    sourcemaps = require('gulp-sourcemaps'),
+    plumber = require('gulp-plumber'),
+    del = require('del');
 
 gulp.task('sass', ['sass:clean'], function() {
   gulp.src(settings.SASSEntryPoint)
