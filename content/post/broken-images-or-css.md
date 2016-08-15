@@ -1,7 +1,7 @@
 +++
 Categories = []
 date = "2016-07-20T13:47:56-04:00"
-description = ""
+excerpt = "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
 menu = "troubleshooting"
 tags = []
 title = "Broken Images or CSS"
