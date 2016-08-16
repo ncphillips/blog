@@ -7,9 +7,9 @@ excerpt = "When it comes to the Internet, content is king. And it is king for a 
 tags = []
 title = "I can finally choose static"
 [[author]]
-name = "Michael Lee"
-img = "/images/michaellee.jpg"
 bio = "You can find me having conversations in 140 characters as <a href=\"https://twitter.com/michaelsoolee\">@michaelsoolee on Twitter</a>, sharing my knowledge of front-end development on <a href=\"http://codepen.io/michaellee\">CodePen</a> and helping others level up their programming skills on <a href=\"https://www.codehive.io/michaellee\">CodeHive</a>."
+img = "/images/michaellee.jpg"
+name = "Michael Lee"
 twitter = "https://twitter.com/michaelsoolee"
 
 +++
@@ -54,7 +54,7 @@ Sorry to burst your bubble a little with the not so good list of things about st
 
 Forestry. Forestry is a CMS for your statically generated sites. Your immediate thoughts might be, great another layer that I need to add to my tech stack. Well hold your horses, let me share with you what you gain from using Forestry. First you gain the benefits I listed above (here's the link to the list if you need a reminder) for static-site generators, second it remedies the "not so good" things about static-site generators and if you've already got a statically generated site, the folks behind Forestry have made it über easy to integrate with Forestry.
 
-<img style="width 200px;float: right;" src="/images/draft-publish.gif">
+<img style="width 200px;float: right;" src="/blog/images/draft-publish.gif" style="float: right; margin: 10px;">
 
 
 - **No more friction to produce.** With Forestry much like a traditional CMS, users login and are presented with a way to create pages and posts. Once the content is written, they can either save a draft or publish with a click of a button. In the background, Forestry commits the necessary changes to your repo (if you’re using GitHub or Bitbucket) and will deploy your compiled site to your host.
@@ -63,7 +63,7 @@ Forestry. Forestry is a CMS for your statically generated sites. Your immediate 
 
 - **Oh so sexy.** Let these screenshots do the talking here. Just eye-candy. Want more? Take [Forestry](https://forestry.io) for a test drive.
 
-<img style="width 200px;float: right;" src="/images/screenshot.jpg">
+<img style="width 200px;float: right;" src="/blog/images/screenshot.jpg">
 
 
 So the next time you're faced with setting up a website or a blog and you don't want to go with the traditional CMS options. You can finally choose the much better technology choice of going with a static-site generator for you, but choose a user-friendly **and** sexy CMS for your content producers with [Forestry](https://forestry.io)[.io](https://forestry.io).
