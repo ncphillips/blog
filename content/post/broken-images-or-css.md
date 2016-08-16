@@ -1,18 +1,18 @@
 +++
 Categories = []
-date = "2016-07-20T13:47:56-04:00"
+date = "2016-07-20T13:47:00+00:00"
+draft = false
 excerpt = "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
-menu = "troubleshooting"
 tags = []
 title = "Broken Images or CSS"
+[menu.troubleshooting]
 [[author]]
-name="Scott Gallant"
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
-twitter ="https://twitter.com/scottgallant"
 img = "/images/Scott_Gallant.jpg"
+name = "Scott Gallant"
+twitter = "https://twitter.com/scottgallant"
 
 +++
-
 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.
