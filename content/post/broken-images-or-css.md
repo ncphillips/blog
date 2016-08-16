@@ -1,10 +1,10 @@
 +++
-Categories = []
+Categories = ["Jekyll"]
 date = "2016-07-20T13:47:00+00:00"
 draft = false
 excerpt = "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
 tags = []
-title = "Broken Images or CSS"
+title = "Lorem ipsum"
 [menu.troubleshooting]
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
