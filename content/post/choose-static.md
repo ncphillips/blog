@@ -47,14 +47,14 @@ Are you saying, hey that sounds awesome! Sign me up? Well before you jump the gu
 
 
 - **It isn't sexy.** To be honest, as someone using a static-site generator, I'll tell you compared to the traditional CMS options, they just aren't sexy. I'm mainly in my command-line or text editor of choice, both of which are great for coding and stuff. But isn't so conducive to writing.
+
 ## The Happy Ending
 
 Sorry to burst your bubble a little with the not so good list of things about static-site generators, but like I said earlier, there really is a happy ending. As the title of this post states, I can finally choose static, and I'm going to tell you why I'm excited about this and why I can finally (still) choose static even with the list of not so good things.
 
 Forestry. Forestry is a CMS for your statically generated sites. Your immediate thoughts might be, great another layer that I need to add to my tech stack. Well hold your horses, let me share with you what you gain from using Forestry. First you gain the benefits I listed above (here's the link to the list if you need a reminder) for static-site generators, second it remedies the "not so good" things about static-site generators and if you've already got a statically generated site, the folks behind Forestry have made it über easy to integrate with Forestry.
 
-https://d2mxuefqeaa7sj.cloudfront.net/s_014709C68DCDF8BD80F107957FB4E50CA386A18CEB650506B2E665212EA1F89F_1471055146622_save-draft-publish.gif
-
+<img style="width 200px;float: right;" src="/images/draft-publish.gif">
 
 
 - **No more friction to produce.** With Forestry much like a traditional CMS, users login and are presented with a way to create pages and posts. Once the content is written, they can either save a draft or publish with a click of a button. In the background, Forestry commits the necessary changes to your repo (if you’re using GitHub or Bitbucket) and will deploy your compiled site to your host.
@@ -63,10 +63,7 @@ https://d2mxuefqeaa7sj.cloudfront.net/s_014709C68DCDF8BD80F107957FB4E50CA386A18C
 
 - **Oh so sexy.** Let these screenshots do the talking here. Just eye-candy. Want more? Take [Forestry](https://forestry.io) for a test drive.
 
+<img style="width 200px;float: right;" src="/images/screenshot.jpg">
 
-https://d2mxuefqeaa7sj.cloudfront.net/s_014709C68DCDF8BD80F107957FB4E50CA386A18CEB650506B2E665212EA1F89F_1471055735866_screenshot.jpg
 
-
-  [Video demo]
-
-  So the next time you're faced with setting up a website or a blog and you don't want to go with the traditional CMS options. You can finally choose the much better technology choice of going with a static-site generator for you, but choose a user-friendly **and** sexy CMS for your content producers with [Forestry](https://forestry.io)[.io](https://forestry.io).
+So the next time you're faced with setting up a website or a blog and you don't want to go with the traditional CMS options. You can finally choose the much better technology choice of going with a static-site generator for you, but choose a user-friendly **and** sexy CMS for your content producers with [Forestry](https://forestry.io)[.io](https://forestry.io).
