@@ -1,5 +1,5 @@
 ---
-baseurl:
+baseurl: https://forestry.io/blog/
 languagecode: en-us
 pluralizelisttitles: false
 theme: hugo-blog-theme
