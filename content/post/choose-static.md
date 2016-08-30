@@ -12,6 +12,13 @@ img = "/images/michaellee.jpg"
 name = "Michael Lee"
 twitter = "https://twitter.com/michaelsoolee"
 link = "https://twitter.com/michaelsoolee"
+[[suggested]]
+link = "https://twitter.com/michaelsoolee"
+title = "something"
+[[suggested]]
+link = "https://twitter.com/michaelsoolee"
+title = "something else"
+
 
 +++
 I can finally choose static.
