@@ -11,6 +11,7 @@ bio = "You can find me having conversations in 140 characters as <a href=\"https
 img = "/images/michaellee.jpg"
 name = "Michael Lee"
 twitter = "https://twitter.com/michaelsoolee"
+link = "https://twitter.com/michaelsoolee"
 
 +++
 I can finally choose static.
