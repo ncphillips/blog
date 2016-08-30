@@ -37,6 +37,23 @@ Let me list a few of the benefits that has me hooked on static-site generators:
 Are you saying, hey that sounds awesome! Sign me up? Well before you jump the gun and hail static-site generators as your go-to content management solution, let me share some of the roadblocks for static-site generators and afterwards share how these roadblocks are quickly fading with a happy ending.
 
 
+<div class="newsletter-block center clear">
+  <h2>Nerd out on Static</h2>
+  <p class="subtitle">
+    Join 3000+ other geeks and get the newsletter
+  </p>
+  <form action="//Forestry.us11.list-manage.com/subscribe/post?u=258a7a7e66229ee7fff436898&amp;id=377858cce3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter pure-form" target="_blank" novalidate>
+    <input type="email" placeholder="Email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+    <div id="mce-responses" class="clear">
+  		<div class="response" id="mce-error-response" style="display:none"></div>
+  		<div class="response" id="mce-success-response" style="display:none"></div>
+  	</div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_258a7a7e66229ee7fff436898_377858cce3" tabindex="-1" value=""></div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary">
+  </form>
+</div>
+
+
 - **Friction to produce content.** As awesome as static-site generators are, there is friction to creating content. On a traditional publishing platform, you simply log in, click a few buttons and you're presented with a text box to write your content and hit publish.
 
 
