@@ -9,16 +9,15 @@ title = "I can finally choose static"
 [[author]]
 bio = "You can find me having conversations in 140 characters as <a href=\"https://twitter.com/michaelsoolee\">@michaelsoolee on Twitter</a>, sharing my knowledge of front-end development on <a href=\"http://codepen.io/michaellee\">CodePen</a> and helping others level up their programming skills on <a href=\"https://www.codehive.io/michaellee\">CodeHive</a>."
 img = "/images/michaellee.jpg"
+link = "https://twitter.com/michaelsoolee"
 name = "Michael Lee"
 twitter = "https://twitter.com/michaelsoolee"
-link = "https://twitter.com/michaelsoolee"
 [[suggested]]
 link = "https://twitter.com/michaelsoolee"
 title = "something"
 [[suggested]]
 link = "https://twitter.com/michaelsoolee"
 title = "something else"
-
 
 +++
 I can finally choose static.
