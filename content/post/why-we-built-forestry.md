@@ -3,9 +3,9 @@ Categories = []
 date = "2016-08-31T11:49:00+00:00"
 description = ""
 draft = true
+excerpt = ""
 tags = []
 title = "Why we built Forestry"
-excerpt = ""
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
 img = "/images/Scott_Gallant.jpg"
@@ -21,9 +21,7 @@ title = ""
 link = ""
 title = ""
 
-
 +++
-
 My friend, Emily, needed a simple website for her restaurant.  She's a chef and didn't want to deal with the hassle of DNS, hosting, design, etc.  As a recovering freelancer, I offered to help.
 
 Normally, I would use WordPress for a site like this, but I was fed up with the headaches that comes with maintaining a WordPress site.  So, I took an evening and cranked out a simple 1-page static site.
