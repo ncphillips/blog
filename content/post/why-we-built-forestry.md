@@ -12,14 +12,11 @@ img = "/images/Scott_Gallant.jpg"
 name = "Scott Gallant"
 twitter = "https://twitter.com/scottgallant"
 [[suggested]]
-link = ""
-title = ""
+link = "#"
+title = "We're in Techstars NYC"
 [[suggested]]
-link = ""
-title = ""
-[[suggested]]
-link = ""
-title = ""
+link = "#"
+title = "I Can Finally Choose Static"
 
 +++
 My friend, Emily, needed a simple website for her restaurant.  She's a chef and didn't want to deal with the hassle of DNS, hosting, design, etc.  As a recovering freelancer, I offered to help.
