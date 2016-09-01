@@ -7,9 +7,9 @@ excerpt = ""
 tags = []
 title = "Why we built Forestry"
 [[author]]
-name = "Scott Gallant"
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
 img = "/images/Scott_Gallant.jpg"
+name = "Scott Gallant"
 twitter = "https://twitter.com/scottgallant"
 [[suggested]]
 link = ""
