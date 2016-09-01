@@ -41,7 +41,7 @@ Let me list a few of the benefits that has me hooked on static-site generators:
 
   If $5 is still steep, you could even host your site on Amazon's AWS and your monthly bill will be cents. You read that right, cents! Pair that with their CDN service and you've got yourself a killer hosting solution. 
   
-  And if that’s still too much, save your spare change for pizza and host your site on [GitHub ](https://pages.github.com/)[P](https://pages.github.com/)[ages](https://pages.github.com/); completely free!
+  And if that’s still too much, save your spare change for pizza and host your site on [GitHub Pages](https://pages.github.com/) completely free!
    
 ## The Not So Good
 
@@ -80,5 +80,5 @@ First you gain the benefits I listed above (here's the link to the list if you n
 ![](/blog/forestryio/images/screenshot-white-matt.jpg)
   
 
-So the next time you're faced with setting up a website or a blog and you don't want to go with the traditional CMS options. You can finally choose the much better technology choice of going with a static-site generator for you, but choose a user-friendly **and** sexy CMS for your content producers with [Forestry](https://forestry.io)[.io](https://forestry.io).
+So the next time you're faced with setting up a website or a blog and you don't want to go with the traditional CMS options. You can finally choose the much better technology choice of going with a static-site generator for you, but choose a user-friendly **and** sexy CMS for your content producers with [Forestry.io](https://forestry.io).
 
