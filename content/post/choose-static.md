@@ -16,7 +16,7 @@ twitter = "https://twitter.com/michaelsoolee"
 link = "https://forestry.io/blog/post/why-we-built-forestry/"
 title = "Why we built Forestry"
 [[suggested]]
-link = "#"
+link = "https://forestry.io/blog/post/why-we-built-forestry/"
 title = "Forestry + Techstars NYC"
 
 +++
@@ -24,7 +24,7 @@ When it comes to the Internet, content is king. A site that has well written con
 
 I've worked with various organizations in helping them choose the technology that is used to publish content onto their sites. When it came down to making a choice, the publishing platform options were often slimmed down by the need for non-technical users to easily publish content.
 
-I've written on my personal site for several years using a static-site generator called Jekyll. It’s my go-to choice for publishing content on my site. What a static-site generator does is simply takes text files — think plain .txt or even markdown files — wraps them in a template and converts them into static HTML pages.
+I've written on [my personal site](https://michaelsoolee.com) for several years using a static-site generator called Jekyll. It’s my go-to choice for publishing content on my site. What a static-site generator does is simply takes text files — think plain .txt or even markdown files — wraps them in a template and converts them into static HTML pages.
 
 If you've never used a static-site generator, you might be wondering at this point, what are the benefits of using a static-site generator over a more traditional content management system (CMS) like Wordpress or Drupal?
 
