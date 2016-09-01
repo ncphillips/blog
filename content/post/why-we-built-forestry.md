@@ -1,6 +1,7 @@
 +++
 Categories = []
 date = "2016-08-31T11:49:00+00:00"
+banner = ""
 description = ""
 draft = false
 excerpt = "A description of the windy road that lead us here. "
