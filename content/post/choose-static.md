@@ -75,7 +75,7 @@ First you gain the benefits I listed above (here's the link to the list if you n
   
 - **Simple by nature.** If the content creators have ever used any modern content management system, they'll feel right at home. WYSIWYG editor? Check. Asset upload? Check.
   
-- **Oh so sexy.** Let these screenshots do the talking here. Just eye-candy. Want more? Take [Forestry](https://forestry.io) for a test drive.
+- **Oh so sexy.** Let the screenshot below do the talking here. Just eye-candy. Want more? Take [Forestry](https://forestry.io) for a test drive.
 
 ![](/blog/forestryio/images/screenshot-white-matt.jpg)
   
