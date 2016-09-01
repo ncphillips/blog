@@ -13,7 +13,7 @@ link = "https://twitter.com/michaelsoolee"
 name = "Michael Lee"
 twitter = "https://twitter.com/michaelsoolee"
 [[suggested]]
-link = "#"
+link = "https://forestry.io/blog/post/why-we-built-forestry/"
 title = "Why we built Forestry"
 [[suggested]]
 link = "#"
