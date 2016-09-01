@@ -3,7 +3,7 @@ Categories = []
 date = "2016-08-31T11:49:00+00:00"
 description = ""
 draft = false
-excerpt = ""
+excerpt = "A description of the windy road that lead us here. "
 tags = []
 title = "Why we built Forestry"
 [[author]]
