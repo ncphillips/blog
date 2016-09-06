@@ -1,11 +1,11 @@
 +++
 Categories = []
-date = "2016-09-06T19:03:01.812-04:00"
+date = "2016-09-06T19:03:00+00:00"
 description = ""
-draft = true
+draft = false
 excerpt = ""
 tags = []
-title = "Forestry.io Techstars 2016"
+title = "Forestry.io + Techstars 2016"
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
 img = "/images/Scott_Gallant.jpg"
@@ -22,3 +22,15 @@ link = ""
 title = ""
 
 +++
+We're stoked to announce that Forestry.io is going to be part of [Techstars NYC](http://www.techstars.com/startup-accelerator/).  The 90-day program runs from July until the end of September 2016.  
+
+What this means for Forestry and our users:
+
+* We're going to be surrounded by some of the brightest minds in New York tech
+* We get to focus intensly on making Forestry awesome for our users. Stoked to be working 15-hour days!
+* Over $1,000,000 in [amazing "perks"](http://www.techstars.com/startup-accelerator/) (free stuff) from companies such as Amazon, Digital Ocean, Microsoft, Google, Sendgrid, etc.
+
+We'll we're off to New York. 
+
+![](/blog/forestryio/images/Forestry.io-in-NY.jpg)
+(The flight attendand gave us his selfie stick for this photo)
