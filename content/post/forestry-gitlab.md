@@ -1,9 +1,9 @@
 +++
 Categories = []
-banner = ""
+banner = "/forestryio/images/gitlab-and-forestryio.png"
 date = "2016-09-06T23:45:00+00:00"
 description = "Happy to announce our support for GitLab hosted sites"
-draft = true
+draft = false
 excerpt = ""
 tags = []
 title = "Forestry + GitLab "
