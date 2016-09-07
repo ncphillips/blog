@@ -7,7 +7,7 @@ excerpt = ""
 tags = []
 title = "Forestry + GitLab "
 [[author]]
-bio = "CTO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Backend developer, systems, father, built a couple of houses. "
+bio = "CTO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Backend developer, systems guy, father, builder of houses. "
 img = "/forestryio/images/jordan-patterson-forestryio.png"
 name = "Jordan Patterson"
 twitter = "https://twitter.com/jpatterson"
@@ -22,8 +22,6 @@ link = "https://forestry.io/blog/post/forestryio-techstars-2016/"
 title = "Forestry.io + Techstars 2016 - Scott Gallant"
 
 +++
-We've been gitLab users since their very first release in Oct of 2011. 
-I worked at a design agency and converted everything over from  SVN to Git and used an internal GitLab installation. 
-It was awesome because we had sensitive projects that we couldn't host on GitHub yet we were able to manage all of our source code internally.
+We've been gitLab users since their very first release in Oct of 2011 when I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation.  I remember filing bugs and _ was quick to fix them. We had sensitive projects that we couldn't host on GitHub, yet we were able to manage all of our source code internally with GitLab. We loved it, and still do.
 
 We've watched GitLab grow since their humble beginnings and become a dominant player in version control management. At Forestry, GitLab has been our most requested feature and we're happy to announce that as of today, you can sync your static site at GitLab.com syncing. 
