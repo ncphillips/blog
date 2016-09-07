@@ -31,10 +31,10 @@ We've watched GitLab grow since their humble beginnings and become a dominant pl
 
 ## Seting up a GitLab site
 Select GitLab from the list of Git services.  Then Choose your repo and branch.
-![](/blog/forestryio/images/gitlab--site-setup.png)
+![](/blog/forestryio/images/gitlab--site-setup-1.png)
 
 Forestry will import your site and automatically build a CMS
-![](/blog/forestryio/images/Screen Shot 2016-09-07 at 12.25.48 AM.png)
+![](/blog/forestryio/images/importing-site.png)
 
 If you're using GitLab pages and you just want Forestry to commit your CMS changes back to your GitLab repo, select **Commit to source repo**.  Alternatively you can have Forestry build and deploy your site (Amazon S3, FTP, etc). 
 ![](/blog/forestryio/images/Gitlab-hosting.png)
