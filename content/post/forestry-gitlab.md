@@ -6,7 +6,8 @@ draft = true
 excerpt = ""
 banner = ""
 tags = []
-title = "Forestry + GitLab "
+title = "Forestry + GitLab"
+twitter_card = ""
 [[author]]
 bio = "CTO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Backend developer, systems guy, father, builder of houses. "
 img = "/forestryio/images/jordan-patterson-forestryio.png"
