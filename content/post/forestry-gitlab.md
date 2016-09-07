@@ -1,10 +1,10 @@
 +++
 Categories = []
+banner = ""
 date = "2016-09-06T23:45:00+00:00"
 description = "Happy to announce our support for GitLab hosted sites"
 draft = true
 excerpt = ""
-banner = ""
 tags = []
 title = "Forestry + GitLab "
 [[author]]
