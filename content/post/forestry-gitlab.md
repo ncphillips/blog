@@ -24,13 +24,13 @@ link = "https://forestry.io/blog/post/forestryio-techstars-2016/"
 title = "Forestry.io + Techstars 2016 - Scott Gallant"
 
 +++
-We've been [GitLab](https://gitlab.com) users since their very first release in Oct of 2011 when I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation.  I remember filing bugs and _ was quick to fix them. We had sensitive projects that we couldn't host on GitHub, yet we were able to manage all of our source code internally with GitLab. We loved it, and still do.
+We've been [GitLab](https://gitlab.com) users since their very first release in Oct of 2011. I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation. I remember submitting a few bugs and [Dmitriy](https://twitter.com/dzaporozhets) was quick to fix them. We had sensitive projects that we couldn't host on GitHub, yet we were able to manage all of our source code internally with GitLab. We loved it, and still do.
 
-We've watched GitLab grow since their humble beginnings and become a dominant player in version control management. At Forestry, GitLab has been our most requested feature and we're happy to announce that as of today, you can sync your static site at GitLab.com syncing.
+We've watched GitLab grow since their humble beginnings and become a dominant player in the version control space. At Forestry, GitLab has been one of the most requested features and we're happy to announce that, you can sync your [GitLab.com](https://gitlab.com) static site with the [Forestry.io CMS](https://forestry.io).
 
 ## Seting up a GitLab site
 Select GitLab from the list of Git services.  Then Choose your repo and branch.
-![](/blog/forestryio/images/gitlab--site-setup2.png)
+![](/blog/forestryio/images/gitlab-import.jpg)
 
 Forestry will import your site and automatically build a CMS
 ![](/blog/forestryio/images/importing-site-1.png)
