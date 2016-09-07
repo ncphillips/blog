@@ -2,9 +2,9 @@
 Categories = []
 banner = "/forestryio/images/techstars.jpg"
 date = "2016-07-06T19:03:00+00:00"
-description = ""
+description = "We're super excited to take part in Techstars NYC summer 2016!"
 draft = false
-excerpt = ""
+excerpt = "We're super excited to take part in Techstars NYC summer 2016!"
 tags = []
 title = "Forestry.io + Techstars 2016"
 twitter_card = "/forestryio/images/techstars.jpg"
@@ -14,14 +14,14 @@ img = "/images/Scott_Gallant.jpg"
 name = "Scott Gallant"
 twitter = "https://twitter.com/scottgallant"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/forestry-gitlab/"
+title = "Forestry + GitLab - Jordan Patterson"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/why-we-built-forestry/"
+title = "Why we built Forestry - Scott Gallant"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/choose-static/"
+title = "I can finally choose static"
 
 +++
 We're stoked to announce that Forestry.io is going to be part of [Techstars NYC](http://www.techstars.com/startup-accelerator/).  The 90-day program runs from July until the end of September 2016.  
