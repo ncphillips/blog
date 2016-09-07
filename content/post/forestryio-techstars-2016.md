@@ -6,6 +6,8 @@ draft = false
 excerpt = ""
 tags = []
 title = "Forestry.io + Techstars 2016"
+banner = "/forestryio/images/gitlab-and-forestryio.png"
+twitter_card = "/forestryio/images/twitter-card-gitlab-forestry.png"
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
 img = "/images/Scott_Gallant.jpg"
@@ -30,7 +32,7 @@ What this means for Forestry and our users:
 * We get to focus intensly on making Forestry awesome for our users. Stoked to be working 15-hour days!
 * Over $1,000,000 in [amazing "perks"](http://www.techstars.com/startup-accelerator/) (free stuff) from companies such as Amazon, Digital Ocean, Microsoft, Google, Sendgrid, etc.
 
-We'll we're off to New York. 
+We'll we're off to New York.
 
 ![](/blog/forestryio/images/Forestry.io-in-NY.jpg)
 (The flight attendand gave us his selfie stick for this photo)
