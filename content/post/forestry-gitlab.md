@@ -4,7 +4,7 @@ banner = "/forestryio/images/gitlab-and-forestryio.png"
 date = "2016-09-06T23:45:00+00:00"
 description = "We're happy to announce our support for GitLab hosted sites"
 draft = false
-excerpt = "We're happy to announce our support for GitLab hosted sites"
+excerpt = "GitLab support is here! Fire up a CMS for your GitLab-hosted Jekyll and Hugo sites! "
 tags = []
 title = "Forestry + GitLab "
 twitter_card = "/forestryio/images/twitter-card-gitlab-forestry.png"
@@ -14,14 +14,14 @@ img = "/forestryio/images/jordan-patterson-forestryio.png"
 name = "Jordan Patterson"
 twitter = "https://twitter.com/jpatterson"
 [[suggested]]
-link = "https://forestry.io/blog/post/why-we-built-forestry/"
-title = "Why we built Forestry.io - Scott Gallant"
+link = "https://forestry.io/blog/post/choose-static/"
+title = "I can finally choose static - Michael Lee"
 [[suggested]]
 link = "https://forestry.io/blog/post/choose-static/"
 title = "I can finally choose static - Michael Lee"
 [[suggested]]
-link = "https://forestry.io/blog/post/forestryio-techstars-2016/"
-title = "Forestry.io + Techstars 2016 - Scott Gallant"
+link = "https://forestry.io/blog/post/choose-static/"
+title = "I can finally choose static - Michael Lee"
 
 +++
 We've been [GitLab](https://gitlab.com) users since their very first release in Oct of 2011. I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation. I remember submitting a few bugs and [Dmitriy](https://twitter.com/dzaporozhets) was quick to fix them. We loved GitLab then, and still do today.
