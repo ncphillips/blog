@@ -2,7 +2,7 @@
 Categories = []
 banner = "/forestryio/images/gitlab-and-forestryio.png"
 date = "2016-09-06T23:45:00+00:00"
-description = "Happy to announce our support for GitLab hosted sites"
+description = "We're happy to announce our support for GitLab hosted sites"
 draft = false
 excerpt = ""
 tags = []
@@ -23,6 +23,18 @@ link = "https://forestry.io/blog/post/forestryio-techstars-2016/"
 title = "Forestry.io + Techstars 2016 - Scott Gallant"
 
 +++
-We've been gitLab users since their very first release in Oct of 2011 when I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation.  I remember filing bugs and _ was quick to fix them. We had sensitive projects that we couldn't host on GitHub, yet we were able to manage all of our source code internally with GitLab. We loved it, and still do.
+![](/blog/forestryio/images/gitlab-and-forestryio-1.png)
+
+We've been [GitLab](https://gitlab.com) users since their very first release in Oct of 2011 when I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation.  I remember filing bugs and _ was quick to fix them. We had sensitive projects that we couldn't host on GitHub, yet we were able to manage all of our source code internally with GitLab. We loved it, and still do.
 
 We've watched GitLab grow since their humble beginnings and become a dominant player in version control management. At Forestry, GitLab has been our most requested feature and we're happy to announce that as of today, you can sync your static site at GitLab.com syncing.
+
+## Seting up a GitLab site
+Select GitLab from the list of Git services.  Then Choose your repo and branch.
+![](/blog/forestryio/images/gitlab--site-setup.png)
+
+Forestry will import your site and automatically build a CMS
+![](/blog/forestryio/images/Screen Shot 2016-09-07 at 12.25.48 AM.png)
+
+If you're using GitLab pages and you just want Forestry to commit your CMS changes back to your GitLab repo, select **Commit to source repo**.  Alternatively you can have Forestry build and deploy your site (Amazon S3, FTP, etc). 
+![](/blog/forestryio/images/Gitlab-hosting.png)
