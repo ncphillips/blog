@@ -1,12 +1,12 @@
 +++
 Categories = []
+banner = "/forestryio/images/gitlab-and-forestryio.png"
 date = "2016-07-06T19:03:00+00:00"
 description = ""
 draft = false
 excerpt = ""
 tags = []
 title = "Forestry.io + Techstars 2016"
-banner = "/forestryio/images/gitlab-and-forestryio.png"
 twitter_card = "/forestryio/images/twitter-card-gitlab-forestry.png"
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
