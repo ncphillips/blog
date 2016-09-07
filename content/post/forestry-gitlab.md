@@ -7,7 +7,7 @@ draft = false
 excerpt = "We're happy to announce our support for GitLab hosted sites"
 tags = []
 title = "Forestry + GitLab "
-twitter_card = ""
+twitter_card = "/forestryio/images/twitter-card-gitlab-forestry.png"
 [[author]]
 bio = "CTO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Backend developer, systems guy, father, builder of houses. "
 img = "/forestryio/images/jordan-patterson-forestryio.png"
