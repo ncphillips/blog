@@ -13,11 +13,11 @@ link = "https://michaelsoolee.com"
 name = "Michael Lee"
 twitter = "https://twitter.com/michaelsoolee"
 [[suggested]]
-link = "https://forestry.io/blog/post/why-we-built-forestry/"
-title = "Why we built Forestry"
+link = "https://forestry.io/blog/post/forestryio-techstars-2016/"
+title = "Forestry.io + Techstars 2016 - Scott Gallant"
 [[suggested]]
 link = "https://forestry.io/blog/post/why-we-built-forestry/"
-title = "Forestry + Techstars NYC"
+title = "Why we built Forestry.io - Scott Gallant"
 
 +++
 When it comes to the Internet, content is king. A site that has well written content concisely tells the story behind a brand, helps to inform customers about a business' products or services and helps guide a user navigate to the information that they seek.
