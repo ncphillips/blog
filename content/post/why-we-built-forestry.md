@@ -4,7 +4,7 @@ banner = ""
 date = "2016-08-31T11:49:00+00:00"
 description = ""
 draft = false
-excerpt = "A description of the windy road that lead us here. "
+excerpt = "The winding road that led us to building a decentralized UI for the web. "
 tags = []
 title = "Why we built Forestry"
 [[author]]
