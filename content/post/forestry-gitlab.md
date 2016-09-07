@@ -24,7 +24,7 @@ link = "https://forestry.io/blog/post/forestryio-techstars-2016/"
 title = "Forestry.io + Techstars 2016 - Scott Gallant"
 
 +++
-We're happy to announce support for GitLab today! Now you can add a [Forestry.io CMS](https://forestry.io) to your [GitLab.com](https://gitlab.com) static site.
+Now you can add a [Forestry.io CMS](https://forestry.io) to your [GitLab.com](https://gitlab.com) static site.
 
 I've been a [GitLab](https://gitlab.com) user since their very first release in Oct of 2011. I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation. I remember submitting a few bugs and [Dmitriy](https://twitter.com/dzaporozhets) was quick to fix them. We loved GitLab then, and still do today.  
 
@@ -35,9 +35,11 @@ Select GitLab from the list of Git services.  Then Choose your repo and branch.
 ![](/blog/forestryio/images/Gitlab-forestry.png)
 
 Forestry will import your site and automatically build a CMS
-![](/blog/forestryio/images/importing-site-1.png)
+![](/blog/forestryio/images/importing-gitlab-site.gif)
 
-If you're using GitLab pages and you just want Forestry to commit your CMS changes back to your GitLab repo, select **Commit to source repo**.  Alternatively you can have Forestry build and deploy your site (Amazon S3, FTP, etc). 
+Forestry will automatically commit changes back to your repo but you can also have it build and deploy your site (Amazon S3, FTP, etc).  
+
+If you're letting GitLab build your site, choose **Commit to source repo only**.
 ![](/blog/forestryio/images/Gitlab-hosting.png)
 
 💥  Boom! Now you're ready to rock.
