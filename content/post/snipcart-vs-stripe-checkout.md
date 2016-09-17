@@ -7,10 +7,10 @@ excerpt = ""
 tags = []
 title = "Snipcart Vs Stripe Checkout"
 [[author]]
-bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
+bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
 img = "/images/Scott_Gallant.jpg"
-name = "Scott Gallant"
-twitter = "https://twitter.com/scottgallant"
+name = "Marc Boisvert-Dupras"
+twitter = "https://twitter.com/yokaicorp"
 [[suggested]]
 link = ""
 title = ""
@@ -25,7 +25,7 @@ title = ""
 # Which online payment solution should you use for your static site?
 
 ---
-
+  
 If you're developing an online store, you'll know that these days there are more options than ever to handle payments. It's a classic example of how multiple standards proliferate[^1]. So which one should _you_ use?
 
 One of the lesser known solutions for building your online store is using one of the many static-site generators out there like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/).
