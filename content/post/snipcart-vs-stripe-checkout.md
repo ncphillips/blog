@@ -30,7 +30,7 @@ If you're developing an online store, you'll know that these days there are more
 
 One of the lesser known solutions for building your online store is using one of the many static-site generators out there like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/).
 
-Using a static-site generator brings many advantages over heavier solutions like WordPress. For one, developing a static site is generally much faster than having to deal with many plugins, endless configuration of themes, databases, et cetera... This results in a quicker turnaround and faster time to market.
+Using a static-site generator brings many advantages over heavier solutions like WordPress. For one, developing a static site is generally much faster than having to deal with many plugins, endless configuration of themes, databases, etc. This results in a quicker turnaround and faster time to market.
 
 But this raises the question, since there are no plugins or ways to interact with the server, how does one integrate an online payments solution on a static platform? Thankfully, there's a new breed of integrated payment companies like [Snipcart](https://snipcart.com/) and [Stripe](https://stripe.com/) that provide all you'll need to make your own store.
 
@@ -79,7 +79,7 @@ Snipcart and Stripe have excellent administrator dashboards with quick and easy 
 
 For easy visualization, we created a small table to illustrate each platform's pricing and fees.
 
-| Pricing            | Snipcart                                                         | Stripe                         | Total                                |
+| Transaction Amount | Snipcart                                                         | Stripe                         | Total                                |
 | ------------------ | ---------------------------------------------------------------- | ------------------------------ | ------------------------------------ |
 | $10 (Credit Card)  | 2% Snipcart fee + 2.9% + $0.30 per transaction (using PayPal)    | 2.9% + $0.30 per transaction   | Snipcart: $10.35<hr>Stripe: $10.33   |
 
@@ -90,7 +90,7 @@ Both platforms offer compelling pricing options however Stripe may be slightly c
 
 * Snipcart's installation is incredibly easy and straightforward. Simply link their `snipcart.min.js` script and optionally the default `snipcart.min.css` theme before the `<head>` closing tag of your website and you are ready to go! Don't forget to include your API key with the `snipcart.min.js` script. Note that Snipcart also makes use of jQuery, so make sure you have it included in your page.
 
-* In contrast, setting up Stripe is a bit more time consuming and requires the use of an actual server to accept payments. If you do not already have a VPS, you can use a PaaS like Heroku to host your code for free, keeping setup time and costs down.
+* In contrast, setting up Stripe is a bit more time consuming and requires the use of an actual back-end server to accept payments. If you do not already have a VPS, you can use a PaaS like Heroku to host your code for free, keeping setup time and costs down.
 
 **Takeaway**<br>
 All-in-all, Snipcart is most definitely the easiest to install out of the two products. The fact the is does not require any external server or backend gives it a clear advantage over Stripe.
@@ -101,7 +101,7 @@ Check out our example integration guides below for both [Snipcart](#!) and [Stri
 
 Here, Snipcart and Stripe have comparable offerings. Both services offer live chat with fast response from the support staff. I've found the documentation easy to navigate through and well written with plenty of code examples.
 
-One thing I liked about Stripe is their searchable knowledge base whereas Snipcart only offers a regular F.A.Q. but once again, this is only personal preference and shouldn't affect your decision.
+One thing I liked about Stripe is their searchable knowledge base. Snipcart only offers a regular F.A.Q. but once again, this is only personal preference and shouldn't affect your decision.
 
 
 ## Integrations
@@ -126,13 +126,13 @@ $ gem install jekyll
 Once you have Jekyll installed, we can our website project with the following command.
 
 ```sh
-$ jekyll new my-online-shop
+$ jekyll new my-online-shop && cd my-online-shop
 ```
 
-Jekyll will automatically pull in all the required files and dependencies. Once that is done, `cd` into your project's directory and run the `serve` command to view your website.
+Jekyll will automatically pull in all the required files and dependencies. Once that is done, run the `serve` command to view your website.
 
 ```sh
-$ cd my-online-shop && jekyll serve
+$ jekyll serve
 ```
 #### Storing our products data
 
@@ -170,7 +170,7 @@ description: Aliqua dolor proident ullamco in duis ex qui occaecat qui occaecat 
 Dolore fugiat qui ad cupidatat adipisicing nulla adipisicing est ut minim dolore cupidatat excepteur tempor aliquip amet culpa. Exercitation excepteur magna ad tempor enim eu pariatur commodo dolor consectetur reprehenderit. Lorem esse laborum laborum nisi sint ipsum nisi anim incididunt cillum sit. Veniam nulla aliqua et aliquip incididunt velit commodo pariatur do deserunt anim deserunt ex ullamco esse.
 ```
 
-That's it! We're now ready to display all of our products on our website. Feel free to create a few additional test products for better visualization of the website will look.
+That's it! We're now ready to display all of our products on our website. Feel free to create a few additional test products for better visualization of how the website will look.
 
 #### Displaying the products
 
@@ -182,7 +182,7 @@ Listing all of our products on one page is simply a matter of looping through ea
 Start by creating a new `item.html` file inside of your `_includes` folder. This will serve as a reusable layout to display all of our products details.
 
 ```html
-<div class="col-xs-12 col-md-4">
+<div class="col col-33">
   <div class="card">
     <div class="card-image">
       <img class="img-responsive" src="{{ product.image }}" alt="{{ product.name }}">
@@ -200,7 +200,7 @@ Start by creating a new `item.html` file inside of your `_includes` folder. This
   </div>
 </div>
 ```
-This might not look very good right now but we can fix that with some simple CSS. Add the following to your `_layout.scss` file:
+This does not look great right now but we can fix that with some simple CSS. Add the following to your `_layout.scss` file:
 
 ```CSS
 /***
@@ -272,9 +272,97 @@ This might not look very good right now but we can fix that with some simple CSS
 }
 ```
 
+With that done, we're ready to display our products on the store. Let's add the following block to our `index.html` file. This will loop through any products in the `_products` directory and render them inside the `item.html` template we just created.
+
+```html
+<div class="row">
+  {% for product in site.products %}
+    {% include item.html %}
+  {% endfor %}
+</div>
+```
+
+Great, with our products now displayed on our store we can move on to the last section of this tutorial. Since Stripe and Snipcart have some key differences in how they process orders, we'll look at them both in separate parts.
+
+If you'd like to review your code, we've created a repository with everything covered in this tutorial thus far. You can check it out on [GitHub](https://github.com/aft3rlife/my-online-shop).
+
 #### Using Stripe
 
+In this section, we'll see how we can integrate Stripe and process payments using all the things we've set up in the previous parts of this tutorial.
+
+Since Stripe requires a back-end server to process payments, let's start by setting that up. We'll be using a small Node server to do all of the back-end work as it's tiny and can be hosted on PaaS platforms like [Heroku](https://www.heroku.com/) but if you already have a VPS you can also use that. For the sake of this tutorial, we'll use Heroku. We've create a handy simple Node server which you can find on [GitHub](https://github.com/aft3rlife/heroku-stripe-checkout).
+
+Simply start by clicking the _Deploy to Heroku_ button and enter your account details which can be found on your Stripe account [dashboard](https://dashboard.stripe.com). Next, let's open up our `_config.yml` file and add a few things for easy access.
+
+```YAML
+# Stripe Integration
+post_url: <your heroku app url>
+public_key: <your stripe public key>
+```
+
+Sweet, we're now ready to use Stripe's Checkout platform. To do so, open up your `item.html` and let's make a few edits. We can remove the `<a href="#">Purchase</a>` and replace it with Stripe's button template like so.
+
+```html
+<form id="stripe" action="{{ site.post_url }}" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="{{ site.public_key }}"
+    data-amount="{{ product.price | remove: '.' }}"
+    data-name="{{ product.name }}"
+    data-description="{{ product.description }}"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-currency="cad">
+  </script>
+  <input name="amount" value="{{ product.price | remove: '.' }}" type="hidden">
+  <input name="description" value="{{ product.description }}" type="hidden">
+</form>
+```
+
+And that's it! You should now be able to use Stripe's Checkout and process orders. You can try this out by clicking on the _Pay with Card_ button and making a sample order with any [test payment details](https://stripe.com/docs/testing#cards).
+
 #### Using Snipcart
+
+Here, we'll look at how we can integrate Snipcart much the same way as we did with Stripe however there are some differences. For instance, Snipcart includes a customizable shopping cart directly on your website so we'll look at how we can add our products to it, display it and finally process payments.
+
+While Stripe requires the use of a back-end server and extra setup, Snipcart does not and thus is much easier to get started with and use. This also means you will be able to run your static-site in full on services like [GitHub Pages](https://pages.github.com) or [Gitlab Pages](https://pages.gitlab.io), free of charge.
+
+To get started, let's open up our `_config.yml` and add our personal api key which can be found on your Snipcart dashboard under Account > API Keys.
+
+```YAML
+api_key: <your api key>
+```
+
+Next, let's include `snipcart.js` in our default layout. For this tutorial we'll be using Snipcart's default theme — `snipcart.min.css` — so let's include that as well. Open up the `default.html` file in the `_layouts` directory and add the following lines before the closing `</head>` tag.
+
+```html
+<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+    data-api-key="{{ site.api_key }}"
+    id="snipcart" async defer>
+</script>
+<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+```
+
+With `snipcart.js` loaded and the default theme included, we can start adding items to the cart. Let's edit our `item.html` and replace `<a href="#">Purchase</a>` with a button that will trigger an action to add an item to the shopping cart.
+
+```html
+<a
+  href="#!"
+  class="snipcart-add-item"
+  data-item-id="{{ product.sku }}"
+  data-item-name="{{ product.name }}"
+  data-item-price="{{ product.price }}"
+  data-item-url="{{ site.url }}{{ product.name }}"
+  data-item-description="{{ product.description }}">
+  Add to cart
+</a>
+```
+
+And that's it! By default, the chosen item will be added to the cart and the shopping cart will open up. If you don't want the cart to open up automatically when adding a product, simply add `data-autopop="false"` after `data-api-key="{{ site.api_key }}"` in the `snipcart.js` script. You can then open up the checkout window by adding this line to your `item.html`.
+
+```html
+<a href="#" class="snipcart-checkout">Checkout</a>
+```
 
 ## Conclusion
 ---
@@ -283,7 +371,7 @@ Overall, I think you should make your decision based on how important each featu
 
 Snipcart offers great flexibility with a wide variety of payment gateways and lets you customize the look and feel of your checkout experience. If having PayPal as a payment option is core to your business then Snipcart will likely be your best option. Integration is also arguably easier than Stripe's so if time is of the essence, Snipcart can be set-up very quickly and easily.
 
-Stripe provides a clean and simple checkout flow however it offers little in the way of customization or payment gateways. If you plan on accepting credit cards or Bitcoins as your sole method of payment then Stripe is a great option. Since Stripe requires a server to generate tokens, it's integration might be a little more time consuming and will require maintenance in the long term.
+Stripe provides a clean and simple checkout flow however it offers little in the way of customization or payment gateways. If you plan on accepting credit cards or Bitcoins as your sole method of payment, then Stripe is a great option. Since Stripe requires a server to generate tokens, it's integration might be a little more time consuming and will require maintenance in the long term.
 
 #### Footnotes
 [^1]: [xkcd: Standards](https://xkcd.com/927/)
