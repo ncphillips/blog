@@ -8,7 +8,7 @@ tags = []
 title = "Snipcart Vs Stripe Checkout"
 [[author]]
 bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
-img = "/images/Scott_Gallant.jpg"
+img = "/forestryio/images/marc.jpg"
 name = "Marc Boisvert-Dupras"
 twitter = "https://twitter.com/yokaicorp"
 [[suggested]]
@@ -25,7 +25,7 @@ title = ""
 # Which online payment solution should you use for your static site?
 
 ---
-  
+
 If you're developing an online store, you'll know that these days there are more options than ever to handle payments. It's a classic example of how multiple standards proliferate[^1]. So which one should _you_ use?
 
 One of the lesser known solutions for building your online store is using one of the many static-site generators out there like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/).
@@ -42,7 +42,7 @@ Although these platforms seemingly provide similar features and integration, the
 
 * Snipcart allows you to accept payments from all the major payment gateway providers (PayPal, Authorize.net, PaySafe, etc... And yes, even Stripe).
 
-* In contrast, Stripe allows you to accept payments through credit cards directly. If mobile payments are important to you, Stripe offers great integration with Apple Pay and Android Pay. They also offer a few other payment gateways like Bitcoin, Alipay and ACH.
+* In contrast, Stripe allows you to accept payments through credit cards directly and acts as the gateway itself. If mobile payments are important to you, Stripe offers great integration with Apple Pay and Android Pay. They also offer a few other payment gateways like Bitcoin, Alipay and ACH.
 
 **Takeaway**<br>
 Snipcart allows for more flexibility in regards to the choice of payment gateways offered. They also support PayPal which can be very important to some businesses while Stripe does not.
@@ -60,11 +60,11 @@ With Snipcart you have more flexibility by default which allows you to get hands
 
 #### Admin Dashboard
 
-![Snipcart's Dashboard](http://i.imgur.com/0RjmpE8.png)
+![Snipcart's Dashboard](/blog/forestryio/images/snipcart.png)
 
 * Snipcart's dashboard features a dual pane layout with all your store related operations on one side and all your account settings on the other. Small nitpicking here but I find that the dual pane system requires more clicking and feels a bit clunky.
 
-![Stripe's Dashboard](http://i.imgur.com/bVufSbo.png)
+![Stripe's Dashboard](/blog/forestryio/images/stripecheckout.png)
 
 * Stripe's on the other hand makes use of a simple and clean unified layout reminiscent of a macOS application. A notable feature I personally find very useful is the global search bar which makes it incredibly easy to sift through all your customers, orders, etc...
 
@@ -112,7 +112,6 @@ In this section, we'll look at how we can integrate Snipcart and Stripe into you
 **What you'll need:**
 * [Ruby](https://www.ruby-lang.org/en/downloads/) `v2.x or higher`
 * [RubyGems](https://rubygems.org/pages/download) `latest`
-* [Node](https://nodejs.org/) `v4.5.0 LTS or higher recommended`
 
 Once you have those installed, we can move on to the next step where we will install Jekyll and create a new project.
 
@@ -358,7 +357,7 @@ With `snipcart.js` loaded and the default theme included, we can start adding it
 </a>
 ```
 
-And that's it! By default, the chosen item will be added to the cart and the shopping cart will open up. If you don't want the cart to open up automatically when adding a product, simply add `data-autopop="false"` after `data-api-key="{{ site.api_key }}"` in the `snipcart.js` script. You can then open up the checkout window by adding this line to your `item.html`.
+By default, the chosen item will be added to the cart and the shopping cart will open up. If you don't want the cart to open up automatically when adding a product, simply add `data-autopop="false"` after `data-api-key="{{ site.api_key }}"` in the `snipcart.js` script. You can then open up the checkout window by adding this line to your `item.html`.
 
 ```html
 <a href="#" class="snipcart-checkout">Checkout</a>
@@ -368,6 +367,15 @@ And that's it! By default, the chosen item will be added to the cart and the sho
 ---
 
 Overall, I think you should make your decision based on how important each feature is to you.
+
+| Feature          | Snipcart                                                                       | Stripe                                                                                             |
+|------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Payment Gateways | Many to choose from, very flexible.                                            | Mainly credit card.                                                                                |
+| Frontend         | Customizable but requires some setup.                                          | Simple defaults, non-customizable.                                                                 |
+| Admin Dashboard  | Access to all the common features. A bit clunky to use.                        | Clean, searchable interface with easy access to all the features.                                  |
+| Pricing          | Standard fee of 2% on top of payment gateway fees.                             | Standard 2.9% fee on transactions. No other fees associated.                                       |
+| Setup            | Plug-and-play setup experience. Can be entirely hosted on GitHub/Gitlab Pages. | Relatively easy to setup. Requires the use of an external server to handle payment requests.       |
+| Support          | Good, in-depth information. Again, a bit clunky to navigate through,           | Excellent documentation covering all topics. Has a handy search bar to locate information quickly. |
 
 Snipcart offers great flexibility with a wide variety of payment gateways and lets you customize the look and feel of your checkout experience. If having PayPal as a payment option is core to your business then Snipcart will likely be your best option. Integration is also arguably easier than Stripe's so if time is of the essence, Snipcart can be set-up very quickly and easily.
 
