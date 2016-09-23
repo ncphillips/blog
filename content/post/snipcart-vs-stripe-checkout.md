@@ -8,7 +8,7 @@ tags = []
 title = "Snipcart Vs Stripe Checkout"
 [[author]]
 bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
-img = "/forestryio/images/marc-1.jpg"
+img = "/forestryio/images/marc-3.jpg"
 name = "Marc Boisvert-Dupras"
 twitter = "https://twitter.com/yokaicorp"
 [[suggested]]
@@ -60,11 +60,11 @@ With Snipcart you have more flexibility by default which allows you to get hands
 
 #### Admin Dashboard
 
-![Snipcart's Dashboard](/blog/forestryio/images/snipcart-2.png)
+![Snipcart's Dashboard](/blog/forestryio/images/snipcart-3.png)
 
 * Snipcart's dashboard features a dual pane layout with all your store related operations on one side and all your account settings on the other. Small nitpicking here but I find that the dual pane system requires more clicking and feels a bit clunky.
 
-![Stripe's Dashboard](/blog/forestryio/images/stripecheckout.png)
+![Stripe's Dashboard](/blog/forestryio/images/stripecheckout-1.png)
 
 * Stripe's on the other hand makes use of a simple and clean unified layout reminiscent of a macOS application. A notable feature I personally find very useful is the global search bar which makes it incredibly easy to sift through all your customers, orders, etc...
 
