@@ -1,6 +1,6 @@
 +++
 Categories = []
-banner = "/forestryio/images/code-bg-image-1.jpg"
+banner = "/forestryio/images/stripe-snipcart.png"
 date = "2016-09-04T16:50:00+00:00"
 description = ""
 draft = true
@@ -13,14 +13,14 @@ img = "/forestryio/images/marc-3.jpg"
 name = "Marc Boisvert-Dupras"
 twitter = "https://twitter.com/yokaicorp"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/forestry-gitlab/"
+title = "Forestry + GitLab - Jordan Patterson"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/forestryio-techstars-2016/"
+title = "Forestry.io + Techstars 2016 - Scott Gallant"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/why-we-built-forestry/"
+title = "Why we built Forestry - Scott Gallant"
 
 +++
 # Which online payment solution should you use for your static site?
