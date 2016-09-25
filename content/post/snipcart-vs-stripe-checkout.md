@@ -26,7 +26,7 @@ title = "Why we built Forestry - Scott Gallant"
 +++
 If you're developing an online store, you'll know that these days there are more options than ever to handle payments. It's a classic example of how multiple standards proliferate[^1]. So which one should _you_ use?
 
-![](/blog/forestryio/images/standards.png)
+<img src="/blog/forestryio/images/standards.png" class="center">
 
 One of the lesser known solutions for building your online store is using one of the many static-site generators out there like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/).
 
