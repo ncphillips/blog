@@ -24,10 +24,6 @@ link = "https://forestry.io/blog/post/why-we-built-forestry/"
 title = "Why we built Forestry - Scott Gallant"
 
 +++
-# Which online payment solution should you use for your static site?
-
----
-
 If you're developing an online store, you'll know that these days there are more options than ever to handle payments. It's a classic example of how multiple standards proliferate[^1]. So which one should _you_ use?
 
 One of the lesser known solutions for building your online store is using one of the many static-site generators out there like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/).
