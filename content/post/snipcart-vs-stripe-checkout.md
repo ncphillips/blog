@@ -1,13 +1,13 @@
 +++
 Categories = []
-banner = "/forestryio/images/stripe-snipcart.png"
+banner = "/forestryio/images/stripe-snipcart-1.png"
 date = "2016-09-04T16:50:00+00:00"
 description = ""
 draft = true
 excerpt = ""
 tags = []
 title = "Snipcart Vs Stripe Checkout"
-twitter_card = "/forestryio/images/code-bg-image.jpg"
+twitter_card = "/forestryio/images/stripe-snipcart-1.png"
 [[author]]
 bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
 img = "/forestryio/images/marc-3.jpg"
