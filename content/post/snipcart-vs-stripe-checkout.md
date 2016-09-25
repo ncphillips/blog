@@ -26,6 +26,8 @@ title = "Why we built Forestry - Scott Gallant"
 +++
 If you're developing an online store, you'll know that these days there are more options than ever to handle payments. It's a classic example of how multiple standards proliferate[^1]. So which one should _you_ use?
 
+![](/blog/forestryio/images/standards.png)
+
 One of the lesser known solutions for building your online store is using one of the many static-site generators out there like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/).
 
 Using a static-site generator brings many advantages over heavier solutions like WordPress. For one, developing a static site is generally much faster than having to deal with many plugins, endless configuration of themes, databases, etc. This results in a quicker turnaround and faster time to market.
