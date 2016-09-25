@@ -2,11 +2,11 @@
 Categories = []
 banner = "/forestryio/images/stripe-snipcart-1.png"
 date = "2016-09-25T16:50:00+00:00"
-description = ""
+description = "Introducing Simple Ecommerce with Jekyll, Stripe Checkout and Snipcart."
 draft = true
-excerpt = ""
+excerpt = "Introducing Simple Ecommerce with Jekyll, Stripe Checkout and Snipcart."
 tags = []
-title = "Snipcart Vs Stripe Checkout"
+title = "Why Shopify is Overkill For Your Next Ecommerce Site "
 twitter_card = "/forestryio/images/stripe-snipcart-1.png"
 [[author]]
 bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
