@@ -77,9 +77,25 @@ Snipcart and Stripe have excellent administrator dashboards with quick and easy 
 
 For easy visualization, we created a small table to illustrate each platform's pricing and fees.
 
-| Transaction Amount | Snipcart                                                         | Stripe                         | Total                                |
-| ------------------ | ---------------------------------------------------------------- | ------------------------------ | ------------------------------------ |
-| $10 (Credit Card)  | 2% Snipcart fee + 2.9% + $0.30 per transaction (using PayPal)    | 2.9% + $0.30 per transaction   | Snipcart: $10.35<hr>Stripe: $10.33   |
+<table class="pure-table">
+<thead>
+<tr>
+<th>Transaction Amount</th>
+<th>Snipcart</th>
+<th>Stripe</th>
+<th>Total</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>$10 (Credit Card)</td>
+<td>2% Snipcart fee + 2.9% + $0.30 per transaction (using PayPal)</td>
+<td>2.9% + $0.30 per transaction</td>
+<td>Snipcart: $10.35<hr>Stripe: $10.33</td>
+</tr>
+</tbody>
+</table>
 
 **Takeaway**<br>
 Both platforms offer compelling pricing options however Stripe may be slightly cheaper in the long run depending on your choice of payment gateway.
@@ -366,14 +382,53 @@ By default, the chosen item will be added to the cart and the shopping cart will
 
 Overall, I think you should make your decision based on how important each feature is to you.
 
-| Feature          | Snipcart                                                                       | Stripe                                                                                             |
-|------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Payment Gateways | Many to choose from, very flexible.                                            | Mainly credit card.                                                                                |
-| Frontend         | Customizable but requires some setup.                                          | Simple defaults, non-customizable.                                                                 |
-| Admin Dashboard  | Access to all the common features. A bit clunky to use.                        | Clean, searchable interface with easy access to all the features.                                  |
-| Pricing          | Standard fee of 2% on top of payment gateway fees.                             | Standard 2.9% fee on transactions. No other fees associated.                                       |
-| Setup            | Plug-and-play setup experience. Can be entirely hosted on GitHub/Gitlab Pages. | Relatively easy to setup. Requires the use of an external server to handle payment requests.       |
-| Support          | Good, in-depth information. Again, a bit clunky to navigate through,           | Excellent documentation covering all topics. Has a handy search bar to locate information quickly. |
+<table class="pure-table">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Snipcart</th>
+<th>Stripe</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Payment Gateways</td>
+<td>Many to choose from, very flexible.</td>
+<td>Mainly credit card.</td>
+</tr>
+
+<tr>
+<td>Frontend</td>
+<td>Customizable but requires some setup.</td>
+<td>Simple defaults, non-customizable.</td>
+</tr>
+
+<tr>
+<td>Admin Dashboard</td>
+<td>Access to all the common features. A bit clunky to use.</td>
+<td>Clean, searchable interface with easy access to all the features.</td>
+</tr>
+
+<tr>
+<td>Pricing</td>
+<td>Standard fee of 2% on top of payment gateway fees.</td>
+<td>Standard 2.9% fee on transactions. No other fees associated.</td>
+</tr>
+
+<tr>
+<td>Setup</td>
+<td>Plug-and-play setup experience. Can be entirely hosted on GitHub/Gitlab Pages.</td>
+<td>Relatively easy to setup. Requires the use of an external server to handle payment requests.</td>
+</tr>
+
+<tr>
+<td>Support</td>
+<td>Good, in-depth information. Again, a bit clunky to navigate through,</td>
+<td>Excellent documentation covering all topics. Has a handy search bar to locate information quickly.</td>
+</tr>
+</tbody>
+</table>
 
 Snipcart offers great flexibility with a wide variety of payment gateways and lets you customize the look and feel of your checkout experience. If having PayPal as a payment option is core to your business then Snipcart will likely be your best option. Integration is also arguably easier than Stripe's so if time is of the essence, Snipcart can be set-up very quickly and easily.
 
