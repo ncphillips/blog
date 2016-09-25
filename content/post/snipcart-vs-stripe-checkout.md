@@ -97,6 +97,8 @@ For easy visualization, we created a small table to illustrate each platform's p
 </tbody>
 </table>
 
+<br>
+
 **Takeaway**<br>
 Both platforms offer compelling pricing options however Stripe may be slightly cheaper in the long run depending on your choice of payment gateway.
 
@@ -428,7 +430,7 @@ Overall, I think you should make your decision based on how important each featu
 <td>Excellent documentation covering all topics. Has a handy search bar to locate information quickly.</td>
 </tr>
 </tbody>
-</table>
+</table><br>
 
 Snipcart offers great flexibility with a wide variety of payment gateways and lets you customize the look and feel of your checkout experience. If having PayPal as a payment option is core to your business then Snipcart will likely be your best option. Integration is also arguably easier than Stripe's so if time is of the essence, Snipcart can be set-up very quickly and easily.
 
