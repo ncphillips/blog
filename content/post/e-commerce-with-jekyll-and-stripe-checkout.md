@@ -10,18 +10,18 @@ title = "E-commerce with Jekyll and Stripe Checkout"
 twitter_card = ""
 [[author]]
 bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
-img = "/forestryio/images/marc-3-1.jpg"
+img = "/forestryio/images/marc-3.jpg"
 name = "Marc Boisvert-Dupras"
 twitter = "https://twitter.com/yokaicorp"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/e-commerce-with-jekyll-and-snipcart/"
+title = "E-commerce with Jekyll and Snipcart - Marc Boisvert-Dupras"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/e-commerce-with-jekyll-and-stripe-checkout/"
+title = "Why Shopify is Overkill For Your Next E-commerce Site - Marc Boisvert-Dupras"
 [[suggested]]
-link = ""
-title = ""
+link = "https://forestry.io/blog/post/forestry-gitlab/"
+title = "Forestry + GitLab - Jordan Patterson"
 
 +++
 <img src="/blog/forestryio/images/stripe-checkout.png" class="medium right">
@@ -204,9 +204,9 @@ With that done, we're ready to display our products on the store. Let's add the 
 </div>
 ```
 
-Great, with our products now displayed on our store we can move on to the last section of this tutorial. 
+Great, with our products now displayed on our store we can move on to the last section of this tutorial.
 
-If you'd like to review your code, we've created a repository with everything covered in this tutorial thus far. You can check it out on 
+If you'd like to review your code, we've created a repository with everything covered in this tutorial thus far. You can check it out on
 <br> <a class="button secondary large" style="margin: 3em auto 1em; display: block; width: 300px; font-size: .9rem;" href="https://github.com/aft3rlife/my-online-shop"><span class="icon icon-github" style="font-size: 16px;"></span> GitHub Demo </a>
 
 ## Integrating Stripe Checkout

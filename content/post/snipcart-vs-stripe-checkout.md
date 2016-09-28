@@ -17,7 +17,7 @@ twitter = "https://twitter.com/yokaicorp"
 link = "https://forestry.io/blog/post/e-commerce-with-jekyll-and-snipcart/"
 title = "E-commerce with Jekyll and Snipcart - Marc Boisvert-Dupras"
 [[suggested]]
-link = "https://forestry.io/blog/post/e-commerce-with-jekyll-and-stripe-checkout/"
+link = "https://forestry.io/blog/post/snipcart-vs-stripe-checkout/"
 title = "E-commerce with Jekyll and Stripe Checkout - Marc Boisvert-Dupras"
 [[suggested]]
 link = "https://forestry.io/blog/post/forestry-gitlab/"
@@ -30,7 +30,7 @@ If you're developing an online store, you'll know that these days there are more
 
 A popular solution for online stores is to bulid the front-end with a static site generator (like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/)).  Using a static site generator brings [many advantages over heavier solutions like WordPress or Shopify](https://forestry.io/blog/post/choose-static/) but how does one integrate an online payments solution on a static platform? Thankfully, there's a new breed of integrated payment companies like [Snipcart](https://snipcart.com/) and [Stripe](https://stripe.com/) that provide all you'll need to make your own store.
 
-## Stripe Checkout Vs Snipcart for your Jekyll 
+## Stripe Checkout Vs Snipcart for your Jekyll
 
 Although these platforms seemingly provide similar features and integration, they have key differences that will define which one is the right solution for you. Let's look at some of these differences, starting with how you can accept payments.
 
@@ -44,7 +44,7 @@ Although these platforms seemingly provide similar features and integration, the
 
 ### Front-end website integration
 
-The largest difference betweent these two platforms is that Snipcart provides a full shopping cart, where as Stripe Checkout just provides a one-off payment overlay. 
+The largest difference betweent these two platforms is that Snipcart provides a full shopping cart, where as Stripe Checkout just provides a one-off payment overlay.
 
 * Snipcart's checkout window uses by default the ```snipcart.css``` theme which doesn't necessarily integrate well with all colour schemes/website designs. You can however roll out your own theme quite easily and customize the look to your heart's content. This means there is some additional configuration needed and will require some mild CSS chops.
 <img src="/blog/forestryio/images/snipcart.gif" class="large center">
