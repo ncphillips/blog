@@ -207,14 +207,14 @@ With that done, we're ready to display our products on the store. Let's add the 
 Great, with our products now displayed on our store we can move on to the last section of this tutorial. 
 
 If you'd like to review your code, we've created a repository with everything covered in this tutorial thus far. You can check it out on 
-<br> <a class="button secondary large" style="margin: 3em auto 1em; display: block; width: 300px;" href="https://github.com/aft3rlife/my-online-shop"><span class="icon icon-github" style="font-size: 16px;"></span> GitHub Demo </a>
+<br> <a class="button secondary large" style="margin: 3em auto 1em; display: block; width: 300px; font-size: .9rem;" href="https://github.com/aft3rlife/my-online-shop"><span class="icon icon-github" style="font-size: 16px;"></span> GitHub Demo </a>
 
 ## Integrating Stripe Checkout
 
 In this section, we'll see how we can integrate Stripe and process payments using all the things we've set up in the previous parts of this tutorial.
 
 Since Stripe requires a back-end server to process payments, let's start by setting that up. We'll be using a small Node server to do all of the back-end work as it's tiny and can be hosted on PaaS platforms like [Heroku](https://www.heroku.com/) but if you already have a VPS you can also use that. For the sake of this tutorial, we'll use Heroku. We've create a handy simple Node server which you can find on GitHub:
-<br> <a class="button secondary large" style="margin: 3em auto 1em; display: block; width: 300px;" href="https://github.com/aft3rlife/heroku-stripe-checkout"><span class="icon icon-github" style="font-size: 16px;"></span> Stripe Node Server </a>
+<br> <a class="button secondary large" style="margin: 3em auto 1em; display: block; width: 300px; font-size: .9rem;" href="https://github.com/aft3rlife/heroku-stripe-checkout"><span class="icon icon-github" style="font-size: 16px;"></span> Stripe Server </a>
 
 Simply start by clicking the _Deploy to Heroku_ button and enter your account details which can be found on your Stripe account [dashboard](https://dashboard.stripe.com). Next, let's open up our Jekyll `_config.yml` file and add a few things for easy access.
 
