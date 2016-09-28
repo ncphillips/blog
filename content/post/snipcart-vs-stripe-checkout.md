@@ -2,9 +2,9 @@
 Categories = []
 banner = "/forestryio/images/stripe-snipcart-1.png"
 date = "2016-09-25T16:50:00+00:00"
-description = "Introducing Simple Ecommerce with Jekyll, Stripe Checkout and Snipcart."
+description = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart."
 draft = true
-excerpt = "Introducing Simple Ecommerce with Jekyll, Stripe Checkout and Snipcart."
+excerpt = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart."
 tags = []
 title = "Why Shopify is Overkill For Your Next Ecommerce Site "
 twitter_card = "/forestryio/images/stripe-snipcart-1.png"
