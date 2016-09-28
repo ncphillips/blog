@@ -2,9 +2,9 @@
 Categories = []
 banner = "/forestryio/images/stripe-snipcart-1.png"
 date = "2016-09-25T16:50:00+00:00"
-description = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart."
+description = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart"
 draft = true
-excerpt = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart."
+excerpt = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart"
 tags = []
 title = "Why Shopify is Overkill For Your Next Ecommerce Site "
 twitter_card = "/forestryio/images/stripe-snipcart-1.png"
@@ -28,37 +28,35 @@ If you're developing an online store, you'll know that these days there are more
 
 <img src="/blog/forestryio/images/standards.png" class="center">
 
-One of the lesser known solutions for building your online store is using one of the many static-site generators out there like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/).
+A popular solution for online stores is to bulid the front-end with a static site generator (like the GitHub Pages favorite, [Jekyll](https://jekyllrb.com/)).  Using a static site generator brings [many advantages over heavier solutions like WordPress or Shopify](https://forestry.io/blog/post/choose-static/) but how does one integrate an online payments solution on a static platform? Thankfully, there's a new breed of integrated payment companies like [Snipcart](https://snipcart.com/) and [Stripe](https://stripe.com/) that provide all you'll need to make your own store.
 
-Using a static-site generator brings many advantages over heavier solutions like WordPress. For one, developing a static site is generally much faster than having to deal with many plugins, endless configuration of themes, databases, etc. This results in a quicker turnaround and faster time to market.
-
-But this raises the question, since there are no plugins or ways to interact with the server, how does one integrate an online payments solution on a static platform? Thankfully, there's a new breed of integrated payment companies like [Snipcart](https://snipcart.com/) and [Stripe](https://stripe.com/) that provide all you'll need to make your own store.
-
-## Choosing the right platform
+## Stripe Checkout Vs Snipcart for your Jekyll 
 
 Although these platforms seemingly provide similar features and integration, they have key differences that will define which one is the right solution for you. Let's look at some of these differences, starting with how you can accept payments.
 
-#### Payment Gateways
+### Payment Gateways
 
 * Snipcart allows you to accept payments from all the major payment gateway providers (PayPal, Authorize.net, PaySafe, etc... And yes, even Stripe).
 
 * In contrast, Stripe allows you to accept payments through credit cards directly and acts as the gateway itself. If mobile payments are important to you, Stripe offers great integration with Apple Pay and Android Pay. They also offer a few other payment gateways like Bitcoin, Alipay and ACH.
 
-**Takeaway**<br>
-Snipcart allows for more flexibility in regards to the choice of payment gateways offered. They also support PayPal which can be very important to some businesses while Stripe does not.
+**Takeaway:** Snipcart allows for more flexibility in regards to the choice of payment gateways offered. They also support PayPal which can be very important to some businesses while Stripe does not.
 
-#### Front-end website integration
+### Front-end website integration
 
 * Snipcart's checkout window uses by default the ```snipcart.css``` theme which doesn't necessarily integrate well with all colour schemes/website designs. You can however roll out your own theme quite easily and customize the look to your heart's content. This means there is some additional configuration needed and will require some mild CSS chops.
+<img src="/blog/forestryio/images/snipcart.gif" class="large center">
+<div style="text-align: center; display: block; font-size: 14px; ">Example from <a href="https://cestbeau.co" target="_blank">cestbeau.co</a></div>
 
 * Stripe's embedded platform, Checkout, provides a neutral and easy to use payment form. It offers little in the way of customization besides adding your logo at the top of the dialog. It is also possible to create your own forms with Stripe.js but the process is a little more involved and aimed at experienced developers.
+<img src="/blog/forestryio/images/stripe.gif" class="large center">
+<div style="text-align: center; display: block; font-size: 14px; ">Example from <a href="https://www.masteringmodernpayments.com/" target="_blank">masteringmodernpayments.com</a></div>
 
-**Takeaway**<br>
-Both platforms offer great front-end solutions targeted at slightly different audiences. Stripe's Checkout is a no-nonsense, easy to use out-of-the-box experience aimed at everyone with no particular configuration required.
+**Takeaway:** Both platforms offer great front-end solutions targeted at slightly different audiences. Stripe's Checkout is a no-nonsense, easy to use out-of-the-box experience aimed at everyone with no particular configuration required.
 
 With Snipcart you have more flexibility by default which allows you to get hands-on with the styling easily however you will need some CSS knowledge and a bit more time to make everything look how you want it to.
 
-#### Admin Dashboard
+### Admin Dashboard
 
 ![Snipcart's Dashboard](/blog/forestryio/images/snipcart-3.png)
 
@@ -68,10 +66,9 @@ With Snipcart you have more flexibility by default which allows you to get hands
 
 * Stripe's on the other hand makes use of a simple and clean unified layout reminiscent of a macOS application. A notable feature I personally find very useful is the global search bar which makes it incredibly easy to sift through all your customers, orders, etc...
 
-**Takeaway**<br>
-Snipcart and Stripe have excellent administrator dashboards with quick and easy access to all the common features you'd expect. Choosing which one you like better is a matter of personal preference so I recommend taking a close look at the two solutions. Personally, I think Stripe's solution is slightly superior overall in terms of design and user experience.
+**Takeaway:** Snipcart and Stripe have excellent administrator dashboards with quick and easy access to all the common features you'd expect. Choosing which one you like better is a matter of personal preference so I recommend taking a close look at the two solutions. Personally, I think Stripe's solution is slightly superior overall in terms of design and user experience.
 
-#### Pricing
+### Pricing
 
 * Snipcart offers two different plans, Standard and "I am special". The standard plan charges a 2% fee per transaction **in addition** to any fees incurred by the choice of payment gateways. If your total sales for the month are under $500, the 2% is replaced by a $10 fee. The "I am special" plan offers fixed pricing for large businesses.
 
@@ -101,21 +98,19 @@ For easy visualization, we created a small table to illustrate each platform's p
 
 <br>
 
-**Takeaway**<br>
-Both platforms offer compelling pricing options however Stripe may be slightly cheaper in the long run depending on your choice of payment gateway.
+**Takeaway:** Both platforms offer compelling pricing options however Stripe may be slightly cheaper in the long run depending on your choice of payment gateway.
 
-#### Setup
+### Setup
 
 * Snipcart's installation is incredibly easy and straightforward. Simply link their `snipcart.min.js` script and optionally the default `snipcart.min.css` theme before the `<head>` closing tag of your website and you are ready to go! Don't forget to include your API key with the `snipcart.min.js` script. Note that Snipcart also makes use of jQuery, so make sure you have it included in your page.
 
 * In contrast, setting up Stripe is a bit more time consuming and requires the use of an actual back-end server to accept payments. If you do not already have a VPS, you can use a PaaS like Heroku to host your code for free, keeping setup time and costs down.
 
-**Takeaway**<br>
-All-in-all, Snipcart is most definitely the easiest to install out of the two products. The fact the is does not require any external server or backend gives it a clear advantage over Stripe.
+**Takeaway:** All-in-all, Snipcart is most definitely the easiest to install out of the two products. The fact the is does not require any external server or backend gives it a clear advantage over Stripe.
 
 Check out our example integration guides below for both [Snipcart](#!) and [Stripe](#!) to get a feel for which solution you might prefer.
 
-#### Support & Documentation
+### Support & Documentation
 
 Here, Snipcart and Stripe have comparable offerings. Both services offer live chat with fast response from the support staff. I've found the documentation easy to navigate through and well written with plenty of code examples.
 
@@ -133,7 +128,7 @@ In this section, we'll look at how we can integrate Snipcart and Stripe into you
 
 Once you have those installed, we can move on to the next step where we will install Jekyll and create a new project.
 
-#### Creating our project
+### Creating our project
 Let's start by making sure Jekyll is properly installed on your system. Open a command prompt and type this command.
 
 ```sh
@@ -151,7 +146,7 @@ Jekyll will automatically pull in all the required files and dependencies. Once 
 ```sh
 $ jekyll serve
 ```
-#### Storing our products data
+### Storing our products data
 
 Now we can start to build our shop! We'll use collections to store our products data. To do that, open up the `_config.yml` file and add the `collections` field with the name of your collection; here we'll use `products`. We'll also set the `output` key to `true` to allow us to create individual pages for each products later on.
 
@@ -189,7 +184,7 @@ Dolore fugiat qui ad cupidatat adipisicing nulla adipisicing est ut minim dolore
 
 That's it! We're now ready to display all of our products on our website. Feel free to create a few additional test products for better visualization of how the website will look.
 
-#### Displaying the products
+### Displaying the products
 
 In this section, we'll cover two different methods for displaying our products, namely listing them all on one page and displaying them one at a time inside their own individual pages. Let's start with the former.
 
@@ -303,7 +298,7 @@ Great, with our products now displayed on our store we can move on to the last s
 
 If you'd like to review your code, we've created a repository with everything covered in this tutorial thus far. You can check it out on [GitHub](https://github.com/aft3rlife/my-online-shop).
 
-#### Using Stripe
+### Using Stripe
 
 In this section, we'll see how we can integrate Stripe and process payments using all the things we've set up in the previous parts of this tutorial.
 
@@ -338,7 +333,7 @@ Sweet, we're now ready to use Stripe's Checkout platform. To do so, open up your
 
 And that's it! You should now be able to use Stripe's Checkout and process orders. You can try this out by clicking on the _Pay with Card_ button and making a sample order with any [test payment details](https://stripe.com/docs/testing#cards).
 
-#### Using Snipcart
+### Using Snipcart
 
 Here, we'll look at how we can integrate Snipcart much the same way as we did with Stripe however there are some differences. For instance, Snipcart includes a customizable shopping cart directly on your website so we'll look at how we can add our products to it, display it and finally process payments.
 
@@ -438,5 +433,5 @@ Snipcart offers great flexibility with a wide variety of payment gateways and le
 
 Stripe provides a clean and simple checkout flow however it offers little in the way of customization or payment gateways. If you plan on accepting credit cards or Bitcoins as your sole method of payment, then Stripe is a great option. Since Stripe requires a server to generate tokens, it's integration might be a little more time consuming and will require maintenance in the long term.
 
-#### Footnotes
+### Footnotes
 [^1]: [xkcd: Standards](https://xkcd.com/927/)
