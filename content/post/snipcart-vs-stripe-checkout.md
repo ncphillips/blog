@@ -44,6 +44,8 @@ Although these platforms seemingly provide similar features and integration, the
 
 ### Front-end website integration
 
+The largest difference betweent these two platforms is that Snipcart provides a full shopping cart, where as Stripe Checkout just provides a one-off payment overlay. 
+
 * Snipcart's checkout window uses by default the ```snipcart.css``` theme which doesn't necessarily integrate well with all colour schemes/website designs. You can however roll out your own theme quite easily and customize the look to your heart's content. This means there is some additional configuration needed and will require some mild CSS chops.
 <img src="/blog/forestryio/images/snipcart.gif" class="large center">
 <div style="text-align: center; display: block; font-size: 14px; ">Example from <a href="https://cestbeau.co" target="_blank">cestbeau.co</a></div>
