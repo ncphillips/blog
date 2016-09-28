@@ -9,10 +9,10 @@ tags = []
 title = "E-commerce with Jekyll and Snipcart"
 twitter_card = ""
 [[author]]
-bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
-img = "/images/Scott_Gallant.jpg"
-name = "Scott Gallant"
-twitter = "https://twitter.com/scottgallant"
+bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
+img = "/forestryio/images/marc-3-2.jpg"
+name = "Marc Boisvert-Dupras"
+twitter = "https://twitter.com/yokaicorp"
 [[suggested]]
 link = ""
 title = ""
