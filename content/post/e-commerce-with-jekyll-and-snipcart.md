@@ -2,9 +2,9 @@
 Categories = []
 banner = ""
 date = "2016-09-28T15:30:00+00:00"
-description = ""
+description = "Sell products simply with Snipcart"
 draft = true
-excerpt = ""
+excerpt = "Sell products simply with Snipcart"
 tags = []
 title = "E-commerce with Jekyll and Snipcart"
 twitter_card = ""
