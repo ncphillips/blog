@@ -89,7 +89,7 @@ For easy visualization, we created a small table to illustrate each platform's p
 
 <br>
 
-**Takeaway:** Both platforms offer compelling pricing options however Stripe may be slightly cheaper in the long run depending on your choice of payment gateway.
+**Takeaway:** Both platforms offer compelling pricing options however Stripe may be slightly cheaper in the long run depending on your choice of payment gateway and amount of sales.
 
 
 ### Admin Dashboard
