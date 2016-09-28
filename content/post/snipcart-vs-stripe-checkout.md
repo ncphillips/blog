@@ -56,18 +56,6 @@ Although these platforms seemingly provide similar features and integration, the
 
 With Snipcart you have more flexibility by default which allows you to get hands-on with the styling easily however you will need some CSS knowledge and a bit more time to make everything look how you want it to.
 
-### Admin Dashboard
-
-![Snipcart's Dashboard](/blog/forestryio/images/snipcart-3.png)
-
-* Snipcart's dashboard features a dual pane layout with all your store related operations on one side and all your account settings on the other. Small nitpicking here but I find that the dual pane system requires more clicking and feels a bit clunky.
-
-![Stripe's Dashboard](/blog/forestryio/images/stripecheckout-1.png)
-
-* Stripe's on the other hand makes use of a simple and clean unified layout reminiscent of a macOS application. A notable feature I personally find very useful is the global search bar which makes it incredibly easy to sift through all your customers, orders, etc...
-
-**Takeaway:** Snipcart and Stripe have excellent administrator dashboards with quick and easy access to all the common features you'd expect. Choosing which one you like better is a matter of personal preference so I recommend taking a close look at the two solutions. Personally, I think Stripe's solution is slightly superior overall in terms of design and user experience.
-
 ### Pricing
 
 * Snipcart offers two different plans, Standard and "I am special". The standard plan charges a 2% fee per transaction **in addition** to any fees incurred by the choice of payment gateways. If your total sales for the month are under $500, the 2% is replaced by a $10 fee. The "I am special" plan offers fixed pricing for large businesses.
@@ -100,11 +88,24 @@ For easy visualization, we created a small table to illustrate each platform's p
 
 **Takeaway:** Both platforms offer compelling pricing options however Stripe may be slightly cheaper in the long run depending on your choice of payment gateway.
 
+
+### Admin Dashboard
+
+![Snipcart's Dashboard](/blog/forestryio/images/snipcart-3.png)
+
+* Snipcart's dashboard features a dual pane layout with all your store related operations on one side and all your account settings on the other. Small nitpicking here but I find that the dual pane system requires more clicking and feels a bit clunky.
+
+![Stripe's Dashboard](/blog/forestryio/images/stripecheckout-1.png)
+
+* Stripe's on the other hand makes use of a simple and clean unified layout reminiscent of a macOS application. A notable feature I personally find very useful is the global search bar which makes it incredibly easy to sift through all your customers, orders, etc...
+
+**Takeaway:** Snipcart and Stripe have excellent administrator dashboards with quick and easy access to all the common features you'd expect. Choosing which one you like better is a matter of personal preference so I recommend taking a close look at the two solutions. Personally, I think Stripe's solution is slightly superior overall in terms of design and user experience.
+
 ### Setup
 
 * Snipcart's installation is incredibly easy and straightforward. Simply link their `snipcart.min.js` script and optionally the default `snipcart.min.css` theme before the `<head>` closing tag of your website and you are ready to go! Don't forget to include your API key with the `snipcart.min.js` script. Note that Snipcart also makes use of jQuery, so make sure you have it included in your page.
 
-* In contrast, setting up Stripe is a bit more time consuming and requires the use of an actual back-end server to accept payments. If you do not already have a VPS, you can use a PaaS like Heroku to host your code for free, keeping setup time and costs down.
+* In contrast, setting up Stripe is a bit more time consuming since it requires the use of a back-end server to accept payments. If you do not already have a VPS, you can use a PaaS like Heroku to host your code for free, keeping setup time and costs down.
 
 **Takeaway:** All-in-all, Snipcart is most definitely the easiest to install out of the two products. The fact the is does not require any external server or backend gives it a clear advantage over Stripe.
 
@@ -120,7 +121,7 @@ One thing I liked about Stripe is their searchable knowledge base. Snipcart only
 ## Conclusion
 ---
 
-Overall, I think you should make your decision based on how important each feature is to you.
+Overall, Stripe seems to be better if you're selling one-off products and you don't mind setting up a back-end server.  If you need a full shopping cart where you can add and remove products and you don't mind paying the additional fee Snipcart might be more for you.  Here's a quick summary of our comparison:
 
 <table class="pure-table">
 <thead>
@@ -145,15 +146,15 @@ Overall, I think you should make your decision based on how important each featu
 </tr>
 
 <tr>
-<td>Admin Dashboard</td>
-<td>Access to all the common features. A bit clunky to use.</td>
-<td>Clean, searchable interface with easy access to all the features.</td>
-</tr>
-
-<tr>
 <td>Pricing</td>
 <td>Standard fee of 2% on top of payment gateway fees.</td>
 <td>Standard 2.9% fee on transactions. No other fees associated.</td>
+</tr>
+
+<tr>
+<td>Admin Dashboard</td>
+<td>Access to all the common features. A bit clunky to use.</td>
+<td>Clean, searchable interface with easy access to all the features.</td>
 </tr>
 
 <tr>
