@@ -24,9 +24,9 @@ link = ""
 title = ""
 
 +++
-<img src="/blog/forestryio/images/stripe-checkout.png" class="medium right">
+<img src="/blog/forestryio/images/snipcart-1.gif" class="medium right">
 
-In this tutorial, we'll look at how we can integrate [Stripe Checkout](https://stripe.com/checkout) into your favorite static-site workflow. We'll use [Jekyll](#!) but you can also use other generators like [Hugo](https://gohugo.io).
+In this tutorial, we'll look at how we can integrate [Snipcart](https://snipcart.com/) into your favorite static-site workflow. We'll use [Jekyll](#!) but you can also use other generators like [Hugo](https://gohugo.io).
 
 **What you'll need:**<br>
 [Ruby](https://www.ruby-lang.org/en/downloads/) `v2.x or higher`  <br>
