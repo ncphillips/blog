@@ -56,7 +56,7 @@ Although these platforms seemingly provide similar features and integration, the
 
 With Snipcart you have more flexibility by default which allows you to get hands-on with the styling easily however you will need some CSS knowledge and a bit more time to make everything look how you want it to.
 
-### Pricing
+### Fees
 
 * Snipcart offers two different plans, Standard and "I am special". The standard plan charges a 2% fee per transaction **in addition** to any fees incurred by the choice of payment gateways. If your total sales for the month are under $500, the 2% is replaced by a $10 fee. The "I am special" plan offers fixed pricing for large businesses.
 
