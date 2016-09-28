@@ -24,11 +24,13 @@ link = ""
 title = ""
 
 +++
+<img src="/blog/forestryio/images/stripe-checkout.png" class="medium right">
+
 In this tutorial, we'll look at how we can integrate [Stripe Checkout](https://stripe.com/checkout) into your favorite static-site workflow. We'll use [Jekyll](#!) but you can also use other generators like [Hugo](https://gohugo.io).
 
-**What you'll need:**
-* [Ruby](https://www.ruby-lang.org/en/downloads/) `v2.x or higher`
-* [RubyGems](https://rubygems.org/pages/download) `latest`
+**What you'll need:**<br>
+[Ruby](https://www.ruby-lang.org/en/downloads/) `v2.x or higher`  <br>
+[RubyGems](https://rubygems.org/pages/download) `latest`
 
 Once you have those installed, we can move on to the next step where we will install Jekyll and create a new project.
 
@@ -88,7 +90,7 @@ Dolore fugiat qui ad cupidatat adipisicing nulla adipisicing est ut minim dolore
 
 That's it! We're now ready to display all of our products on our website. Feel free to create a few additional test products for better visualization of how the website will look.
 
-**Shameless plug:** If you want a great admin interface to manage your e-commerce site, [Forestry.io](https://forestry.io) will generate this CMS from the above example:
+**Shameless plug:** If you want a great admin interface to manage your Jekyll e-commerce site, [Forestry.io](https://forestry.io) will generate this CMS from the above example:
 
 <img src="/blog/forestryio/images/forestry-ecommerce-screenshot.png" class="large center">
 
