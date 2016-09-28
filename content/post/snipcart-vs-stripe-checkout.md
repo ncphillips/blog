@@ -6,7 +6,7 @@ description = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart"
 draft = true
 excerpt = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart"
 tags = []
-title = "Why Shopify is Overkill For Your Next Ecommerce Site "
+title = "Why Shopify is Overkill For Your Next E-commerce Site "
 twitter_card = "/forestryio/images/stripe-snipcart-1.png"
 [[author]]
 bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
