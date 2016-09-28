@@ -68,9 +68,9 @@ For easy visualization, we created a small table to illustrate each platform's p
 <thead>
 <tr>
 <th>Transaction Amount</th>
-<th>Snipcart</th>
-<th>Stripe</th>
-<th>Total</th>
+<th width="25%">Snipcart</th>
+<th width="25%">Stripe</th>
+<th>Fees</th>
 </tr>
 </thead>
 
@@ -79,7 +79,13 @@ For easy visualization, we created a small table to illustrate each platform's p
 <td>$10 (Credit Card)</td>
 <td>2% Snipcart fee + 2.9% + $0.30 per transaction (using PayPal)</td>
 <td>2.9% + $0.30 per transaction</td>
-<td>Snipcart: $10.35<hr>Stripe: $10.33</td>
+<td>Snipcart: $0.35<hr>Stripe: $.33</td>
+</tr>
+<tr>
+<td>$100 (Credit Card)</td>
+<td>2% Snipcart fee + 2.9% + $0.30 per transaction (using PayPal)</td>
+<td>2.9% + $0.30 per transaction</td>
+<td>Snipcart: $5.20<hr>Stripe: $3.40</td>
 </tr>
 </tbody>
 </table>
