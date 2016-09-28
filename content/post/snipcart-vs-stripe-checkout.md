@@ -77,12 +77,12 @@ For easy visualization, we created a small table to illustrate each platform's p
 <tr>
 <td>$10 <br><div style="font-size: 13px; color: #666;">(Credit Card)</div></td>
 <td><strong>$0.35 </strong><br><div style="font-size: 13px; color: #666;">2% Snipcart fee + 2.9% + $0.30 per transaction (using PayPal)</div></td>
-<td>**$0.33 **<br><div style="font-size: 13px; color: #666;">2.9% + $0.30 per transaction</div></td>
+<td><strong>$0.33</strong><br><div style="font-size: 13px; color: #666;">2.9% + $0.30 per transaction</div></td>
 </tr>
 <tr>
 <td>$100 <br><div style="font-size: 13px; color: #666;">(Credit Card)</div></td>
-<td><strong>$0.35 </strong><br><div style="font-size: 13px; color: #666;">2% Snipcart fee + 2.9% + $0.30 per transaction (using PayPal)</div></td>
-<td>**$0.33 **<br><div style="font-size: 13px; color: #666;">2.9% + $0.30 per transaction</div></td>
+<td><strong>$5.20 </strong><br><div style="font-size: 13px; color: #666;">2% Snipcart fee + 2.9% + $0.30 per transaction (using PayPal)</div></td>
+<td><strong>$3.20</strong><br><div style="font-size: 13px; color: #666;">2.9% + $0.30 per transaction</div></td>
 </tr>
 </tbody>
 </table>
