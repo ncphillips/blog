@@ -34,7 +34,7 @@ A popular solution for online stores is to bulid the front-end with a static sit
 
 Although these platforms seemingly provide similar features and integration, they have key differences that will define which one is the right solution for you. Let's look at some of these differences, starting with how you can accept payments.
 
-### Payment Gateways
+## Payment Gateways
 
 * Snipcart allows you to accept payments from all the major payment gateway providers (PayPal, Authorize.net, PaySafe, etc... And yes, even Stripe).
 
@@ -42,7 +42,7 @@ Although these platforms seemingly provide similar features and integration, the
 
 **Takeaway:** Snipcart allows for more flexibility in regards to the choice of payment gateways offered. They also support PayPal which can be very important to some businesses while Stripe does not.
 
-### Front-end website integration
+## Front-end website integration
 
 The largest difference betweent these two platforms is that Snipcart provides a full shopping cart, where as Stripe Checkout just provides a one-off payment overlay. 
 
@@ -58,7 +58,7 @@ The largest difference betweent these two platforms is that Snipcart provides a 
 
 With Snipcart you have more flexibility by default which allows you to get hands-on with the styling easily however you will need some CSS knowledge and a bit more time to make everything look how you want it to.
 
-### Fees
+## Fees
 
 * Snipcart offers two different plans, Standard and "I am special". The standard plan charges a 2% fee per transaction **in addition** to any fees incurred by the choice of payment gateways. If your total sales for the month are under $500, the 2% is replaced by a $10 fee. The "I am special" plan offers fixed pricing for large businesses.
 
@@ -94,7 +94,7 @@ For easy visualization, we created a small table to illustrate each platform's p
 **Takeaway:** Both platforms offer compelling pricing options however Stripe may be slightly cheaper in the long run depending on your choice of payment gateway and amount of sales.
 
 
-### Admin Dashboard
+## Admin Dashboard
 
 ![Snipcart's Dashboard](/blog/forestryio/images/snipcart-3.png)
 
@@ -106,7 +106,7 @@ For easy visualization, we created a small table to illustrate each platform's p
 
 **Takeaway:** Snipcart and Stripe have excellent administrator dashboards with quick and easy access to all the common features you'd expect. Choosing which one you like better is a matter of personal preference so I recommend taking a close look at the two solutions. Personally, I think Stripe's solution is slightly superior overall in terms of design and user experience.
 
-### Setup
+## Setup
 
 * Snipcart's installation is incredibly easy and straightforward. Simply link their `snipcart.min.js` script and optionally the default `snipcart.min.css` theme before the `<head>` closing tag of your website and you are ready to go! Don't forget to include your API key with the `snipcart.min.js` script. Note that Snipcart also makes use of jQuery, so make sure you have it included in your page.
 
@@ -116,7 +116,7 @@ For easy visualization, we created a small table to illustrate each platform's p
 
 Check out our example integration guides below for both [Snipcart](#!) and [Stripe](#!) to get a feel for which solution you might prefer.
 
-### Support & Documentation
+## Support & Documentation
 
 Here, Snipcart and Stripe have comparable offerings. Both services offer live chat with fast response from the support staff. I've found the documentation easy to navigate through and well written with plenty of code examples.
 
