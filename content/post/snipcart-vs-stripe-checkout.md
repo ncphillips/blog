@@ -181,4 +181,4 @@ Snipcart offers great flexibility with a wide variety of payment gateways and le
 Stripe provides a clean and simple checkout flow however it offers little in the way of customization or payment gateways. If you plan on accepting credit cards or Bitcoins as your sole method of payment, then Stripe is a great option. Since Stripe requires a server to generate tokens, it's integration might be a little more time consuming and will require maintenance in the long term.
 
 ### Footnotes
-[^1]: [xkcd: Standards](https://xkcd.com/927/)
+[^1]: [xkcd: Standards](https://xkcd.com/927/) 
