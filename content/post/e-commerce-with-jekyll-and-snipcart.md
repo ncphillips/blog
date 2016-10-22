@@ -5,12 +5,12 @@ date = "2016-09-28T15:30:00+00:00"
 description = "Sell products simply with Snipcart"
 draft = true
 excerpt = "Sell products simply with Snipcart"
+show_author = true
+show_comments = true
+show_signup = true
 tags = []
 title = "E-commerce with Jekyll and Snipcart"
 twitter_card = ""
-show_comments = true
-show_signup = true
-show_author = true
 [[author]]
 bio = "Marc Boisvert is a frontend web developer and UX architect at <a href=\"https://yokai.io/\">yokai</a>. When he's not brewing some delicious CSS goodness he likes to talk about cats, politics and tech. You can find him on Twitter at <a href=\"https://twitter.com/yokaicorp\">@yokaicorp</a> or on the web at yokai.io"
 img = "/forestryio/images/marc-3.jpg"
