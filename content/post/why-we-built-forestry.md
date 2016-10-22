@@ -5,11 +5,11 @@ date = "2016-06-27T11:49:00+00:00"
 description = ""
 draft = false
 excerpt = "The winding road that led us to building a decentralized UI for the web. "
-tags = []
-title = "Why we built Forestry"
+show_author = true
 show_comments = true
 show_signup = true
-show_author = true
+tags = []
+title = "Why we built Forestry"
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
 img = "/images/Scott_Gallant.jpg"
