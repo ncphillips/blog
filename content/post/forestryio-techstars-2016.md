@@ -8,6 +8,9 @@ excerpt = "We're super excited to take part in Techstars NYC summer 2016!"
 tags = []
 title = "Forestry.io + Techstars 2016"
 twitter_card = "/forestryio/images/techstars.jpg"
+show_comments = true
+show_signup = true
+show_author = true
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
 img = "/images/Scott_Gallant.jpg"

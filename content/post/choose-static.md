@@ -7,6 +7,7 @@ excerpt = "When it comes to the Internet, content is king. And it is king for a 
 tags = []
 title = "I can finally choose static"
 twitter_card = "/forestryio/images/code-bg-image.jpg"
+show_comments = true
 [[author]]
 bio = "Michael is the author of the upcoming book, <a href=\"https://michaelsoolee.com/jekyll-field-guide/\">Field Guide to Jekyll</a>, a step by step guide to building websites with Jekyll. You can find him on <a href=\"https://twitter.com/michaelsoolee\">Twitter as @michaelsoolee</a>."
 img = "/images/michaellee.jpg"

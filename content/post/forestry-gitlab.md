@@ -8,6 +8,9 @@ excerpt = "GitLab support is here! Fire up a CMS for your GitLab-hosted Jekyll a
 tags = []
 title = "Forestry + GitLab "
 twitter_card = "/forestryio/images/twitter-card-gitlab-forestry.png"
+show_comments = true
+show_signup = true
+show_author = true
 [[author]]
 bio = "CTO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Backend developer, systems guy, father, builder of houses. "
 img = "/forestryio/images/jordan-patterson-forestryio.png"
