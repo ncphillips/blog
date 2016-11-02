@@ -29,7 +29,7 @@ title = ""
 +++
 We've been working super hard on a rewrite of [Forestry.io](http://Forestry.io), our CMS for Jekyll and Hugo sites, and I'm happy to say that we're we just launched.
 
-**Before I talk about what's new, I want to thank everyone who has been testing this while it was in beta. You know who you are. Your help was crucial and we're going to continue to build an awesome CMS that you love.**
+Before I talk about what's new, I want to thank everyone who has been testing this while it was in beta. You know who you are. Your help was crucial and we're going to continue to build an awesome CMS that you love.
 
 ## What's new:
 
