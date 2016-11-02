@@ -39,4 +39,4 @@ Inspired by [Medium.com](http://Medium.com). Thanks to [@envygeeks](https://envy
 
 ### A complete reskin
 
-Our UI has been completely redesigned and is mobile friendly.  We're not going to stop until this is the most user-friendly UI on the planet. Thanks to Nichlas's amazing design chops here.
+Our UI has been completely redesigned and is mobile friendly.  We're not going to stop until this is the most user-friendly CMS on the planet. Thanks to [Nichlas's](https://twitter.com/nichlaswa) amazing design chops.
