@@ -33,4 +33,6 @@ We've been working super hard on a rewrite of [Forestry.io](http://Forestry.io),
 
 ## What's new:
 
-We built a new editor, inspired by [Medium.com](http://Medium.com). Thanks to [@envygeeks](https://envygeeks.io/) for this (a man who knows Jekyll well).
+### A new editor
+
+Inspired by [Medium.com](http://Medium.com). Thanks to [@envygeeks](https://envygeeks.io/) for this (a man who knows Jekyll well).  Flip between Markdown (or HTML) and WYSIWYG.
