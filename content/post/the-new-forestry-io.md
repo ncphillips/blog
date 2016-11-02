@@ -35,4 +35,8 @@ We've been working super hard on a rewrite of [Forestry.io](http://Forestry.io),
 
 ### A new editor
 
-Inspired by [Medium.com](http://Medium.com). Thanks to [@envygeeks](https://envygeeks.io/) for this (a man who knows Jekyll well).  Flip between Markdown (or HTML) and WYSIWYG.
+Inspired by [Medium.com](http://Medium.com). Thanks to [@envygeeks](https://envygeeks.io/) for this (a man who knows Jekyll well).  Flip between Markdown (or HTML) and WYSIWYG.  Here's a gif of me writing this post (how meta)
+
+### A complete reskin
+
+Our UI has been completely redesigned and is mobile friendly.  We're not going to stop until this is the most user-friendly UI on the planet. Thanks to Nichlas's amazing design chops here.
