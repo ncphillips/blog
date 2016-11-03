@@ -27,18 +27,18 @@ link = ""
 title = ""
 
 +++
-We've been working super hard on a rewrite of [Forestry.io](http://Forestry.io), our CMS for Jekyll and Hugo sites, and I'm happy to say that we're we just launched.
+We're happy to announce some huge improvements to [Forestry.io](http://Forestry.io), our CMS for Jekyll and Hugo sites.
 
-Before I talk about what's new, I want to thank everyone who has been testing this while it was in beta. You know who you are. Your help was crucial and we're going to continue to build an awesome CMS that you love.
+<span style="letter-spacing: 0.01em;">Before I talk about what's new, I want to thank everyone who has been testing this while it was in beta (you know who you are). Your help was crucial and we're going to continue to build an awesome CMS that you love.</span>
 
 ## What's new:
 
 ### A new editor
 
-Inspired by [Medium.com](http://Medium.com). Thanks to [@envygeeks](https://envygeeks.io/) for this (a man who knows Jekyll well).  Flip between Markdown (or HTML) and WYSIWYG.  Here's a gif of me writing this post (how meta)
-
-### A complete reskin
-
-Our UI has been completely redesigned and is mobile friendly.  We're not going to stop until this is the most user-friendly CMS on the planet. Thanks to [Nichlas's](https://twitter.com/nichlaswa) amazing design chops.
+Inspired by [Medium.com](http://Medium.com). Thanks to [@envygeeks](https://envygeeks.io/) for this (a man who knows Jekyll well).  Flip between Markdown (or HTML) and WYSIWYG.  Here's a screenshot of the post I'm writing (how meta).
 
 ![](/blog/forestryio/images/forestry-io-editor.png)
+
+### A RE-Designed UI
+
+Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas's](https://twitter.com/nichlaswa) amazing design chops and hard work
