@@ -55,4 +55,6 @@ Our UI has been completely redesigned and is now mobile friendly.  We're not go
 
 ### Forestry Remote
 
-Now you can install Forestry on your site like: [my-site.com/admin/](http://my-site.com/admin/). We think this is pretty cool. It's like WordPress, but in a single HTML file that you deploy to your static site. Note: this is a paid feature, but comes with a trial if you want to kick the tires.
+Forestry Remote is the exact same interface you would see when you log into your site at [forestry.io](http://forestry.io), but the difference is, you can access it from [mysite.com/admin/](http://mysite.com/admin/). It's a single html file that you drop into your static site. It communicates with our API and gives you a powerful CMS. We think this is pretty cool. It's like WordPress, but in a single HTML file that you deploy to your static site.
+
+Note: this is a [paid feature](https://forestry.io/plans) but there's a free trial if you want to kick the tires.
