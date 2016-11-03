@@ -29,16 +29,30 @@ title = ""
 +++
 We're happy to announce some huge improvements to [Forestry.io](http://Forestry.io), our CMS for Jekyll and Hugo sites.
 
-<span style="letter-spacing: 0.01em;">Before I talk about what's new, I want to thank everyone who has been testing this while it was in beta (you know who you are). Your help was crucial and we're going to continue to build an awesome CMS that you love.</span>
+Before I outline what's new, I want to thank everyone who has been testing this while it was in beta (you know who you are). Your help was crucial and we're going to continue to build an awesome CMS that you love. 👊
 
 ## What's new:
 
-### A new editor
+### New Editor
 
-Inspired by [Medium.com](http://Medium.com). Thanks to [@envygeeks](https://envygeeks.io/) for this (a man who knows Jekyll well).  Flip between Markdown (or HTML) and WYSIWYG.  Here's a screenshot of the post I'm writing (how meta).
+Inspired by [Medium.com](http://Medium.com), we rebuilt the editor.
+
+*   Flip between Markdown (or HTML) and WYSIWYG.
+*   Drag images right into the editor
+*   Clean design
+
+Here's a screenshot of the post I'm writing (how meta).
 
 ![](/blog/forestryio/images/forestry-io-editor.png)
 
-### A RE-Designed UI
+Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
-Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas's](https://twitter.com/nichlaswa) amazing design chops and hard work
+### Re-Designed UI
+
+Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas's](https://twitter.com/nichlaswa) amazing design chops here:
+
+![](/blog/forestryio/images/new-forestry-io-cms-3.png)
+
+### Forestry Remote
+
+Now you can install Forestry on your site like: [my-site.com/admin/](http://my-site.com/admin/). We think this is pretty cool. It's like WordPress, but in a single HTML file that you deploy to your static site. Note: this is a paid feature, but comes with a trial if you want to kick the tires.
