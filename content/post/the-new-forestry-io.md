@@ -38,7 +38,7 @@ Before I outline what's new, I want to thank everyone who has been testing this 
 Inspired by [Medium.com](http://Medium.com), we rebuilt the editor.
 
 *   Flip between Markdown (or HTML) and WYSIWYG.
-*   Drag images right into the editor
+*   Drag and drop images
 *   Clean design
 
 Here's a screenshot of the post I'm writing (how meta).
@@ -49,12 +49,30 @@ Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
 ### Re-Designed UI
 
-Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas's](https://twitter.com/nichlaswa) amazing design chops here:
+Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas](https://twitter.com/nichlaswa) for his amazing design chops here:
 
 ![](/blog/forestryio/images/new-forestry-io-cms-3.png)
 
 ### Forestry Remote
 
-Forestry Remote is the exact same interface you would see when you log into your site at [forestry.io](http://forestry.io), but the difference is, you can access it from [mysite.com/admin/](http://mysite.com/admin/). It's a single html file that you drop into your static site. It communicates with our API and gives you a powerful CMS. We think this is pretty cool. It's like WordPress, but in a single HTML file that you deploy to your static site.
+Forestry Remote is the exact same interface you would see when you log into your site at forestry.io, but the difference is, you can access it from mysite.com/admin/. It's a single html file that you drop into your static site. It communicates with our API and gives you a powerful CMS. We think this is pretty cool. It's like WordPress, but in a single HTML file that requires any updates. With Remote comes the ability to customize the branding if you're setting this up for a client (replace the Forestry logo with your own). [Nolan](https://twitter.com/ncphi) built this from the ground up with React.js.
 
-Note: this is a [paid feature](https://forestry.io/plans) but there's a free trial if you want to kick the tires.
+### Automatic Building and Deploying
+
+You can tell Forestry to watch Jekyll or Hugo repo and build your site every time you commit to that repo. Forestry can also deploy your built site to your host (S3, FTP, Git branch, etc). Like continuous integration for static sites.
+
+### Billing Updates
+
+We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. Peter, has been crushing this with his coding skills.
+
+### What's next?
+
+*   Hosting - we're building a hosting platform on top of a blazing-fast, global CDN. If you're a paying Forestry customer, you can host with us for no additional cost.
+*   Better control over the UI
+    *   Support for new front matter fields like photo galleries
+    *   Customize the CMS interface
+    *   Support for Jekyll nav menus (Hugo already supports this)
+*   Media gallery and image editing
+*   Support for more static site generators
+
+We're super excited to get this into your hands. We're absolutely convinced this is the future of the web and we're dead-set on making the best tools for it. As always, let us know what you'd like to see improved.
