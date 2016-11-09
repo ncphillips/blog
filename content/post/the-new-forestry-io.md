@@ -64,7 +64,7 @@ You can tell Forestry to watch Jekyll or Hugo repo and build your site when you 
 
 ### Billing Updates
 
-We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. Peter, has been crushing this with his coding skills.
+We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. [Peter](https://github.com/volgorean), has been crushing this with his coding skills.
 
 ### What's Next?
 
