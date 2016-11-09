@@ -1,9 +1,9 @@
 +++
 Categories = []
-banner = "/forestryio/images/new-forestry-io-cms.png"
+banner = "forestryio/images/new-forestry-io-cms.png"
 date = "2016-11-01T19:36:26-04:00"
-description = "V2 of Forestry.io is live. We redesigned the UI, built a new editor and now you can deploy Forestry to your domain with your custom branding."
-draft = true
+description = "V2 of Forestry.io is live! We redesigned the UI, built a new editor and now you can deploy Forestry to your domain with your own branding."
+draft = false
 excerpt = ""
 show_author = true
 show_comments = true
