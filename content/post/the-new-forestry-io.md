@@ -44,7 +44,7 @@ We totally rebuilt our WYSIWYG editor (inspired by Medium.com).
 
 Here's a screenshot of the post I'm writing (how meta).
 
-![](/blog/forestryio/images/forestry-io-editor.png)
+<img src="/blog/forestryio/images/forestry-io-editor.png" style="width: 90%; margin: auto; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); margin: 2.5em auto;">
 
 Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
