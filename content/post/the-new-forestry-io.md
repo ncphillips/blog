@@ -4,7 +4,7 @@ banner = "forestryio/images/new-forestry-io-cms.png"
 date = "2016-11-01T19:36:26-04:00"
 description = "V2 of Forestry.io is live! We redesigned the UI, built a new editor and now you can deploy Forestry to your domain with your own branding."
 draft = false
-excerpt = "V2 of Forestry.io is live! We redesigned the UI, built a new editor and now you can deploy
+excerpt = "V2 of Forestry.io is live! We redesigned the UI, built a new editor and now you can deploy"
 show_author = true
 show_comments = true
 show_signup = true
@@ -64,7 +64,7 @@ You can tell Forestry to watch Jekyll or Hugo repo and build your site when you 
 
 ### Billing Updates
 
-We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. Peter, has been crushing this with his coding skills.
+We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. [Peter](https://github.com/volgorean), has been crushing this with his coding skills.
 
 ### What's next?
 
