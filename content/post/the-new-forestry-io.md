@@ -46,7 +46,7 @@ We totally rebuilt our WYSIWYG editor (inspired by Medium.com).
 
 Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
-### ReDesigned UI
+### Redesigned UI
 
 Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas](https://twitter.com/nichlaswa) for his amazing design chops here. I designed V1 of Forestry and I'm happy to say that Nichlas has warped us to level 3.
 
