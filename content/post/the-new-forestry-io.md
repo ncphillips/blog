@@ -1,10 +1,10 @@
 +++
 Categories = []
-banner = "forestryio/images/new-forestry-io-cms.png"
+banner = "/forestryio/images/new-forestry-io-cms.png"
 date = "2016-11-01T19:36:26-04:00"
-description = "V2 of Forestry.io is live! We redesigned the UI, built a new editor and now you can deploy Forestry to your domain with your own branding."
-draft = false
-excerpt = "V2 of Forestry.io is live! We redesigned the UI, built a new editor and now you can deploy"
+description = "V2 of Forestry.io is live. We redesigned the UI, built a new editor and now you can deploy Forestry to your domain with your custom branding."
+draft = true
+excerpt = ""
 show_author = true
 show_comments = true
 show_signup = true
@@ -42,13 +42,11 @@ We totally rebuilt our WYSIWYG editor (inspired by Medium.com).
 *   Highlight text to change formatting
 *   Clean and simple interface
 
-Here's a screenshot of the post I'm writing (how meta).
-
-![](/blog/forestryio/images/forestry-io-editor.png)
+![](/blog/forestryio/images/Forestry-io-editor.png)
 
 Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
-### Redesigned UI
+### ReDesigned UI
 
 Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas](https://twitter.com/nichlaswa) for his amazing design chops here. I designed V1 of Forestry and I'm happy to say that Nichlas has warped us to level 3.
 
@@ -64,7 +62,7 @@ You can tell Forestry to watch Jekyll or Hugo repo and build your site when you 
 
 ### Billing Updates
 
-We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. [Peter](https://github.com/volgorean), has been crushing this with his coding skills.
+We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. Peter, has been crushing this with his coding skills.
 
 ### What's next?
 
