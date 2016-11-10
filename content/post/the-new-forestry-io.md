@@ -42,7 +42,7 @@ We totally rebuilt our WYSIWYG editor (inspired by Medium.com).
 *   Highlight text to change formatting
 *   Clean and simple interface
 
-![](/blog/forestryio/images/Forestry-io-editor.png)
+<img src="/blog/forestryio/images/Forestry-io-editor.png" style="width: 95%; margin: 2em auto; border: 1px solid rgba(0, 0, 0, 0.12); box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);">
 
 Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
