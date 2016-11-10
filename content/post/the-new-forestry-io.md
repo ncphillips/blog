@@ -77,9 +77,10 @@ We changed our pricing to build a better, more sustainable service. Forestry wil
 *   Hosting - we're building a hosting platform on top of a blazing-fast, global CDN. If you're a paying Forestry customer, you can host with us for no additional cost.
 *   Better control over the UI
     *   Support for new front matter fields like photo galleries
-    *   Customize the CMS interface 
-    *   Support for Jekyll nav menus (Hugo already supports this)
-*   Media gallery and image editing
+    *   Customize the CMS interface (hide stuff, move stuff, etc)
+    *   Jekyll nav menus (Hugo already supports this)
+*   Media manager
+*   Image editing (cropping, resizing, etc)
 *   Support for more static site generators
 
 We're super excited to get this into your hands. We're absolutely convinced this is the future of the web and we're dead-set on making the best tools for it. As always, let us know what you'd like to see improved.
