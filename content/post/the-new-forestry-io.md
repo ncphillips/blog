@@ -46,28 +46,32 @@ We totally rebuilt our WYSIWYG editor (inspired by Medium.com).
 
 Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
+***
 ### Redesigned UI
 
 Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas](https://twitter.com/nichlaswa) for his amazing design chops here. I designed V1 of Forestry and I'm happy to say that Nichlas has warped us to level 3.
 
 ![](/blog/forestryio/images/new-forestry-io-cms-3.png)
 
+***
 ### Forestry Remote
 
 Forestry Remote is a single html file that you drop into your static site and it allows you to access your CMS from mysite.com/admin/. We think this is pretty cool. It's like WordPress, but instead of 100's of PHP files, it's just a single HTML file that doesn't require any updates. With Remote, you can also customize the branding and replace the Forestry logo with your own. Thanks to [Nolan](https://twitter.com/ncphi) who flawlessly guided this project.
 
 ![](/blog/forestryio/images/forestry-remote.gif)
 
+***
 ### Automic Building and Deploying
 
 You can tell Forestry to watch Jekyll or Hugo repo and build your site when you commit to that repo. Forestry can also deploy your built site to your host (S3, FTP, Git branch, etc). Like continuous integration for static sites.
 
 ![](/blog/forestryio/images/xQ36lylOK6.gif)
 
+***
 ### Pricing and Billing
 
 We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. [Peter](https://github.com/volgorean) has been heading this up while juggling countless support requests.
-
+***
 ### What's next?
 
 *   Hosting - we're building a hosting platform on top of a blazing-fast, global CDN. If you're a paying Forestry customer, you can host with us for no additional cost.
