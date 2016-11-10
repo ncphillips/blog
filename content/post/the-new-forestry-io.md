@@ -56,11 +56,15 @@ Our UI has been completely redesigned and is now mobile friendly.  We're not go
 
 Forestry Remote is a single html file that you drop into your static site and it allows you to access your CMS from mysite.com/admin/. We think this is pretty cool. It's like WordPress, but instead of 100's of PHP files, it's just a single HTML file that doesn't require any updates. With Remote, you can also customize the branding and replace the Forestry logo with your own. Thanks to Nolan who flawlessly guided this project.
 
+![](/blog/forestryio/images/forestry-remote.gif)
+
 ### Automic Building and Deploying
 
 You can tell Forestry to watch Jekyll or Hugo repo and build your site when you commit to that repo. Forestry can also deploy your built site to your host (S3, FTP, Git branch, etc). Like continuous integration for static sites.
 
-### Billing Updates
+![](/blog/forestryio/images/xQ36lylOK6.gif)
+
+### Pricing and Billing
 
 We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we'll be charging medium and larger teams. Also, soon you'll be able to set up client billing if you want your client to handle the payment. Peter, has been crushing this with his coding skills.
 
@@ -68,8 +72,8 @@ We changed our pricing to build a better, more sustainable service. Forestry wil
 
 *   Hosting - we're building a hosting platform on top of a blazing-fast, global CDN. If you're a paying Forestry customer, you can host with us for no additional cost.
 *   Better control over the UI
-    *   Support for new front matter fields like photo galleries
-    *   Customize the CMS interface
+    *   We will support new front matter fields like photo galleries
+    *   Customize the CMS interface 
     *   Support for Jekyll nav menus (Hugo already supports this)
 *   Media gallery and image editing
 *   Support for more static site generators
