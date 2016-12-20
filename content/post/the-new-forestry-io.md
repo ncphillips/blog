@@ -42,7 +42,7 @@ We totally rebuilt our WYSIWYG editor (inspired by Medium.com).
 *   Highlight text to change formatting
 *   Clean and simple interface
 
-<img src="/blog/forestryio/images/Forestry-io-editor.png" style="width: 95%; margin: 2em auto; border: 1px solid rgba(0, 0, 0, 0.12); box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);">
+![](/blog/forestryio/images/Forestry-io-editor.png){:style="width: 95%; margin: 2em auto; border: 1px solid rgba(0, 0, 0, 0.12); box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);"}
 
 Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
@@ -56,9 +56,9 @@ Our UI has been completely redesigned and is now mobile friendly.  We're not go
 
 * * *
 
-### Forestry Remote
+### Remote Admin
 
-Forestry Remote is a single html file that you drop into your static site and it allows you to access your CMS from mysite.com/admin/. We think this is pretty cool. It's like WordPress, but instead of 100's of PHP files, it's just a single HTML file that doesn't require any updates.  Thanks to [Nolan](https://twitter.com/ncphi) who flawlessly guided this project.
+Remote Admin is a single html file that you drop into your static site and it allows you to access your CMS from mysite.com/admin/. We think this is pretty cool. It's like WordPress, but instead of 100's of PHP files, it's just a single HTML file that doesn't require any updates.  Thanks to [Nolan](https://twitter.com/ncphi) who flawlessly guided this project.
 
 ![](/blog/forestryio/images/forestry-remote.gif)
 
