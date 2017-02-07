@@ -3,7 +3,6 @@ Categories = []
 banner = "/forestryio/images/techstars.jpg"
 date = "2016-07-06T19:03:00+00:00"
 description = "We're super excited to take part in Techstars NYC summer 2016!"
-draft = false
 excerpt = "We're super excited to take part in Techstars NYC summer 2016!"
 show_author = true
 show_comments = true

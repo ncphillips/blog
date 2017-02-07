@@ -1,7 +1,7 @@
 +++
 Categories = []
 banner = ""
-date = "2017-01-13T15:23:44.241-05:00"
+date = "2017-01-13T15:23:44-05:00"
 description = ""
 draft = true
 excerpt = ""
