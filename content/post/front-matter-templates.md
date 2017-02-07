@@ -1,7 +1,6 @@
 +++
 Categories = []
 banner = "/blog/forestryio/images/code-bg-image-1-5.jpg"
-date = ""
 description = "A first step towards a hackable CMS"
 draft = true
 excerpt = ""
