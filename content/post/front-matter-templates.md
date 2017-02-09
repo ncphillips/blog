@@ -48,8 +48,7 @@ That has all sorts of front matter like so:
 
 ![/blog/images/front matter-1.png](/blog/images/front%20matter-1.png)
 
-<pre class="hljs">
----
+<pre><code class="hljs less">---
 title: Astronomy
 layout: astronomy
 order: 5
@@ -73,4 +72,4 @@ permalink: /astronomy/
 Astronomy compels the soul to look upward, and leads us from this world to another.
 
 Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
-</pre>
+</code></pre>
