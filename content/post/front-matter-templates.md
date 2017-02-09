@@ -46,8 +46,6 @@ If you have a page with a complex layout.
 
 That has all sorts of front matter like so:
 
-![/blog/images/front matter-1.png](/blog/images/front%20matter-1.png)
-
     ---
     title: Astronomy
     layout: astronomy
@@ -73,7 +71,7 @@ That has all sorts of front matter like so:
 
     Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
 
-Well now you can customize the layout by going to 
+Well now you can customize the layout by going to
 
 ![/blog/images/front-matter-template.png](/blog/images/front-matter-template.png){:style="float: none;"}![/blog/images/gallery upload .png](/blog/images/gallery%20upload%20.png)![/blog/images/add help text.png](/blog/images/add%20help%20text.png)
 
