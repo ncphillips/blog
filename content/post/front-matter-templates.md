@@ -40,11 +40,11 @@ To which you reply:
 
 Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out non-essential clutter from your UI.  <span style="letter-spacing: 0.01em;">Today we're announcing the foundation for this: </span>[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) <span style="letter-spacing: 0.01em;">(FMTs).</span>
 
-If you have a page with a complex layout.
+If you have a page with  a complex layout.
 
 ![/blog/images/front-matter-templates-1.jpg](/blog/images/front-matter-templates-1.jpg)
 
-That has all sorts of front matter like so:
+That has a variety of front matter, like so:
 
     ---
     title: Astronomy
