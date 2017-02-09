@@ -40,12 +40,37 @@ To which you reply:
 
 Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out non-essential clutter from your UI.  <span style="letter-spacing: 0.01em;">Today we're announcing the foundation for this: </span>[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) <span style="letter-spacing: 0.01em;">(FMTs).</span>
 
-If you have a page with a complex layout. 
+If you have a page with a complex layout.
 
-![/images/front-matter-templates.jpg](/images/front-matter-templates.jpg)
+![/blog/images/front-matter-templates-1.jpg](/blog/images/front-matter-templates-1.jpg)
 
 That has all sorts of front matter like so:
 
-![/images/front matter.png](/images/front%20matter.png)
+![/blog/images/front matter-1.png](/blog/images/front%20matter-1.png)
 
-<span style="letter-spacing: 0.01em;"></span>
+<pre class="hljs">
+---
+title: Astronomy
+layout: astronomy
+order: 5
+bio: Astronomy compels the soul to look upward...
+banner: /images/mars.jpg
+images:
+- "/images/rover2.png"
+- "/images/earth.jpg"
+- "/images/rocket.jpg"
+- "/images/aurora.jpg"
+- "/images/nebula.jpg"
+- "/images/rover.jpg"
+- "/images/galaxy.jpg"
+- "/images/rover3.png"
+email: astronomy@gmail.com
+phone: (555) 555-5555
+permalink: /astronomy/
+
+---
+
+Astronomy compels the soul to look upward, and leads us from this world to another.
+
+Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
+</pre>
