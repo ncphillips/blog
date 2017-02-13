@@ -36,11 +36,9 @@ To which you sheepishly reply:
 
 A CMS often feels like a work-around. Like it's designed for some other purpose.  The UI has a bunch of extra features that we don't need and the features that we use are often not in the right place or don't look quite right. Devs can deal with this, but non-technical folks find it confusing.
 
-Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out non-essential clutter from your UI.   Today we're happy to announce the first step in this direction:
+Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out non-essential clutter from your UI.   Today we're happy to announce the first step in this direction: [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) (FMTs).
 
-[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) (FMTs).
-
-If you have a page that makes use of a bunch of different fields (say a banner image, a gallery, etc.
+FMTs allow us to customize the layout of our CMS UI. This is useful if your pages have different content on them. Like a big banner image, some different text fields, an image gallery, etc.
 
 ![/blog/images/front-matter-templates-1.jpg](/blog/images/front-matter-templates-1.jpg)
 
