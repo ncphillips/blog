@@ -38,9 +38,9 @@ A CMS often feels like a work-around. Like it's designed for some other purpose.
 
 Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out non-essential clutter from your UI.   Today we're happy to announce the first step in this direction:
 
-[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/){:style="background-color: white; letter-spacing: 0.01em;"} (FMTs).
+[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) (FMTs).
 
-If you have a page that makes use of a bunch of different fields (say a banner image, a gallery, etc.<span class="image-wrapper media-wrapper" contenteditable="false"></span>
+If you have a page that makes use of a bunch of different fields (say a banner image, a gallery, etc.
 
 ![/blog/images/front-matter-templates-1.jpg](/blog/images/front-matter-templates-1.jpg)
 
