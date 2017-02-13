@@ -42,11 +42,14 @@ A CMS often feels like a work-around. Like it's designed for some other purpose 
 
 Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out the non-essential clutter from your UI so you don't confuse your client or your teammates.
 
-That's why we're happy to announce the first step in this direction: 
+That's why we're happy to announce the first step in this direction:
+
 <a href="https://forestry.io/docs/setting-up-a-site/front-matter-templates/">Front Matter Templates</a> (FMTs).
 
-FMTs allow you to define and customize the presentation for your UI fields in 
+FMTs allow you to define and customize the presentation for your UI fields in
+
 <a href="https://forestry.io">Forestry.io</a>.  This is useful if your pages have a variety of content and you want to customize the editing interface.
+
 <img src="/blog/images/front-matter-templates-1.jpg" class="wider-than-text">
 
 The above page makes use of all sorts of front matter, like so:
@@ -70,44 +73,37 @@ phone: (555) 555-5555
 permalink: /astronomy/
 
 ---
-
 Astronomy compels the soul to look upward, and leads us from this world to another.
-
 Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
 </code></pre>
 
-Now you can do things like:## Hide some fields from your editors
+Now you can do things like:## Hide fields from your editors
 
 
-<img src="/uploads/2017/02/13/hidden-field.gif" alt="/uploads/2017/02/13/hidden-field.gif">
-<p class=""><br></p>## Mark some fields as required
+<img src="/uploads/2017/02/13/hidden-field.gif" alt="/uploads/2017/02/13/hidden-field.gif" class="">
+<p class=""><br></p>## Change the field type in the UI
 
 
-<img src="/uploads/2017/02/13/required.gif" alt="/uploads/2017/02/13/required.gif">
+<img src="/uploads/2017/02/13/field-type-1.gif" alt="/uploads/2017/02/13/field-type-1.gif">
+<p class=""><br></p>
+<h2 class="">Mark some fields as required
+</h2>
+<img src="/uploads/2017/02/13/required.gif" alt="/uploads/2017/02/13/required.gif" class="">
 <p class=""><br></p>
 <h2 class="">Reorder the fields in the UI</h2>
 <img src="/uploads/2017/02/13/reorder-fields-1.gif" alt="/uploads/2017/02/13/reorder-fields-1.gif">
+<p class=""><br></p>## Add help text
+
+
+<img src="/uploads/2017/02/13/help-text.png" alt="/uploads/2017/02/13/help-text.png">
 <p class=""><br></p>
-
-Well now you can customize the layout by going to
+<p class=""><br></p>
+<p class="">Well now you can customize the layout by going to</p>
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-<img src="/blog/images/front-matter-template.png" alt="/blog/images/front-matter-template.png">{:style="float: none;"}
-<img src="/blog/images/gallery%20upload%20.png" alt="/blog/images/gallery upload .png"> 
-<img src="/blog/images/add%20help%20text.png" alt="/blog/images/add help text.png">
+<img src="/blog/images/add%20help%20text.png" alt="/blog/images/add help text.png" class="">
 
-Set fields to hidden:
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-
-<img src="/blog/images/hidden-field.gif" alt="/blog/images/hidden-field.gif">
-
-
-
-Change the order of the fields on your page:
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
-
-
-<img src="/blog/images/reorder-fields.gif" alt="/blog/images/reorder-fields.gif">
-
