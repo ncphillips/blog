@@ -26,59 +26,88 @@ link = ""
 title = ""
 
 +++
-Does the following sound familiar?  You set up a WP site, hand it off to a non-dev, show them how to edit stuff and then they point to some unused part of the UI and say:
 
-> "What does this do?"
+
+Does the following sound familiar?  You set up a WP site, hand it off to a non-dev, show them how to edit stuff and then they point to some unused part of the UI and say:
+<blockquote>
+<p>"What does this do?"</p>
+</blockquote>
 
 To which you sheepishly reply:
+<blockquote>
+<p>"Oh, that doesn't do anything...just ignore it."</p>
+</blockquote>
 
-> "Oh, that doesn't do anything...just ignore it."
+A CMS often feels like a work-around. Like it's designed for some other purpose and isn't tailored to your site.  For example, some pages don't have a *body* section (like a blog post would have).  And when a non-technical person tries to edit that page, they find it confusing to see a giant WYSIWYG editor taking up 90% of the interface.
 
-A CMS often feels like a work-around. Like it's designed for some other purpose.  The UI has a bunch of extra features that we don't need and the features that we use are often not in the right place or don't look quite right. Devs can deal with this, but non-technical folks find it confusing.
+Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out the non-essential clutter from your UI so you don't confuse your client or your teammates.
 
-Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out non-essential clutter from your UI.   Today we're happy to announce the first step in this direction: [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) (FMTs).
+That's why we're happy to announce the first step in this direction: 
+<a href="https://forestry.io/docs/setting-up-a-site/front-matter-templates/">Front Matter Templates</a> (FMTs).
 
-FMTs allow us to customize the layout of our CMS UI. This is useful if your pages have different content on them. Like a big banner image, some different text fields, an image gallery, etc.
-
+FMTs allow you to define and customize the presentation for your UI fields in 
+<a href="https://forestry.io">Forestry.io</a>.  This is useful if your pages have a variety of content and you want to customize the editing interface.
 <img src="/blog/images/front-matter-templates-1.jpg" class="wider-than-text">
 
-That has all sorts of front matter like so:
+The above page makes use of all sorts of front matter, like so:
+<pre data-md-type="spec"><code>---
+title: Astronomy
+layout: astronomy
+order: 5
+bio: Astronomy compels the soul to look upward...
+banner: /images/mars.jpg
+images:
+- "/images/rover2.png"
+- "/images/earth.jpg"
+- "/images/rocket.jpg"
+- "/images/aurora.jpg"
+- "/images/nebula.jpg"
+- "/images/rover.jpg"
+- "/images/galaxy.jpg"
+- "/images/rover3.png"
+email: astronomy@gmail.com
+phone: (555) 555-5555
+permalink: /astronomy/
 
-    ---
-    title: Astronomy
-    layout: astronomy
-    order: 5
-    bio: Astronomy compels the soul to look upward...
-    banner: /images/mars.jpg
-    images:
-    - "/images/rover2.png"
-    - "/images/earth.jpg"
-    - "/images/rocket.jpg"
-    - "/images/aurora.jpg"
-    - "/images/nebula.jpg"
-    - "/images/rover.jpg"
-    - "/images/galaxy.jpg"
-    - "/images/rover3.png"
-    email: astronomy@gmail.com
-    phone: (555) 555-5555
-    permalink: /astronomy/
+---
 
-    ---
+Astronomy compels the soul to look upward, and leads us from this world to another.
 
-    Astronomy compels the soul to look upward, and leads us from this world to another.
+Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
+</code></pre>
 
-    Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
+Now you can do things like:## Hide some fields from your editors
+
+
+<img src="/uploads/2017/02/13/hidden-field.gif" alt="/uploads/2017/02/13/hidden-field.gif">
+<p class=""><br></p>## Mark some fields as required
+
+
+<img src="/uploads/2017/02/13/required.gif" alt="/uploads/2017/02/13/required.gif">
+<p class=""><br></p>
+<h2 class="">Reorder the fields in the UI</h2>
+<img src="/uploads/2017/02/13/reorder-fields-1.gif" alt="/uploads/2017/02/13/reorder-fields-1.gif">
+<p class=""><br></p>
 
 Well now you can customize the layout by going to
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-![/blog/images/front-matter-template.png](/blog/images/front-matter-template.png){:style="float: none;"}![/blog/images/gallery upload .png](/blog/images/gallery%20upload%20.png) ![/blog/images/add help text.png](/blog/images/add%20help%20text.png)
+<img src="/blog/images/front-matter-template.png" alt="/blog/images/front-matter-template.png">{:style="float: none;"}
+<img src="/blog/images/gallery%20upload%20.png" alt="/blog/images/gallery upload .png"> 
+<img src="/blog/images/add%20help%20text.png" alt="/blog/images/add help text.png">
 
-Set fields to hidden:<span class="image-wrapper media-wrapper" contenteditable="false"></span>
+Set fields to hidden:
+<span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-![/blog/images/hidden-field.gif](/blog/images/hidden-field.gif)
 
-Change the order of the fields on your page:<span class="image-wrapper media-wrapper" contenteditable="false"></span>
+<img src="/blog/images/hidden-field.gif" alt="/blog/images/hidden-field.gif">
 
-![/blog/images/reorder-fields.gif](/blog/images/reorder-fields.gif)
+
+
+Change the order of the fields on your page:
+<span class="image-wrapper media-wrapper" contenteditable="false"></span>
+
+
+<img src="/blog/images/reorder-fields.gif" alt="/blog/images/reorder-fields.gif">
+
