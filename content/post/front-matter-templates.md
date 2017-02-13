@@ -26,8 +26,6 @@ link = ""
 title = ""
 
 +++
-
-
 Does the following sound familiar?  You set up a WP site, hand it off to a non-dev, show them how to edit stuff and then they point to some unused part of the UI and say:
 <blockquote>
 <p>"What does this do?"</p>
