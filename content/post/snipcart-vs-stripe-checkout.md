@@ -27,8 +27,6 @@ link = "https://forestry.io/blog/post/forestry-gitlab/"
 title = "Forestry + GitLab - Jordan Patterson"
 
 +++
-
-
 If you're developing an online store, you'll know that these days there are more options than ever to handle payments. It's a classic example of how multiple standards proliferate[^1]. So which one should *you* use?
 
 <img src="/blog/forestryio/images/standards.png" class="center">
