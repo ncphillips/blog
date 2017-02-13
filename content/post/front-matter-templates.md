@@ -40,7 +40,7 @@ Our goal is to build the dream CMS for developers. A CMS that's customizable and
 
 FMTs allow us to customize the layout of our CMS UI. This is useful if your pages have different content on them. Like a big banner image, some different text fields, an image gallery, etc.
 
-![/blog/images/front-matter-templates-1.jpg](/blog/images/front-matter-templates-1.jpg)
+<img src="/blog/images/front-matter-templates-1.jpg" class="wider-than-text">
 
 That has all sorts of front matter like so:
 
