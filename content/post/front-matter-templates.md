@@ -50,7 +50,7 @@ The following page makes use of a variety of front matter:
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-<img src="/blog/images/front-matter-templates-1.jpg" alt="Forestry front matter demo" class="wider-than-text">
+![Forestry front matter demo](/blog/images/front-matter-templates-1.jpg){:.wider-than-text}
 
     ---
     title: Astronomy
@@ -107,17 +107,17 @@ For example, change type from a list of tags to an image gallery. [See full list
 
 This is just the beginning. Soon we'll be adding more field types and more customizability.
 
-### Image resizing and cropping
+### Coming soon: image resizing and cropping
 
 ![/blog/images/image-upload-4.gif](/blog/images/image-upload-4.gif)
 
-### More advanced UI fields
+### Coming soon: advanced UI fields
 
 Like color pickers, google map location picker, etc.
 
 ![/blog/images/color-picker-forestry.png](/blog/images/color-picker-forestry.png)
 
-### Related fields
+### Coming soon: related fields
 
 Select data from your elsewhere in your site. For example, choose a related post, or choose an author from a data file.
 
