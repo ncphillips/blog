@@ -38,9 +38,9 @@ A CMS often feels like a work-around, designed for some other purpose. For examp
 
 ## Front Matter Templates (FMTs)
 
-We're setting out to build a customizable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) are the first step in this direction.
+FMTs allow you to customize the presentation of the fields in your CMS.
 
-FMTs allow you to customize the presentation of the fields in your CMS.  This is handy if your pages make use of [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/).
+We're setting out to build a hackable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/){:style="background-color: rgb(255, 255, 255);"} are the first step in this direction.  
 
 ## What you can do with FMTs
 
