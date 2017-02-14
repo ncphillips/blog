@@ -36,13 +36,11 @@ To which you sheepishly reply:
 
 A CMS often feels like a work-around, designed for some other purpose. For example, not all pages have a _body_ section and when a non-technical person tries to edit that page, they find it confusing to see a giant WYSIWYG editor taking up 90% of the interface.
 
-## A Customizable UI
+## Front Matter Templates (FMTs)
 
-We're setting out to build a super-hackable CMS for Jekyll and Hugo sites. A CMS that's customizable and allows you to strip out the non-essential clutter from your UI.  
+We're setting out to build a customizable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/){:style="background-color: rgb(255, 255, 255); letter-spacing: 0.01em;"}<span style="letter-spacing: 0.01em;"> are the first step in this direction.</span>
 
-[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/){:style="background-color: rgb(255, 255, 255); letter-spacing: 0.01em;"}<span style="letter-spacing: 0.01em;"> (FMTs) are the first step in this direction.</span>
-
-FMTs allow you to customize the presentation of your UI fields in your CMS.  This is handy if your pages have a variety of content defined in your [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/).
+FMTs allow you to customize the presentation of your UI fields in your CMS.  This is handy if your pages use a lot of [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/) fields.
 
 ## What you can do with FMTs
 
