@@ -86,23 +86,23 @@ With Front Matter Templates, you can do things like:
 
 For example, change type from a list of tags to an image gallery. [See full list of available fields](https://forestry.io/docs/setting-up-a-site/front-matter-templates/#field-types).
 
-![/uploads/2017/02/13/field-type-1.gif](/uploads/2017/02/13/field-type-1.gif)
+![change field type](/blog/images/field-type-1.gif)
 
 ### Required fields
 
-![/uploads/2017/02/13/required.gif](/uploads/2017/02/13/required.gif)
+![set field as required](/blog/images/required.gif)
 
 ### Reorder the fields in the UI
 
-![/uploads/2017/02/13/reorder-fields-1.gif](/uploads/2017/02/13/reorder-fields-1.gif)
+![reorder front matter fields](/blog/images/reorder-fields-1.gif)
 
 ### Add help text
 
-![/uploads/2017/02/13/help-text.png](/uploads/2017/02/13/help-text.png)
+![add help text to front matter fields](/blog/images/help-text.png)
 
 ### Set default values and much more.
 
-![/blog/images/default-values.png](/blog/images/default-values.png)
+![set a default value](/blog/images/default-values.png)
 
 ## What's Next?
 
