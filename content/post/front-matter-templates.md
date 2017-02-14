@@ -2,7 +2,6 @@
 Categories = []
 banner = "/images/code-bg-image-1-3.jpg"
 description = ""
-draft = true
 excerpt = "The foundation for a hackable CMS"
 show_author = true
 show_comments = true
