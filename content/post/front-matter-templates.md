@@ -34,17 +34,17 @@ To which you sheepishly reply:
 
 > "Oh, that doesn't do anything...just ignore it."
 
-A CMS often feels like a work-around. Like it's designed for some other purpose and isn't tailored to your site.  For example, some pages don't have a _body_ section (like a blog post would have).  And when a non-technical person tries to edit that page, they find it confusing to see a giant WYSIWYG editor taking up 90% of the interface.
+A CMS often feels like a work-around, designed for some other purpose.  For example, not all pages have a _body_ section and when a non-technical person tries to edit that page, they find it confusing to see a giant WYSIWYG editor taking up 90% of the interface.
 
-Our goal is to build the dream CMS for developers. A CMS that's customizable and allows you to strip out the non-essential clutter from your UI so you don't confuse your clients or your teammates.
+We're build a hackable CMS for developers. A CMS that's customizable and allows you to strip out the non-essential clutter from your UI so you don't confuse your non-technical colleagues.
 
 That's why we're happy to announce the first step in this direction: [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) (FMTs).
 
-FMTs allow you to define and customize the presentation for your UI fields in your CMS.  This is useful if your pages have a variety of content defined in your [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/).
+FMTs allow you to define and customize the presentation for your UI fields in your CMS.  This is handy if your pages have a variety of content defined in your [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/).
 
 ## Customize the UI
 
-The following page makes use of a variety of front matter:  
+The following page makes use of a variety of front matter:
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
@@ -105,7 +105,7 @@ For example, going from tags to an image gallery. [See full list of available fi
 
 ## What's Next?
 
-This is just the beginning. Soon we'll be adding more field types and more customizability.  
+This is just the beginning. Soon we'll be adding more field types and more customizability.
 
 ### Image resizing and cropping
 
@@ -123,6 +123,6 @@ Link to a related post, or choose an author from a data file.
 
 ## Conclusion
 
-[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) allow you to customize the presentation of the fields on your pages.  You can set up a template to be used for a single page or for a collection of pages (like your blog posts, events, projects, etc).  Customize your UI and add help text, hide fields, set defaults, etc.  
+[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) allow you to customize the presentation of the fields on your pages.  You can set up a template to be used for a single page or for a collection of pages (like your blog posts, events, projects, etc).  Customize your UI and add help text, hide fields, set defaults, etc.
 
 As always, if you have any thoughts or feedback, we'd love to hear from you!
