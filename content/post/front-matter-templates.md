@@ -46,7 +46,7 @@ FMTs allow you to define and customize the presentation for your UI fields in yo
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-![](/blog/images/front-matter-templates-1.jpg){:.wider-than-text}
+<img src="/blog/images/front-matter-templates-1.jpg" class="wider-than-text">
 
 The above page makes use of the following front matter:
 
