@@ -26,7 +26,7 @@ link = ""
 title = ""
 
 +++
-Does the following sound familiar?  You set up a WP site, hand it off to a non-dev, show them how to edit stuff and then they point to some unused part of the UI and say:
+Does the following sound familiar?  You set up a WP site, hand it off to a non-dev, and then they point to some unused part of the UI and say:
 
 > "What does this do?"
 
@@ -34,13 +34,13 @@ To which you sheepishly reply:
 
 > "Oh, that doesn't do anything...just ignore it."
 
-A CMS often feels like a work-around, designed for some other purpose. For example, not all pages have a _body_ section and when a non-technical person tries to edit that page, they find it confusing to see a giant WYSIWYG editor taking up 90% of the interface.
+A CMS often feels like a work-around, designed for some other purpose. For example, not all pages have a _body_ section and when a non-technical person tries to edit that page, they're confused to see a giant WYSIWYG editor that takes up 90% of the UI.
 
 ## Front Matter Templates (FMTs)
 
-We're setting out to build a customizable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) are the first step in this direction.
+FMTs allow you to customize the presentation of your UI fields in your CMS.  
 
-FMTs allow you to customize the presentation of your UI fields in your CMS.  This is handy if your pages use a lot of [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/) fields.
+We're building a hackable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) are the first step in this direction. This is handy if your pages use a lot of [front](https://jekyllrb.com/docs/frontmatter/){:style="background-color: rgb(255, 255, 255);"} [matter](https://gohugo.io/content/front-matter/){:style="background-color: rgb(255, 255, 255);"} fields.
 
 ## What you can do with FMTs
 
