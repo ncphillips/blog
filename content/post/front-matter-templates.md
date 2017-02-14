@@ -34,14 +34,13 @@ To which you sheepishly reply:
 
 > "Oh, that doesn't do anything...just ignore it."
 
-A CMS often feels like a work-around, designed for some other purpose. For example, not all pages have a _body_ section and when a non-technical person tries to edit that page, they're confused to see a giant WYSIWYG editor that takes up 90% of the UI.
+A CMS often feels like a work-around, designed for some other purpose.
 
 ## Front Matter Templates (FMTs)
 
-FMTs allow you to customize the presentation of your UI fields in your CMS.  
+FMTs allow you to customize the presentation of your UI fields in your CMS.
 
-We're building a hackable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) are the first step in this direction. This is handy if your pages use a lot of [front](https://jekyllrb.com/docs/frontmatter/)
-[matter](https://gohugo.io/content/front-matter/) fields.
+We're building a hackable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) are the first step in this direction. This is handy if your pages use a lot of [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/) fields.
 
 ## What you can do with FMTs
 
@@ -51,7 +50,7 @@ The following page makes use of a variety of front matter:
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-<img src="/blog/images/front-matter-templates-1.jpg" alt="Forestry front matter demo" class="wider-than-text">
+![Forestry front matter demo](/blog/images/front-matter-templates-1.jpg){:.wider-than-text}
 
     ---
     title: Astronomy
@@ -75,7 +74,6 @@ The following page makes use of a variety of front matter:
     ---
     Astronomy compels the soul to look upward, and leads us from this world to another.
     Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
-
 
 With Front Matter Templates, you can do things like:
 
