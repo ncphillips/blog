@@ -8,7 +8,7 @@ show_author = true
 show_comments = true
 show_signup = true
 tags = []
-title = "Customize your UI with Front Matter Templates"
+title = "Customize the UI with Front Matter Templates"
 twitter_card = "/blog/forestryio/images/code-bg-image-1-3.jpg"
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
