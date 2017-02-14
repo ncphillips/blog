@@ -50,7 +50,7 @@ The following page makes use of a variety of front matter:
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-![Forestry front matter demo](/blog/images/front-matter-templates-1.jpg){:.wider-than-text}
+<img src="/blog/images/front-matter-templates-1.jpg" alt="Forestry front matter demo" class="wider-than-text">
 
     ---
     title: Astronomy
@@ -75,6 +75,7 @@ The following page makes use of a variety of front matter:
     Astronomy compels the soul to look upward, and leads us from this world to another.
     Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
 
+<br><br>
 With Front Matter Templates, you can do things like:
 
 ### Hide fields from your editors
