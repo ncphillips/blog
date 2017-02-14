@@ -34,15 +34,17 @@ To which you sheepishly reply:
 
 > "Oh, that doesn't do anything...just ignore it."
 
-A CMS often feels like a work-around, designed for some other purpose.  For example, not all pages have a _body_ section and when a non-technical person tries to edit that page, they find it confusing to see a giant WYSIWYG editor taking up 90% of the interface.
+A CMS often feels like a work-around, designed for some other purpose. For example, not all pages have a _body_ section and when a non-technical person tries to edit that page, they find it confusing to see a giant WYSIWYG editor taking up 90% of the interface.
 
-We're build a hackable CMS for developers. A CMS that's customizable and allows you to strip out the non-essential clutter from your UI so you don't confuse your non-technical colleagues.
+## A Customizable UI
 
-That's why we're happy to announce the first step in this direction: [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) (FMTs).
+We're setting out to build a super-hackable CMS for Jekyll and Hugo sites. A CMS that's customizable and allows you to strip out the non-essential clutter from your UI.  
 
-FMTs allow you to define and customize the presentation for your UI fields in your CMS.  This is handy if your pages have a variety of content defined in your [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/).
+[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/){:style="background-color: rgb(255, 255, 255); letter-spacing: 0.01em;"}<span style="letter-spacing: 0.01em;"> (FMTs) are the first step in this direction.</span>
 
-## Customize the UI
+FMTs allow you to customize the presentation of your UI fields in your CMS.  This is handy if your pages have a variety of content defined in your [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/).
+
+## What you can do with FMTs
 
 The following page makes use of a variety of front matter:
 
