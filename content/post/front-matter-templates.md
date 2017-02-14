@@ -80,7 +80,7 @@ With Front Matter Templates, you can do things like:
 
 ### Hide fields from your editors
 
-![/uploads/2017/02/13/hidden-field.gif](/uploads/2017/02/13/hidden-field.gif)
+![/uploads/2017/02/13/hidden-field.gif](/uploads/2017/02/13/hidden-field-1.gif)
 
 ### Change the field type in the UI
 
