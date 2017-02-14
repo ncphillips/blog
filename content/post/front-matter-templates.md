@@ -38,7 +38,7 @@ A CMS often feels like a work-around, designed for some other purpose. For examp
 
 ## Front Matter Templates (FMTs)
 
-We're setting out to build a customizable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/){:style="background-color: rgb(255, 255, 255); letter-spacing: 0.01em;"}<span style="letter-spacing: 0.01em;"> are the first step in this direction.</span>
+We're setting out to build a customizable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) are the first step in this direction.
 
 FMTs allow you to customize the presentation of your UI fields in your CMS.  This is handy if your pages use a lot of [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/) fields.
 
@@ -50,7 +50,7 @@ The following page makes use of a variety of front matter:
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-![](/blog/images/front-matter-templates-1.jpg){:.wider-than-text}
+<img src="/blog/images/front-matter-templates-1.jpg" alt="forestry.io CMS front matter" class="wider-than-text">
 
     ---
     title: Astronomy
