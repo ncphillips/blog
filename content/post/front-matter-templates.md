@@ -104,3 +104,17 @@ For example, going from tags to an image gallery. [See full list of available fi
 ## What's Next?
 
 This is just the beginning. Soon we'll be adding more field types and more customizability.
+
+### Image resizing and cropping
+
+![/blog/images/image-upload-4.gif](/blog/images/image-upload-4.gif)
+
+### More advanced UI fields
+
+Like color pickers, google map location picker, etc. 
+
+![/blog/images/color-picker-forestry.png](/blog/images/color-picker-forestry.png)
+
+### Related fields
+
+Link to a related post, or choose an author from an author data file.
