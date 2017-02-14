@@ -38,9 +38,9 @@ A CMS often feels like a work-around, designed for some other purpose. For examp
 
 ## Front Matter Templates (FMTs)
 
-FMTs allow you to customize the presentation of the fields in your CMS.
+We're setting out to build a customizable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) are the first step in this direction.
 
-We're setting out to build a hackable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and [Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/){:style="background-color: rgb(255, 255, 255);"} are the first step in this direction.  
+FMTs allow you to customize the presentation of your UI fields in your CMS.  This is handy if your pages use a lot of [front](https://jekyllrb.com/docs/frontmatter/) [matter](https://gohugo.io/content/front-matter/) fields.
 
 ## What you can do with FMTs
 
@@ -57,7 +57,7 @@ The following page makes use of a variety of front matter:
     layout: astronomy
     order: 5
     bio: Astronomy compels the soul to look upward...
-    banner: /images/mountains.jpg
+    banner: /images/mars.jpg
     images:
     - "/images/rover2.png"
     - "/images/earth.jpg"
@@ -83,7 +83,7 @@ With Front Matter Templates, you can do things like:
 
 ### Change the field type in the UI
 
-For example, going from tags to an image gallery. [See full list of available fields](https://forestry.io/docs/setting-up-a-site/front-matter-templates/#field-types).
+For example, change type from a list of tags to an image gallery. [See full list of available fields](https://forestry.io/docs/setting-up-a-site/front-matter-templates/#field-types).
 
 ![/uploads/2017/02/13/field-type-1.gif](/uploads/2017/02/13/field-type-1.gif)
 
@@ -119,10 +119,10 @@ Like color pickers, google map location picker, etc.
 
 ### Related fields
 
-Link to a related post, or choose an author from a data file.
+Select data from your elsewhere in your site. For example, choose a related post, or choose an author from a data file.
 
 ## Conclusion
 
-[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) allow you to customize the presentation of the fields on your pages.  You can set up a template to be used for a single page or for a collection of pages (like your blog posts, events, projects, etc).  Customize your UI and add help text, hide fields, set defaults, etc.
+[Front Matter Templates](https://forestry.io/docs/setting-up-a-site/front-matter-templates/) allow you to customize the presentation of the fields in your CMS.  You can set up a template to be used for a single page or for a collection of pages (posts, projects, etc).  Customize the UI so non-developers aren't confused.
 
 As always, if you have any thoughts or feedback, we'd love to hear from you!
