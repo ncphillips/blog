@@ -50,7 +50,7 @@ The following page makes use of a variety of front matter:
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-![Forestry front matter demo](/blog/images/front-matter-templates-1.jpg){:.wider-than-text}
+<img src="/blog/images/front-matter-templates-1.jpg" alt="Forestry front matter demo" class="wider-than-text">
 
     ---
     title: Astronomy
