@@ -9,7 +9,7 @@ show_comments = true
 show_signup = true
 tags = []
 title = "Customize the UI with Front Matter Templates"
-twitter_card = "/blog/forestryio/images/code-bg-image-1-3.jpg"
+twitter_card = "/images/help-text-1.png"
 [[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
 img = "/images/Scott_Gallant.jpg"
@@ -50,7 +50,7 @@ The following page makes use of a variety of front matter:
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-<img src="/blog/images/front-matter-templates-1.jpg" alt="Forestry front matter demo" class="wider-than-text">
+![Forestry front matter demo](/blog/images/front-matter-templates-1.jpg){:.wider-than-text}
 
     ---
     title: Astronomy
@@ -75,12 +75,11 @@ The following page makes use of a variety of front matter:
     Astronomy compels the soul to look upward, and leads us from this world to another.
     Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
 
-<br><br>
 With Front Matter Templates, you can do things like:
 
 ### Hide fields from your editors
 
-![/uploads/2017/02/13/hidden-field.gif](/uploads/2017/02/13/hidden-field-1.gif)
+![/blog/images/hidden-field-3.gif](/blog/images/hidden-field-3.gif)
 
 ### Change the field type in the UI
 
