@@ -57,7 +57,7 @@ The following page makes use of a variety of front matter:
     layout: astronomy
     order: 5
     bio: Astronomy compels the soul to look upward...
-    banner: /images/mars.jpg
+    banner: /images/mountains.jpg
     images:
     - "/images/rover2.png"
     - "/images/earth.jpg"
