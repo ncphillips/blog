@@ -1,7 +1,7 @@
 +++
 Categories = []
 banner = "/forestryio/images/gitlab-and-forestryio.png"
-date = "2016-09-06T23:45:00+00:00"
+date = "2016-09-06T23:45:00Z"
 description = "We're happy to announce our support for GitLab hosted sites"
 excerpt = "GitLab support is here! Fire up a CMS for your GitLab-hosted Jekyll and Hugo sites! "
 show_author = true

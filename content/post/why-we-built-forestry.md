@@ -1,7 +1,7 @@
 +++
 Categories = []
 banner = ""
-date = "2016-06-27T11:49:00+00:00"
+date = "2016-06-27T11:49:00Z"
 description = ""
 excerpt = "The winding road that led us to building a decentralized UI for the web. "
 show_author = true

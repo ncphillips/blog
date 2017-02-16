@@ -1,7 +1,7 @@
 +++
 Categories = []
 banner = "/forestryio/images/code-bg-image-1.jpg"
-date = "2016-08-02T01:06:00+00:00"
+date = "2016-08-02T01:06:00Z"
 excerpt = "When it comes to the Internet, content is king. And it is king for a reason. A site that has well written content concisely tells the story behind a brand, helps to inform customers about a business's products or services and helps guide a user navigate to their desired destination on your site."
 show_author = true
 show_comments = true

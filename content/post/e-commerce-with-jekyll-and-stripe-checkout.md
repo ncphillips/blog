@@ -1,7 +1,7 @@
 +++
 Categories = []
 banner = ""
-date = "2016-09-28T14:34:00+00:00"
+date = "2016-09-28T14:34:00Z"
 description = "Sell products simply with Stripe Checkout"
 draft = true
 excerpt = "Sell products simply with Stripe Checkout"

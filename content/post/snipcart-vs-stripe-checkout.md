@@ -1,7 +1,7 @@
 +++
 Categories = []
 banner = "/forestryio/images/stripe-snipcart-1.png"
-date = "2016-09-25T16:50:00+00:00"
+date = "2016-09-25T16:50:00Z"
 description = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart"
 draft = true
 excerpt = "Simple E-commerce with Jekyll, Stripe Checkout and Snipcart"
