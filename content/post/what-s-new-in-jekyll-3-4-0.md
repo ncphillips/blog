@@ -9,7 +9,7 @@ show_author = true
 show_comments = true
 show_signup = true
 tags = ""
-title = "What’s new in Jekyll 3.4.0"
+title = "What's new in Jekyll 3.4.0"
 twitter_card = "/images/jekyll-3.4.0-2.png"
 [[author]]
 bio = "Marketer, Media buyer and Developer at desiredpersona.com"
