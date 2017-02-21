@@ -12,10 +12,10 @@ tags = ""
 title = "What’s new in Jekyll 3.4.0"
 twitter_card = ""
 [[author]]
-bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
+bio = "Marketer, Media buyer and Developer at desiredpersona.com"
 img = "/images/colin-garvey.jpg"
 name = "Colin Garvey "
-twitter = "https://twitter.com/scottgallant"
+twitter = "https://twitter.com/desiredpersona"
 [[suggested]]
 link = ""
 title = ""
