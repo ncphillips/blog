@@ -106,5 +106,3 @@ Returns an array of Hashes, each looking something like this: {"name" => "larry"
 ## Noteworthy warnings
 
 If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is part of rails and will be fixed in an upcoming release. For now you can just ignore those warnings. You didn’t do anything wrong.
-
-As always the Jekyll team have been hard a work updating the documentation so there has never been a better time to [learn Jekyll](https://jekyllrb.com/).
