@@ -31,7 +31,7 @@ Jekyll 3.4.0 was release on the 27<sup>th</sup> of January with some noteworthy 
 
 So whats new?
 
-### Add connector param to ‘array_to_sentence_string’ filter
+## Add connector param to ‘array_to_sentence_string’ filter
 
 *   **array** - The list of strings to join.
 *   **string** - A string can be any text inside quotes. In this example I will use Jekyll tags.
@@ -76,7 +76,7 @@ This will output
 one, two, or three
 ```
 
-### Group By Expression filter (Note: Not finished)
+## Group By Expression filter (Note: Not finished)
 
 The `group_by_exp` filter allows you to group an array's items using a Liquid expression.
 
@@ -90,17 +90,17 @@ Here's a quick example that shows how to arrange site members by the year they g
 [{"name"=>"201...", "items"=>[...]},{"name"=>"200...", "items"=>[...]}]
 ```
 
-### Group an array of items by a property (Note: Not finished)
+## Group an array of items by a property (Note: Not finished)
 
 input - the inputted Enumerable property - the property
 
 Returns an array of Hashes, each looking something like this: {"name" => "larry" "items" => [...] } # all the items where `property` == "larry"
 
-### Documentation updates (Note: Not finished)
+## Documentation updates (Note: Not finished)
 
 Plugins page was update to show case more plugins. http://jekyllrb.com/docs/plugins/
 
-### Noteworthy warnings
+## Noteworthy warnings
 
 If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is part of rails and will be fixed in an upcoming release. For now you can just ignore those warnings. You didn’t do anything wrong.
 
