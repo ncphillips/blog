@@ -41,7 +41,7 @@ Still with me?
 
 Here is a real world example.
 
-Let’s say we have the following tag’s in our post’s front matter.
+Let’s say we have the following tag’s in our post front matter.
 
 ```
 tags:
