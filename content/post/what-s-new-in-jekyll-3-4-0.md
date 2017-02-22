@@ -33,28 +33,31 @@ So whats new?
 
 ### Add connector param to ‘array_to_sentence_string’ filter
 
-- **array** - The list of strings to join.
-- **string** - A string can be any text inside quotes. In this example I will use Jekyll tags.
-- **connector** - The word placed before the last word in the array. The default connector Jekyll uses is the word “and”.
+*   **array** - The list of strings to join.
+*   **string** - A string can be any text inside quotes. In this example I will use Jekyll tags.
+*   **connector** - The word placed before the last word in the array. The default connector Jekyll uses is the word “and”.
 
 Still with me?
 
 Here is a real world example.
 
 Let’s say we have the following tag’s in our post’s front matter.
+
 ```
-Tags:
+tags:
 	- one
 	- two
 	- three
 ```
 
 We can then create an `_include` file for our post tag’s using
+
 ```
 {{ page.tags | array_to_sentence_string }}
-``` 
+```
 
 Remember the default connector is `and`, so this will output our tags like so
+
 ```
 one, two, and three
 ```
@@ -62,11 +65,13 @@ one, two, and three
 Easy right?
 
 Now Jekyll 3.4.0 allows you to change the default connector to use other terms such as "or” like so.
+
 ```
 {{ page.tags | array_to_sentence_string: 'or' }}
 ```
 
 This will output
+
 ```
 one, two, or three
 ```
