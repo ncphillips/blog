@@ -98,7 +98,11 @@ Returns an array of Hashes, each looking something like this: {"name" => "larry"
 
 ## Documentation updates (Note: Not finished)
 
-Plugins page was update to show case more plugins. http://jekyllrb.com/docs/plugins/
+- Jekyll’s plugin page now showcases the most {popular plugins
+
+](http://jekyllrb.com/docs/plugins/#available-plugins/).
+
+- The quick-start guide was updated so there’s never been a better time to [try Jekyll](https://jekyllrb.com/).
 
 ## Noteworthy warnings
 
