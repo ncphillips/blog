@@ -100,7 +100,19 @@ members:
 We can create a list of members grouped by company name like so
 
 ```
-{{ site.members | group_by:"company" }}
+{%raw%}
+<div>
+{% assign groups = site.members | group_by: 'company' %}
+{% for group in groups %}
+		<h3>{{ group.name }}</h3>
+    <ul>
+    {% for item in group.items %}
+				<li>{{item.name}}</li>
+    {%endfor%}
+    </ul>
+{%endfor%}
+</div>
+{%endraw%}
 ```
 
 This will output the following
