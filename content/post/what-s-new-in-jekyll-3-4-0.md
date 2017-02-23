@@ -120,6 +120,7 @@ This will output the following list
   <li>Scott</li>
   <li>Jordan</li>
 </ul>
+
 <h3>Github</h3>
 <ul>
   <li>Parker</ul>
