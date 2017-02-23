@@ -85,9 +85,10 @@ Let’s use site members as an example.
 *   **input** - Site members names.
 *   **property** - All the items where property is equal to the company name.
 
-Our Jekyll site includes the following members.
+Our Jekyll site’s `_config.yml` includes the following members.
 
 ```
+members:
 - name: "Scott"
   company: "Forestry"
 - name: "Jordan"
