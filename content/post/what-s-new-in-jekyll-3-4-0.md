@@ -123,7 +123,7 @@ This will output the following list
 
 <h3>Github</h3>
 <ul>
-  <li>Parker</ul>
+  <li>Parker</li>
 </ul>
 ```
 
