@@ -76,9 +76,55 @@ This will output
 one, two, or three
 ```
 
-## Group By Expression filter (Note: Not finished)
+## Group an array's items using a Liquid expression filter (Note: Not finished)
 
-The `group_by_exp` filter allows you to group an array's items using a Liquid expression.
+Jekyll previously allowed you to group an array's items by a given property using the `group_by` filter.
+
+Let’s use site members as an example.
+
+*   **input** - Site members names
+*   **property** - All the items where property is equal to the company name.
+
+Our Jekyll site includes the following members.
+
+```
+- name: "Scott"
+  company: "Forestry"
+- name: "Jordan"
+  company: "Forestry"
+- name: "Parker"
+  company: "Github"
+```
+
+We can create a list of members grouped by company name like so
+
+```
+{{ site.members | group_by:"company" }}
+```
+
+This will output the following
+
+```
+{
+  "name"=>"Forestry",
+  "items"=>[{
+    "name"=>"Scott",
+    "company"=>"Forestry"
+  }, {
+    "name"=>"Jordan",
+    "company"=>"Forestry"
+  }]
+},
+{
+  "name"=>"Github",
+  "items"=>[{
+    "name"=>"Parker",
+    "company"=>"Github"
+  }]
+}
+```
+
+Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression.
 
 Here's a quick example that shows how to arrange site members by the year they graduated.
 
@@ -89,12 +135,6 @@ Here's a quick example that shows how to arrange site members by the year they g
 ```
 [{"name"=>"201...", "items"=>[...]},{"name"=>"200...", "items"=>[...]}]
 ```
-
-## Group an array of items by a property (Note: Not finished)
-
-input - the inputted Enumerable property - the property
-
-Returns an array of Hashes, each looking something like this: {"name" => "larry" "items" => [...] } # all the items where `property` == "larry"
 
 ## Documentation updates (Note: Not finished)
 
