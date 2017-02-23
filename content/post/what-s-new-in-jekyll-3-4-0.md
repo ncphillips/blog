@@ -125,6 +125,7 @@ This will output the following
 ```
 
 ### (Note: Not finished)
+
 Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression.
 
 Here's a quick example that shows how to arrange site members by the year they graduated.
@@ -149,4 +150,4 @@ Here's a quick example that shows how to arrange site members by the year they g
 
 *   Jekyll docs recommend ruby version 2.0 or above. If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is part of rails and will be fixed in an upcoming release. For now you can just ignore those warnings. You didn’t do anything wrong.
 
-Let me know if you found this tutorial helpful.
+Let me know if you found these tutorials helpful.
