@@ -76,7 +76,7 @@ This will output
 one, two, or three
 ```
 
-## Group an array's items using a Liquid expression filter (Note: Not finished)
+## Group an array's items using a Liquid expression filter
 
 Jekyll previously allowed you to group an array's items by a given property using the `group_by` filter.
 
@@ -124,6 +124,7 @@ This will output the following
 }
 ```
 
+### (Note: Not finished)
 Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression.
 
 Here's a quick example that shows how to arrange site members by the year they graduated.
