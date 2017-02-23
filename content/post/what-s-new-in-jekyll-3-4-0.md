@@ -113,26 +113,17 @@ We can create a list of members grouped by company name like so
 </div>
 ```
 
-This will output the following
-
+This will output the following list
 ```
-{
-  "name"=>"Forestry",
-  "items"=>[{
-    "name"=>"Scott",
-    "company"=>"Forestry"
-  }, {
-    "name"=>"Jordan",
-    "company"=>"Forestry"
-  }]
-},
-{
-  "name"=>"Github",
-  "items"=>[{
-    "name"=>"Parker",
-    "company"=>"Github"
-  }]
-}
+<h3>Forestry</h3>
+<ul>
+  <li>Scott</li>
+  <li>Jordan</li>
+</ul>
+<h3>Github</h3>
+<ul>
+  <li>Parker</ul>
+</ul>
 ```
 
 ### (Note: Not finished)
