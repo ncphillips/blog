@@ -82,7 +82,7 @@ Jekyll previously allowed you to group an array's items by a given property usin
 
 Let’s use site members as an example.
 
-*   **input** - Site members names
+*   **input** - Site members names.
 *   **property** - All the items where property is equal to the company name.
 
 Our Jekyll site includes the following members.
