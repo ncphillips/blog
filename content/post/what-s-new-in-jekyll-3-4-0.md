@@ -100,7 +100,6 @@ members:
 We can create a list of members grouped by company name like so
 
 ```
-{%raw%}
 <div>
 {% assign groups = site.members | group_by: 'company' %}
 {% for group in groups %}
@@ -112,7 +111,6 @@ We can create a list of members grouped by company name like so
     </ul>
 {%endfor%}
 </div>
-{%endraw%}
 ```
 
 This will output the following
