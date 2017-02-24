@@ -100,7 +100,7 @@ Jekyll members are grouped into an array using
 {{ site.members | group_by:"company" }}
 ```
 
-Companys are collected into an array which looks something like this
+Company names are collected into an array which looks something like this
 ```
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
 ```
