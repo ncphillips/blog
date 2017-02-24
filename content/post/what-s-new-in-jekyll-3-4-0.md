@@ -107,7 +107,7 @@ Site members names are collected into an array which outputs the following infor
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
 ```
 
-To make this information more useful, we can now create a list of members grouped by their company name like so
+To make this information more useful, we can now create a list of members grouped by their company name
 
 ```
 {% assign groups = site.members | group_by: "company" %}
