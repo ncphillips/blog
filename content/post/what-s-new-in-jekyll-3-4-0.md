@@ -135,18 +135,43 @@ This will output the following list of members organised by the company they wor
 </ul>
 ```
 
-### (Note: Not finished)
-
-Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression.
-
-Here's a quick example that shows how to arrange site members by the year they graduated.
+Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression like so
 
 ```
-{{ site.members | group_by_exp:"item", "item.graduation_year | truncate: 3, \"\"" }}
+{{ site.members | group_by_exp:"items", "items.company" }}
 ```
 
+This outputs the following information
 ```
-[{"name"=>"201...", "items"=>[...]},{"name"=>"200...", "items"=>[...]}]
+{“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
+```
+
+We can now create a list of members grouped by their company by using a Liquid expression like so
+```
+
+{% assign groups = site.members | group_by_exp: 'items', "items.company" %}
+{% for group in groups %}
+    <h3>{{ group.name }}</h3>
+
+    <ul>
+    {% for item in group.items %}
+        <li>{{item.name}}</li>
+    {%endfor%}
+    </ul>
+{%endfor%}
+```
+
+This gives us the same output as earlier
+```
+<h3>Forestry</h3>
+<ul>
+  <li>Scott</li>
+  <li>Jordan</li>
+</ul>
+<h3>Github</h3>
+<ul>
+  <li>Parker</ul>
+</ul>
 ```
 
 ## Documentation updates (Note: Not finished)
