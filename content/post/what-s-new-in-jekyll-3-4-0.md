@@ -147,7 +147,7 @@ This outputs the following information
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
 ```
 
-Using a Liquid expression we can now create a list of members grouped by the company they work for
+Using a Liquid expression we can now create a list of members grouped by the companies they work for
 
 ```
 
@@ -178,11 +178,13 @@ This gives us the same output as earlier
 ```
 
 In conclusion we can also use the `group_by_exp` filter to output different information such as site members names if we change the Liquid expression.
+
 ```
 {{ site.members | group_by_exp:"items", "items.name" }}
 ```
 
 Using the above Liquid expression we can now create a list of site members names.
+
 ```
 {% assign groups = site.members | group_by_exp: "items", "items.name" %}
 {% for group in groups %}
@@ -191,6 +193,7 @@ Using the above Liquid expression we can now create a list of site members names
 ```
 
 Output:
+
 ```
 <h3>Scott</h3>
 <h3>Jordan</h3>
