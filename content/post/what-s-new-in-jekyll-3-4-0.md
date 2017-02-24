@@ -80,8 +80,8 @@ one, two, or three
 
 Jekyll previously allowed you to group your content by a given property using the `group_by` filter. Let’s group all members by the company they work for as an example.
 
- - **input** - Members names.
- - **property** - Company names.
+*   **input** - Members names.
+*   **property** - Company names.
 
 Our Jekyll site’s `_config.yml` includes the following members.
 
@@ -95,18 +95,20 @@ members:
   company: "Github"
 ```
 
-Jekyll members are grouped into an array using
+Jekyll can apply the group_by filter with company as the parameter using
+
 ```
 {{ site.members | group_by:"company" }}
 ```
 
 Company names are collected into an array which looks something like this
+
 ```
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
 ```
 
-To make this information more useful, we can now create a list of members grouped by company name like so 
-   
+To make this information more useful, we can now create a list of members grouped by company name like so
+
 ```
 {%raw%}
 {% assign groups = site.members | group_by: 'company' %}
@@ -119,9 +121,10 @@ To make this information more useful, we can now create a list of members groupe
     </ul>
 {%endfor%}
 {%endraw%}
-``` 
+```
 
 This will output the following list of members organised by the company they work for.
+
 ```
 <h3>Forestry</h3>
 <ul>
