@@ -110,7 +110,7 @@ Site members names are collected into an array which outputs the following infor
 To make this information more useful, we can now create a list of members grouped by their company name like so
 
 ```
-{% assign groups = site.members | group_by: 'company' %}
+{% assign groups = site.members | group_by: "company" %}
 {% for group in groups %}
     <h3>{{ group.name }}</h3>
     <ul>
@@ -147,11 +147,11 @@ This outputs the following information
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
 ```
 
-Using a Liquid expression 'company' we can now create a list of members grouped by the company they work for
+Using a Liquid expression "company" we can now create a list of members grouped by the company they work for
 
 ```
 
-{% assign groups = site.members | group_by_exp: 'items', "items.company" %}
+{% assign groups = site.members | group_by_exp: "items", "items.company" %}
 {% for group in groups %}
     <h3>{{ group.name }}</h3>
 
@@ -182,9 +182,9 @@ In conclusion we can also use the `group_by_exp` filter to output different info
 {{ site.members | group_by_exp:"items", "items.name" }}
 ```
 
-Using a Liquid expression ‘name’ we can now create a list of site members
+Using a Liquid expression "name" we can now create a list of site members
 ```
-{% assign groups = site.members | group_by_exp: 'items', "items.name" %}
+{% assign groups = site.members | group_by_exp: "items", "items.name" %}
 {% for group in groups %}
     <h3>{{ group.name }}</h3>
 {%endfor%}
