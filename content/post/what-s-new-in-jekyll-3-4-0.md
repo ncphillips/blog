@@ -95,7 +95,7 @@ members:
   company: "Github"
 ```
 
-Jekyll can apply the group_by filter with company as the parameter using
+Jekyll can apply the `group_by` filter with company as the parameter using
 
 ```
 {{ site.members | group_by:"company" }}
