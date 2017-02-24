@@ -182,7 +182,7 @@ In conclusion we can also use the `group_by_exp` filter to output different info
 {{ site.members | group_by_exp:"items", "items.name" }}
 ```
 
-Using a Liquid expression we can now create a list of site members names
+Using a different Liquid expression we can now create a list of site members names.
 ```
 {% assign groups = site.members | group_by_exp: "items", "items.name" %}
 {% for group in groups %}
