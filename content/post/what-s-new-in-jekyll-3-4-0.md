@@ -177,7 +177,7 @@ This gives us the same output as earlier
 </ul>
 ```
 
-In conclusion we can also use the `group_by_exp` filter to output different information such as site members names if we change the Liquid expression.
+In conclusion we can also use the `group_by_exp` filter to output different information such as site members names by changing the Liquid expression.
 
 ```
 {{ site.members | group_by_exp:"items", "items.name" }}
