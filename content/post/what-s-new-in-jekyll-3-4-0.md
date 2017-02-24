@@ -76,7 +76,7 @@ This will output
 one, two, or three
 ```
 
-## Group an array's items using a Liquid expression filter
+## Group an arrays items using a Liquid expression filter
 
 Jekyll previously allowed you to group your content by a given property using the `group_by` filter. As an example let’s group all site members working for each company.
 
