@@ -78,12 +78,10 @@ one, two, or three
 
 ## Group an array's items using a Liquid expression filter
 
-Jekyll previously allowed you to group an array's items by a given property using the `group_by` filter.
+Jekyll previously allowed you to group your content by a given property using the `group_by` filter. Let’s group all members by the company they work for as an example.
 
-Let’s use site members as an example.
-
-*   **input** - Company names.
-*   **property** - All the items where property is equal to the company name.
+ - **input** - Members names.
+ - **property** - Company names.
 
 Our Jekyll site’s `_config.yml` includes the following members.
 
@@ -97,33 +95,42 @@ members:
   company: "Github"
 ```
 
-We can create a list of members grouped by company name like so
-
+Jekyll members are grouped into an array using
 ```
-<div>
+{{ site.members | group_by:"company" }}
+```
+
+Companys are collected into an array which looks something like this
+```
+{“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
+```
+
+To make this information more useful, we can now create a list of members grouped by company name like so 
+   
+```
+{%raw%}
 {% assign groups = site.members | group_by: 'company' %}
 {% for group in groups %}
-    <h3>{{ group.name }}</h3>
+		<h3>{{ group.name }}</h3>
     <ul>
     {% for item in group.items %}
-        <li>{{item.name}}</li>
+				<li>{{item.name}}</li>
     {%endfor%}
     </ul>
 {%endfor%}
-</div>
-```
+{%endraw%}
+``` 
 
-This will output the following list
+This will output the following list of members organised by the company they work for.
 ```
 <h3>Forestry</h3>
 <ul>
   <li>Scott</li>
   <li>Jordan</li>
 </ul>
-
 <h3>Github</h3>
 <ul>
-  <li>Parker</li>
+  <li>Parker</ul>
 </ul>
 ```
 
