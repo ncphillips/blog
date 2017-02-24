@@ -121,7 +121,7 @@ To make this information more useful, we can now create a list of members groupe
 {%endfor%}
 ```
 
-This will output the following list of members organised by the companies they work for.
+This will output the following list of members organised by the company they work for.
 
 ```
 <h3>Forestry</h3>
@@ -147,7 +147,7 @@ This outputs the following information
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
 ```
 
-Using a Liquid expression we can now create a list of members grouped by the companies they work for
+Using a Liquid expression we can now create a list of members grouped by the company they work for
 
 ```
 
