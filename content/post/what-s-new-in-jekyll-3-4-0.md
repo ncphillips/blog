@@ -41,7 +41,7 @@ Still with me?
 
 Here is a real world example.
 
-Let’s say we have the following tag’s in our post front matter.
+Let’s say we have the following tags in our post front matter.
 
 ```
 tags:
@@ -50,7 +50,7 @@ tags:
 	- three
 ```
 
-We can then create an `_include` file for our post tag’s using
+We can then create an `_include` file for our post tags using
 
 ```
 {{ page.tags | array_to_sentence_string }}
