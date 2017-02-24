@@ -146,7 +146,7 @@ This outputs the following information
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
 ```
 
-We can now create a list of members grouped by their company by using a Liquid expression like so
+Using a Liquid expression we can now create a list of members grouped by the company they work for
 ```
 
 {% assign groups = site.members | group_by_exp: 'items', "items.company" %}
@@ -180,7 +180,7 @@ This gives us the same output as earlier
 
 *   The quick-start guide was updated so there’s never been a better time to [try Jekyll](https://jekyllrb.com/).
 
-## Noteworthy warnings
+## Jekyll warnings
 
 *   Jekyll now notifies you when you have an error in an `_include` file. This should save you some time tracking down bugs.
 
