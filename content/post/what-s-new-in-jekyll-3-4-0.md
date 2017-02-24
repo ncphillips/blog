@@ -142,11 +142,13 @@ Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an a
 ```
 
 This outputs the following information
+
 ```
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
 ```
 
 Using a Liquid expression we can now create a list of members grouped by the company they work for
+
 ```
 
 {% assign groups = site.members | group_by_exp: 'items', "items.company" %}
@@ -162,6 +164,7 @@ Using a Liquid expression we can now create a list of members grouped by the com
 ```
 
 This gives us the same output as earlier
+
 ```
 <h3>Forestry</h3>
 <ul>
@@ -184,6 +187,6 @@ This gives us the same output as earlier
 
 *   Jekyll now notifies you when you have an error in an `_include` file. This should save you some time tracking down bugs.
 
-*   Jekyll docs recommend ruby version 2.0 or above. If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is part of rails and will be fixed in an upcoming release. For now you can just ignore those warnings. You didn’t do anything wrong.
+*   Jekyll docs recommend ruby version 2.0 or above. If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is a Jekyll dependancy and will be fixed in an upcoming release. For now you can just ignore those warnings. You didn’t do anything wrong.
 
 Let me know if you found these tutorials helpful.
