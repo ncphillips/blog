@@ -110,17 +110,15 @@ Members names are collected into an array which outputs the following informatio
 To make this information more useful, we can now create a list of members grouped by company name like so
 
 ```
-{%raw%}
 {% assign groups = site.members | group_by: 'company' %}
 {% for group in groups %}
-		<h3>{{ group.name }}</h3>
+		    <h3>{{ group.name }}</h3>
     <ul>
     {% for item in group.items %}
 				        <li>{{item.name}}</li>
     {%endfor%}
     </ul>
 {%endfor%}
-{%endraw%}
 ```
 
 This will output the following list of members organised by the company they work for.
