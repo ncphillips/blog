@@ -27,9 +27,9 @@ link = ""
 title = ""
 
 +++
-Jekyll 3.4.0 was release on the 27<sup>th</sup> of January 2017 with some noteworthy enhancements that id like to share with you.
+Jekyll 3.4.0 was release on the 27<sup>th</sup> of January 2017 with some noteworthy enhancements that I'd like to share with you.
 
-So whats new?
+So what's new?
 
 ## Add connector param to ‘array_to_sentence_string’ filter
 
@@ -78,7 +78,7 @@ one, two, or three
 
 ## Group an array's items using a Liquid expression filter
 
-Jekyll previously allowed you to group your content by a given property using the `group_by` filter. Let’s group all members by the company they work for as an example.
+Jekyll previously allowed you to group your content by a given property using the `group_by` filter. As an example let’s group all site members working for each company.
 
 *   **input** - Site members names.
 *   **property** - Company names.
