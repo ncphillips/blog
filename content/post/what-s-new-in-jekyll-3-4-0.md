@@ -56,7 +56,7 @@ We can then create an `_include` file for our post tags using
 {{ page.tags | array_to_sentence_string }}
 ```
 
-Remember the default connector is `and`, so this will output our tags like so
+Remember the default connector is `and`. This will output our tags like so
 
 ```
 one, two, and three
