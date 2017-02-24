@@ -111,10 +111,10 @@ To make this information more useful, we can now create a list of members groupe
 {%raw%}
 {% assign groups = site.members | group_by: 'company' %}
 {% for group in groups %}
-		<h3>{{ group.name }}</h3>
+			    <h3>{{ group.name }}</h3>
     <ul>
     {% for item in group.items %}
-				<li>{{item.name}}</li>
+				        <li>{{item.name}}</li>
     {%endfor%}
     </ul>
 {%endfor%}
