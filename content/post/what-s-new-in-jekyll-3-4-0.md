@@ -39,9 +39,7 @@ So what's new?
 
 Still with me?
 
-Here is a real world example.
-
-Let’s say we have the following tags in our post front matter.
+Here is a real world example. Our post has the following tags.
 
 ```
 tags:
@@ -56,7 +54,7 @@ We can then create an `_include` file for our post tags using
 {{ page.tags | array_to_sentence_string }}
 ```
 
-Remember the default connector is `and`. This will output our tags like so
+This will output our tags  
 
 ```
 one, two, and three
@@ -79,9 +77,6 @@ one, two, or three
 ## Group an array's items using a Liquid expression filter
 
 Jekyll previously allowed you to group your content by a given property using the `group_by` filter. As an example let’s group all site members working for each company.
-
-*   **input** - Site members.
-*   **property** - Company.
 
 Our Jekyll site’s `_config.yml` includes the following members.
 
@@ -173,7 +168,7 @@ This gives us the same output as earlier
 </ul>
 <h3>Github</h3>
 <ul>
-  <li>Parker</ul>
+  <li>Parker</li>
 </ul>
 ```
 
