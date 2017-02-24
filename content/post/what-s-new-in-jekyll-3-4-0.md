@@ -204,7 +204,7 @@ Output:
 
 *   Jekyll’s plugin page now showcases the most [popular plugins](http://jekyllrb.com/docs/plugins/#available-plugins/) .
 
-*   The quick-start guide was updated so there’s never been a better time to [try Jekyll](https://jekyllrb.com/).
+*   The quick-start guide was updated so there has never been a better time to [try Jekyll](https://jekyllrb.com/).
 
 ## Jekyll warnings
 
