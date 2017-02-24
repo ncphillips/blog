@@ -177,6 +177,18 @@ This gives us the same output as earlier
 </ul>
 ```
 
+In conclusion we can also use the `group_by_exp` filter to output different information such as a list of site members if we change the Liquid expression to members names.
+```
+{{ site.members | group_by_exp:"items", "items.name" }}
+```
+
+Output:
+```
+<h3>Scott</h3>
+<h3>Jordan</h3>
+<h3>Parker</h3>
+```
+
 ## Documentation updates (Note: Not finished)
 
 *   Jekyll’s plugin page now showcases the most [popular plugins](http://jekyllrb.com/docs/plugins/#available-plugins/) .
