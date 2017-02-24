@@ -210,6 +210,6 @@ Output:
 
 *   Jekyll now notifies you when you have an error in an `_include` file. This should save you some time tracking down bugs.
 
-*   Jekyll docs recommend ruby version 2.0 or above. If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is a Jekyll dependancy and will be fixed in an upcoming release. For now you can just ignore those warnings. You didn’t do anything wrong.
+*   Jekyll docs recommend ruby version 2.0 or above. If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is a Jekyll dependancy and will be fixed in an upcoming release. For now you can just ignore those warnings. You haven't done anything wrong.
 
 Let me know if you found these tutorials helpful.
