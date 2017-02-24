@@ -197,7 +197,7 @@ Output:
 <h3>Parker</h3>
 ```
 
-## Documentation updates (Note: Not finished)
+## Documentation updates
 
 *   Jekyll’s plugin page now showcases the most [popular plugins](http://jekyllrb.com/docs/plugins/#available-plugins/) .
 
