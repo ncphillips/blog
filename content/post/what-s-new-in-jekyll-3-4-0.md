@@ -131,7 +131,7 @@ This will output the following list of site members organised by the company the
 </ul>
 <h3>Github</h3>
 <ul>
-  <li>Parker</ul>
+  <li>Parker</li>
 </ul>
 ```
 
