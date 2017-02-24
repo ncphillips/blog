@@ -101,7 +101,7 @@ Jekyll can apply the group_by filter with company as the parameter using
 {{ site.members | group_by:"company" }}
 ```
 
-Company names are collected into an array which looks something like this
+Members names are collected into an array which outputs the following information
 
 ```
 {“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
