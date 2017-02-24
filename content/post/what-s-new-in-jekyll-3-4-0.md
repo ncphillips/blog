@@ -80,8 +80,8 @@ one, two, or three
 
 Jekyll previously allowed you to group your content by a given property using the `group_by` filter. As an example let’s group all site members working for each company.
 
-*   **input** - Site members names.
-*   **property** - Company names.
+*   **input** - Site members.
+*   **property** - Company.
 
 Our Jekyll site’s `_config.yml` includes the following members.
 
