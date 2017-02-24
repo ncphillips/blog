@@ -183,7 +183,7 @@ In conclusion we can also use the `group_by_exp` filter to output different info
 {{ site.members | group_by_exp:"items", "items.name" }}
 ```
 
-Using the above Liquid expression we can now create a list of site members names.
+We can create a list of site members names like so
 
 ```
 {% assign groups = site.members | group_by_exp: "items", "items.name" %}
@@ -204,7 +204,7 @@ Output:
 
 *   Jekyll’s plugin page now showcases the most [popular plugins](http://jekyllrb.com/docs/plugins/#available-plugins/) .
 
-*   The quick-start guide was updated so there has never been a better time to [try Jekyll](https://jekyllrb.com/).
+*   The quick-start guide was updated so there’s never been a better time to [try Jekyll](https://jekyllrb.com/).
 
 ## Jekyll warnings
 
