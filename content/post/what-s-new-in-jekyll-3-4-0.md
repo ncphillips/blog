@@ -27,7 +27,7 @@ link = ""
 title = ""
 
 +++
-Jekyll 3.4.0 was release on the 27<sup>th</sup> of January with some noteworthy enhancements that id like to share with you.
+Jekyll 3.4.0 was release on the 27<sup>th</sup> of January 2017 with some noteworthy enhancements that id like to share with you.
 
 So whats new?
 
