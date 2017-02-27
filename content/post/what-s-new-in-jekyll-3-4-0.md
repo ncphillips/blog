@@ -130,23 +130,35 @@ This will output the following list of site members organised by the company the
 </ul>
 ```
 
-Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression like so
+Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression.
+
+Our Jekyll page front matter includes information about our company software.
 
 ```
-{{ site.members | group_by_exp:"items", "items.company" }}
+
+software:
+- name: "New shiny software"
+  version: "0.4"
+- name: "ABC software"
+  version: "1.2"
+- name: "XYZ software"
+  version: "1.9"
+```
+
+We can apply the `group_by_exp` filter with our software version as the parameter using
+
+```
+{{ page.software | group_by_exp:"item", "item.version | slice: 0" }}
 ```
 
 This outputs the following information
-
 ```
-{“name”=>”Forestry”, “items”=>[{“name”=>”Scott”, “company”=>”Forestry”}, {“name”=>”Jordan”, “company”=>”Forestry”}], “size”=>2}{“name”=>”Github”, “items”=>[{“name”=>”Parker”, “company”=>”Github”}], “size”=>1}
-```
-
-Using a Liquid expression we can now create a list of site members grouped by the company they work for
-
+{“name”=>”0”, “items”=>[{“name”=>”New shiny software”, “version”=>”0.4”}], “size”=>1}{“name”=>”1”, “items”=>[{“name”=>”ABC software”, “version”=>”1.2”}, {“name”=>”XYZ software”, “version”=>”1.9”}], “size”=>2}
 ```
 
-{% assign groups = site.members | group_by_exp: "items", "items.company" %}
+We will group our software by version
+```
+{% assign groups = page.software | group_by_exp:"item", "item.version | slice: 0" %}
 {% for group in groups %}
     <h3>{{ group.name }}</h3>
 
@@ -158,17 +170,17 @@ Using a Liquid expression we can now create a list of site members grouped by th
 {%endfor%}
 ```
 
-This gives us the same output as earlier
-
+This gives us the following output
 ```
-<h3>Forestry</h3>
+<h3>Major version number 0</h3>
 <ul>
-  <li>Scott</li>
-  <li>Jordan</li>
+  <li>New shiny software</li>
 </ul>
-<h3>Github</h3>
+
+<h3>Major version number 1</h3>
 <ul>
-  <li>Parker</li>
+  <li>ABC software</li>
+  <li>XYZ software</li>
 </ul>
 ```
 
