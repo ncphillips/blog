@@ -2,8 +2,8 @@
 Categories = ""
 banner = "/images/jekyll-3.4.0-1.png"
 date = "2017-02-20T10:06:00-04:00"
-description = ""
-excerpt = ""
+description = "Jekyll 3.4.0 was released last month with some noteworthy enhancements that I’d like to share with you."
+excerpt = "Jekyll 3.4.0 was released last month with some noteworthy enhancements that I’d like to share with you."
 show_author = true
 show_comments = true
 show_signup = true
