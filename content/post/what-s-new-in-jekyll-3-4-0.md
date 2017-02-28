@@ -1,7 +1,7 @@
 +++
 Categories = ""
 banner = "/images/jekyll-3.4.0-1.png"
-date = "2017-02-10T09:06:16-05:00"
+date = "2017-02-20T10:06:00-04:00"
 description = ""
 excerpt = ""
 show_author = true
