@@ -2,7 +2,7 @@
 Categories = ""
 banner = "/images/jekyll-3.4.0-1.png"
 date = "2017-02-20T10:06:00-04:00"
-description = "Jekyll 3.4.0 was released last month with some noteworthy enhancements that I’d like to share with you."
+description = ""
 excerpt = "Jekyll 3.4.0 was released last month with some noteworthy enhancements that I’d like to share with you."
 show_author = true
 show_comments = true
@@ -26,9 +26,9 @@ link = ""
 title = ""
 
 +++
-Jekyll 3.4.0 was release on the 27<sup>th</sup> of January 2017 with some noteworthy enhancements that I'd like to share with you.
+Jekyll 3.4.0 was release on the 27th of January 2017 with some noteworthy enhancements that I'd like to share with you.  
 
-So what's new?
+So what's new?  
 
 ## Add connector param to ‘array_to_sentence_string’ filter
 
