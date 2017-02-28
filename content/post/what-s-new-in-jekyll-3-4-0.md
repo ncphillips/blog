@@ -132,7 +132,7 @@ This will output the following list of site members organised by the company the
 
 Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression.
 
-Our Jekyll page front matter includes information about our company software.
+Now, if you have the following data about our company software.
 
 ```
 
@@ -162,7 +162,7 @@ We will group our software by version
 ```
 {% assign groups = page.software | group_by_exp:"item", "item.version | slice: 0" %}
 {% for group in groups %}
-    <h3>{{ group.name }}</h3>
+    <h3>Major version number {{ group.name }}</h3>
 
     <ul>
     {% for item in group.items %}
@@ -226,7 +226,8 @@ Output:
 
 *   Jekyll now notifies you when you have an error in an `_include` file. This should save you some time tracking down bugs.
 
-* Jekyll now prevents double forward slash errors. In this case Jekyll will not append a forward slash to `url:` because the `baseurl:` input already contains ‘/‘.
+*   Jekyll now prevents double forward slash errors. In this case Jekyll will not append a forward slash to `url:` because the `baseurl:` input already contains ‘/‘.
+
 ```
 url: "http://example.com"
 baseurl: "/blog"
