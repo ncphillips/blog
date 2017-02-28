@@ -3,7 +3,6 @@ Categories = ""
 banner = "/images/jekyll-3.4.0-1.png"
 date = "2017-02-10T09:06:16-05:00"
 description = ""
-draft = true
 excerpt = ""
 show_author = true
 show_comments = true
@@ -132,7 +131,7 @@ This will output the following list of site members organised by the company the
 
 Jekyll 3.4.0 introduced the `group_by_exp` filter which allows you to group an array of items using a Liquid expression.
 
-Now, if you have the following data about our company software.
+Now, we have the following data about our company software.
 
 ```
 
@@ -145,7 +144,7 @@ software:
   version: "1.9"
 ```
 
-We can apply the `group_by_exp` filter with our software version as the parameter using
+We can apply the `group_by_exp` filter to group our software by _major_ version number.  For major version we are not concerned with the decimal places (just 1.x, 2.x, 3.x, etc).  So our expression will use the **slice** filter. Like so:
 
 ```
 {{ page.software | group_by_exp:"item", "item.version | slice: 0" }}
