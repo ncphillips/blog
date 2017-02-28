@@ -54,7 +54,7 @@ We can then create an `_include` file for our post tags using
 {{ page.tags | array_to_sentence_string }}
 ```
 
-This will output our tags  
+This will output our tags
 
 ```
 one, two, and three
@@ -152,11 +152,13 @@ We can apply the `group_by_exp` filter with our software version as the paramete
 ```
 
 This outputs the following information
+
 ```
 {“name”=>”0”, “items”=>[{“name”=>”New shiny software”, “version”=>”0.4”}], “size”=>1}{“name”=>”1”, “items”=>[{“name”=>”ABC software”, “version”=>”1.2”}, {“name”=>”XYZ software”, “version”=>”1.9”}], “size”=>2}
 ```
 
 We will group our software by version
+
 ```
 {% assign groups = page.software | group_by_exp:"item", "item.version | slice: 0" %}
 {% for group in groups %}
@@ -171,6 +173,7 @@ We will group our software by version
 ```
 
 This gives us the following output
+
 ```
 <h3>Major version number 0</h3>
 <ul>
@@ -187,13 +190,18 @@ This gives us the following output
 In conclusion we can also use the `group_by_exp` filter to output different information such as site members names by changing the Liquid expression.
 
 ```
-{{ site.members | group_by_exp:"items", "items.name" }}
+{{ site.members | group_by_exp:"item", "item.name" }}
+```
+
+This will output
+```
+{"name"=>"Scott", "items"=>[{"name"=>"Scott", "company"=>"Forestry", "age"=>"32"}], "size"=>1}{"name"=>"Jordan", "items"=>[{"name"=>"Jordan", "company"=>"Forestry", "age"=>"33"}], "size"=>1}{"name"=>"Parker", "items"=>[{"name"=>"Parker", "company"=>"Github", "age"=>"31"}], "size"=>1}
 ```
 
 We can create a list of site members names like so
 
 ```
-{% assign groups = site.members | group_by_exp: "items", "items.name" %}
+{% assign groups = site.members | group_by_exp: "item", "item.name" %}
 {% for group in groups %}
     <h3>{{ group.name }}</h3>
 {%endfor%}
