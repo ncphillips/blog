@@ -13,9 +13,9 @@ twitter_card = "/images/jekyll-3.4.0-2.png"
 [[author]]
 bio = "Marketer. Developer. Founder of <a href='https://desiredpersona.com/' target='_blank'>Desired Persona</a>"
 img = "/images/colin-garvey.jpg"
+link = "https://desiredpersona.com/about/"
 name = "Colin Garvey "
 twitter = "https://twitter.com/desiredpersona"
-link = "https://desiredpersona.com/about/"
 [[suggested]]
 link = ""
 title = ""
