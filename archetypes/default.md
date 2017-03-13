@@ -14,6 +14,7 @@ bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CM
 img = "/images/Scott_Gallant.jpg"
 name = "Scott Gallant"
 twitter = "https://twitter.com/scottgallant"
+link = ""
 [[suggested]]
 link = ""
 title = ""
