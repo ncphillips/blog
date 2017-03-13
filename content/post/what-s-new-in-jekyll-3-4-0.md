@@ -11,7 +11,7 @@ tags = ""
 title = "What's new in Jekyll 3.4.0"
 twitter_card = "/images/jekyll-3.4.0-2.png"
 [[author]]
-bio = "Marketer, Media buyer and Developer at desiredpersona.com"
+bio = "Update bio: Marketer. Developer. Founder of <a href=”https://desiredpersona.com/\">Desired Persona</a>"
 img = "/images/colin-garvey.jpg"
 name = "Colin Garvey "
 twitter = "https://twitter.com/desiredpersona"
