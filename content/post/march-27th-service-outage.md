@@ -3,7 +3,6 @@ Categories = ""
 banner = "/images/forestry-outage-2.png"
 date = "2017-03-27T21:25:39+00:00"
 description = ""
-draft = true
 excerpt = "A post mortem on the Forestry service outage"
 show_author = true
 show_comments = true
