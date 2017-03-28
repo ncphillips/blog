@@ -42,4 +42,6 @@ I ran squasher on our migrations in dry run mode (as I have done before) to ensu
 But... this is why we have backups. Our production database runs on 
 <a href="https://aws.amazon.com/rds/">Amazon&nbsp;RDS</a> in a multi-az deployment. By the time the issue was noticed, the changes had already propagated to the failover instance so we had to go back to a point-in-time restore. So we took the site offline and searched our logs to find the most recent successful API request (this was the longest part). Once we found that, it was just a few clicks (and some waiting) to get a restored copy of the database back up and running. All in all, we lost < 1min worth of data.
 
+Once service was restored, we had a backlog jobs that needed to be processed. You may have experienced slow publish/preview/import times while we churned through them. After about 30 mins of Forestry coming back online everything was back to normal.
+
 TLDR; Accidentally deleted our production database by way of a bad migration so we had to restore from a backup.
