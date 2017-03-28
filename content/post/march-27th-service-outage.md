@@ -39,8 +39,7 @@ The way squasher works is by taking the current state of the database and adding
 
 I ran squasher on our migrations in dry run mode (as I have done before) to ensure that everything looked ok. Dry run mode creates the new squashed migration so that it can be inspected. My mistake was that I forgot to delete the migration that the dry run created before I ran it for real. On the subsequent run squasher picked up on the new migration, which didn't have a record in the database because it had never been run. The new squashed migration now had a name that did not exist in our production database and so when it ran, wiped our entire production database clean. The migration was run in development, but it was on a clean database so the issue wasn't noticed. And frankly, I wasn't worried because "I've done this before".
 
-But... this is why we have backups. Our production database runs on
-
+But... this is why we have backups. Our production database runs on 
 <a href="https://aws.amazon.com/rds/">Amazon&nbsp;RDS</a> in a multi-az deployment. By the time the issue was noticed, the changes had already propagated to the failover instance so we had to go back to a point-in-time restore. So we took the site offline and searched our logs to find the most recent successful API request (this was the longest part). Once we found that, it was just a few clicks (and some waiting) to get a restored copy of the database back up and running. All in all, we lost < 1min worth of data.
 
 Once service was restored, we had a backlog jobs that needed to be processed. You may have experienced slow publish/preview/import times while we churned through them. After about 30 mins of Forestry coming back online everything was back to normal.
