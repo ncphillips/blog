@@ -3,7 +3,7 @@ baseurl: https://forestry.io/blog/
 languagecode: en-us
 pluralizelisttitles: false
 theme: hugo-blog-theme
-title: The Forestry Blog
+title: Forestry Blog
 sitemap:
   ChangeFreq: ''
   Filename: sitemap.xml
