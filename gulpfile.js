@@ -1,24 +1,48 @@
-var requireDir = require('require-dir'),
-      fs = require('fs');
+// https://www.sitepoint.com/simple-gulpy-workflow-sass/
 
-// Require all tasks in gulp, including subfolders
-requireDir('./gulp', { recurse: true });
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var exec = require('child_process').exec;
 
-// global settings
-settings = {
-  theme: "hugo-blog-theme",
-  //Your main javascipt files
-  jsEntryPoints: ['main.js'],
-  // only one of these
-  SASSEntryPoint: 'main.scss'
+var input = './themes/hugo-blog-theme/src/sass/**/*.scss';
+var output = './themes/hugo-blog-theme/static/css';
+
+var sassOptions = {
+  errLogToConsole: true,
+  outputStyle: 'compressed' // expanded
 };
 
-// use the settings to set up convenience variables
-(function(settings){
-  settings.jsEntryPoints = settings.jsEntryPoints.map( x => "./themes/" + settings.theme + '/src/js/' + x);
-  settings.JSExitPoint = './themes/' + settings.theme +  '/static/js/'
-  settings.SASSEntryPoint = "./themes/" + settings.theme + '/src/sass/' + settings.SASSEntryPoint
-  settings.SASSExitPoint = "./themes/" + settings.theme + '/static/css/'
-  settings.SASSDir = "./themes/" + settings.theme + "/src/sass/"
-  settings.jsDir = "./themes/" + settings.theme + "/src/js/"
-})(settings);
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+};
+
+
+gulp.task('hugo', function () {
+  exec('hugo server --buildDrafts=true --verbose=true');
+});
+
+gulp.task('sass', function () {
+  return gulp
+  .src(input)
+  .pipe(sourcemaps.init())
+  .pipe(sass(sassOptions).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(autoprefixer(autoprefixerOptions))
+  .pipe(gulp.dest(output));
+});
+
+gulp.task('watch', function() {
+  return gulp
+    // Watch the input folder for change,
+    // and run `sass` task when something happens
+    .watch(input, ['sass'])
+    // When there is a change,
+    // log a message in the console
+    .on('change', function(event) {
+      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
+});
+
+gulp.task('default', ['hugo', 'sass', 'watch']);
