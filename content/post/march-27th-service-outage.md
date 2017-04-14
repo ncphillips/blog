@@ -1,7 +1,7 @@
 +++
 Categories = ""
 banner = "/images/forestry-outage-2.png"
-date = "2017-03-27T21:25:39+00:00"
+date = "2017-03-27T21:25:39Z"
 description = ""
 excerpt = "A post mortem on the Forestry service outage"
 show_author = true
@@ -26,8 +26,6 @@ link = ""
 title = ""
 
 +++
-
-
 As some of you may have noticed, Forestry was down for about 2.5 hours between 23:00 UTC March 27 until 01:30 UTC March 28. In the spirit of full disclosure I'd like to explain what happened and why.
 
 Forestry is a Rails application and from time to time the number of migrations we have get unwieldy. Being an application under rapid development, things are constantly changing and migrations are created sometimes daily. To keep this every growing list of files at bay we use a tool called 
