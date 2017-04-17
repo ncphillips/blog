@@ -29,3 +29,13 @@ title = ""
 
 +++
 https://www.youtube.com/watch?v=WI-bwB0esmk
+
+
+Shift select, multiple images
+
+![](/blog/images/select-multiple-images.gif)
+
+Drag in multiple images
+
+![](/blog/images/drag-drop-multiple-images.jpg)
+<p class=""><br></p>
