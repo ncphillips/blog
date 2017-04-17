@@ -29,12 +29,12 @@ title = ""
 
 +++
 We all love working with Markdown but one of it's biggest limitations is managing images to your content.  To simplify this process we're happy to announce the [Forestry.io](https://forestry.io) Media Manager.  [Nolan](https://twitter.com/ncphi) and <a href="https://twitter.com/nichlaswa" class="">Nichlas</a> put a ton of effort into crafting an amazing UX for this, so we hope you like it <img src="/blog/images/fist-pump.png" style="display: inline;max-width: 40px;margin: 0;vertical-align: middle;">
-
-
 <!--<iframe width="853" height="480" src="https://www.youtube.com/embed/WI-bwB0esmk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>-->
 
 
-## Manage all of your images and files from one place
+
+
+## Media Manager
 
 
 ![](/blog/images/Forestry-media-manager.png)
@@ -42,7 +42,8 @@ We all love working with Markdown but one of it's biggest limitations is managin
 
 
 
-## Drag in multiple images at once
+## Drag multiple files
+
 
 Handy if you have large image galleries.
 
@@ -52,9 +53,11 @@ Handy if you have large image galleries.
 
 
 
-## Manage other files, such as PDFs
+## Manage other files
+
 
 Also manage non-image files like PDFs, text files, etc.
+
 
 ## ![](/blog/images/Forestry-pdf.png)
 
@@ -66,3 +69,5 @@ Want to select multiple images at once? Just click on one, then hold Shift and c
 
 
 ![](/blog/images/select-multiple-images.gif)
+
+As always, we'd love to know what you think. 
