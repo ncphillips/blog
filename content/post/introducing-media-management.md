@@ -28,7 +28,9 @@ link = ""
 title = ""
 
 +++
-We all love working with Markdown but one of it's biggest limitations is managing images to your content.  To simplify this process we're happy to announce the [Forestry.io](https://forestry.io) Media Manager.  [Nolan](https://twitter.com/ncphi) and <a href="https://twitter.com/nichlaswa" class="">Nichlas</a> put a lot of effort crafting an amazing UX for this, so we hope you like it <img src="/blog/images/fist-pump.png" style="display: inline;max-width: 40px;margin: 0;vertical-align: middle;">
+
+
+We all love working with Markdown but one of it's biggest limitations is managing image.  To simplify this process we're happy to announce the [Forestry.io](https://forestry.io) Media Manager.  [Nolan](https://twitter.com/ncphi) and <a href="https://twitter.com/nichlaswa" class="">Nichlas</a> put a lot of work into crafting an amazing UX for this, so we hope you like it ![](/blog/images/fist-pump.png)
 <!--<iframe width="853" height="480" src="https://www.youtube.com/embed/WI-bwB0esmk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>-->
 
 
