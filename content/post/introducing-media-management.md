@@ -29,16 +29,13 @@ link = ""
 title = ""
 
 +++
+We all love working with Markdown but one of it's biggest limitations is managing images to your content.  To simplify this process we're happy to announce the [Forestry.io](https://forestry.io) Media Manager.  [Nolan](https://twitter.com/ncphi) and <a href="https://twitter.com/nichlaswa" class="">Nichlas</a> put a ton of effort into crafting an amazing UX for this, so we hope you like it <img src="/blog/images/fist-pump.png" style="display: inline;max-width: 40px;margin: 0;vertical-align: middle;">
 
 
-We all love working with Markdown but one of it's biggest limitations is managing images to your content.  We're trying to simplify this process and today we're happy to announce the [Forestry.io](https://forestry.io) Media Manager.  [Nolan](https://twitter.com/ncphi) and <a href="https://twitter.com/nichlaswa" class="">Nichlas</a> put a ton of effort into crafting an amazing UX for this ![](/blog/images/fist-pump.png)
+<!--<iframe width="853" height="480" src="https://www.youtube.com/embed/WI-bwB0esmk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>-->
 
 
-
-
-<iframe width="853" height="480" src="https://www.youtube.com/embed/WI-bwB0esmk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-
-## See an archive of all of your images and files
+## Manage all of your images and files from one place
 
 
 ![](/blog/images/Forestry-media-manager.png)
@@ -46,7 +43,9 @@ We all love working with Markdown but one of it's biggest limitations is managin
 
 
 
-## Drag in multiple images
+## Drag in multiple images at once
+
+Handy if you have large image galleries.
 
 
 ![](/blog/images/drag-drop-multiple-images.jpg)
@@ -54,16 +53,17 @@ We all love working with Markdown but one of it's biggest limitations is managin
 
 
 
-## Manage other files, such as PDFs![](/blog/images/Forestry-pdf.png)
+## Manage other files, such as PDFs
+
+Also manage non-image files like PDFs, text files, etc.
+
+## ![](/blog/images/Forestry-pdf.png)
 
 
-## Hold shift and click to select multiple images
+## Hold *shift* to select multiple images
 
-This is convenient if you're batch-deleting old image files.
+
+Want to select multiple images at once? Just click on one, then hold Shift and click on another image. This will select all images between the two.
 
 
 ![](/blog/images/select-multiple-images.gif)
-
-
-
-
