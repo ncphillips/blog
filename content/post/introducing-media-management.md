@@ -3,7 +3,6 @@ Categories = ""
 banner = "/images/forestry-io-media-images.jpg"
 date = "2017-04-17T11:46:07+00:00"
 description = ""
-draft = true
 excerpt = "A WordPress-like media manager for your Jekyll and Hugo sites"
 link = ""
 show_author = true
