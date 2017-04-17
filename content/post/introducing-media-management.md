@@ -28,12 +28,4 @@ link = ""
 title = ""
 
 +++
-
-
-Buy why, some say, the moon? Why choose this as our goal? And they may as well ask why climb the highest mountain?<iframe width="100%" height="auto" src="https://www.youtube.com/embed/WI-bwB0esmk" frameborder="0" allowfullscreen="" async="" preload=""></iframe>
-
-Where ignorance lurks, so too do the frontiers of discovery and imagination.
-
-Here men from the planet Earth first set foot upon the Moon. July 1969 AD. We came in peace for all mankind.
-
-Failure is not an option.
+https://www.youtube.com/watch?v=WI-bwB0esmk
