@@ -50,7 +50,7 @@ The following page makes use of a variety of front matter:
 
 <span class="image-wrapper media-wrapper" contenteditable="false"></span>
 
-<img src="/blog/images/front-matter-templates-1.jpg" alt="Forestry front matter demo" class="wider-than-text">
+<img src="/images/front-matter-templates-1.jpg" alt="Forestry front matter demo" class="wider-than-text">
 
     ---
     title: Astronomy
@@ -79,29 +79,29 @@ With Front Matter Templates, you can do things like:
 
 ### Hide fields from your editors
 
-![/blog/images/hidden-field-3.gif](/blog/images/hidden-field-3.gif)
+![/blog/images/hidden-field-3.gif](/images/hidden-field-3.gif)
 
 ### Change the field type in the UI
 
 For example, change type from a list of tags to an image gallery. [See full list of available fields](https://forestry.io/docs/setting-up-a-site/front-matter-templates/#field-types).
 
-![change field type](/blog/images/field-type-1.gif)
+![change field type](/images/field-type-1.gif)
 
 ### Required fields
 
-![set field as required](/blog/images/required.gif)
+![set field as required](/images/required.gif)
 
 ### Reorder the fields in the UI
 
-![reorder front matter fields](/blog/images/reorder-fields-1.gif)
+![reorder front matter fields](/images/reorder-fields-1.gif)
 
 ### Add help text
 
-![add help text to front matter fields](/blog/images/help-text.png)
+![add help text to front matter fields](/images/help-text.png)
 
 ### Set default values and much more.
 
-![set a default value](/blog/images/default-values.png)
+![set a default value](/images/default-values.png)
 
 ## What's Next?
 
@@ -109,13 +109,13 @@ This is just the beginning. Soon we'll be adding more field types and more custo
 
 ### Coming soon: image resizing and cropping
 
-![/blog/images/image-upload-4.gif](/blog/images/image-upload-4.gif)
+![/blog/images/image-upload-4.gif](/images/image-upload-4.gif)
 
 ### Coming soon: advanced UI fields
 
 Like color pickers, google map location picker, etc.
 
-![/blog/images/color-picker-forestry.png](/blog/images/color-picker-forestry.png)
+![/blog/images/color-picker-forestry.png](/images/color-picker-forestry.png)
 
 ### Coming soon: related fields
 

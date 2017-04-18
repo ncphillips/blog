@@ -28,7 +28,7 @@ link = ""
 title = ""
 
 +++
-We all love working with Markdown but one of it's biggest limitations is adding images to your content.  That's why we're happy to announce the [Forestry.io](https://forestry.io) Media Manager.  [Nolan](https://twitter.com/ncphi) and <a href="https://twitter.com/nichlaswa" class="">Nichlas</a> put a lot of work into crafting an amazing UX for this, so we hope you like it ![](/blog/images/fist-pump.png)
+We all love working with Markdown but one of it's biggest limitations is adding images to your content.  That's why we're happy to announce the [Forestry.io](https://forestry.io) Media Manager.  [Nolan](https://twitter.com/ncphi) and <a href="https://twitter.com/nichlaswa" class="">Nichlas</a> put a lot of work into crafting an amazing UX for this, so we hope you like it ![](/images/fist-pump.png)
 <!--<iframe width="853" height="480" src="https://www.youtube.com/embed/WI-bwB0esmk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>-->
 
 
@@ -37,7 +37,7 @@ We all love working with Markdown but one of it's biggest limitations is adding 
 ## Media Manager
 
 
-![](/blog/images/Forestry-media-manager.png)
+![](/images/Forestry-media-manager.png)
 
 
 
@@ -48,7 +48,7 @@ We all love working with Markdown but one of it's biggest limitations is adding 
 Handy if you have large image galleries.
 
 
-![](/blog/images/drag-drop-multiple-images.jpg)
+![](/images/drag-drop-multiple-images.jpg)
 
 
 
@@ -59,7 +59,7 @@ Handy if you have large image galleries.
 Also manage non-image files like PDFs, text files, etc.
 
 
-## ![](/blog/images/Forestry-pdf.png)
+## ![](/images/Forestry-pdf.png)
 
 
 ## Hold *shift* to select multiple images
@@ -68,7 +68,7 @@ Also manage non-image files like PDFs, text files, etc.
 Want to select multiple images at once? Just click on one, then hold Shift and click on another image. This will select all images between the two.
 
 
-![](/blog/images/select-multiple-images.gif)
+![](/images/select-multiple-images.gif)
 
 
 

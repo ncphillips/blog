@@ -4,6 +4,7 @@ languagecode: en-us
 pluralizelisttitles: false
 theme: hugo-blog-theme
 title: Forestry Blog
+canonifyUrls: true
 sitemap:
   ChangeFreq: ''
   Filename: sitemap.xml
