@@ -41,7 +41,7 @@ We totally rebuilt our WYSIWYG editor (inspired by Medium.com).
 *   Highlight text to change formatting
 *   Clean and simple interface
 
-![](/blog/forestryio/images/Forestry-io-editor.png){:style="width: 95%; margin: 2em auto; border: 1px solid rgba(0, 0, 0, 0.12); box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);"}
+![](/forestryio/images/Forestry-io-editor.png){:style="width: 95%; margin: 2em auto; border: 1px solid rgba(0, 0, 0, 0.12); box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);"}
 
 Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
@@ -51,7 +51,7 @@ Thanks to [@envygeeks](https://envygeeks.io/) for all of his hard work on this.
 
 Our UI has been completely redesigned and is now mobile friendly.  We're not going to stop until this is the slickest CMS on the planet. Thanks to [Nichlas](https://twitter.com/nichlaswa) for his amazing design chops here. I designed V1 of Forestry and I'm happy to say that Nichlas has warped us to level 3.
 
-![](/blog/forestryio/images/new-forestry-io-cms-3.png)
+![](/forestryio/images/new-forestry-io-cms-3.png)
 
 * * *
 
@@ -59,7 +59,7 @@ Our UI has been completely redesigned and is now mobile friendly.  We're not go
 
 Remote Admin is a single html file that you drop into your static site and it allows you to access your CMS from mysite.com/admin/. We think this is pretty cool. It's like WordPress, but instead of 100's of PHP files, it's just a single HTML file that doesn't require any updates.  Thanks to [Nolan](https://twitter.com/ncphi) who flawlessly guided this project.
 
-![](/blog/forestryio/images/forestry-remote.gif)
+![](/forestryio/images/forestry-remote.gif)
 
 * * *
 
@@ -67,7 +67,7 @@ Remote Admin is a single html file that you drop into your static site and it al
 
 With Remote, you can also customize the branding and replace the Forestry logo with your own.
 
-![](/blog/forestryio/images/forestry-white-label.gif)
+![](/forestryio/images/forestry-white-label.gif)
 
 * * *
 
@@ -75,7 +75,7 @@ With Remote, you can also customize the branding and replace the Forestry logo w
 
 You can tell Forestry to watch Jekyll or Hugo repo and build your site when you commit to that repo. Forestry can also deploy your built site to your host (S3, FTP, Git branch, etc). Like continuous integration for static sites.
 
-![](/blog/forestryio/images/xQ36lylOK6.gif)
+![](/forestryio/images/xQ36lylOK6.gif)
 
 * * *
 

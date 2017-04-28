@@ -27,7 +27,7 @@ link = "https://forestry.io/blog/post/forestry-gitlab/"
 title = "Forestry + GitLab - Jordan Patterson"
 
 +++
-<img src="/blog/forestryio/images/snipcart-1.gif" class="medium right">
+<img src="/forestryio/images/snipcart-1.gif" class="medium right">
 
 In this tutorial, we'll look at how we can integrate [Snipcart](https://snipcart.com/) into your favorite static-site workflow. We'll use [Jekyll](#!) but you can also use other generators like [Hugo](https://gohugo.io).
 
@@ -95,7 +95,7 @@ That's it! We're now ready to display all of our products on our website. Feel f
 
 **Shameless plug:** If you want a great admin interface to manage your Jekyll e-commerce site, [Forestry.io](https://forestry.io) will generate this CMS from the above example:
 
-<img src="/blog/forestryio/images/forestry-ecommerce-screenshot.png" class="large center">
+<img src="/forestryio/images/forestry-ecommerce-screenshot.png" class="large center">
 
 ## Displaying the products
 

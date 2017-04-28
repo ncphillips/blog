@@ -26,7 +26,7 @@ link = "https://forestry.io/blog/post/choose-static/"
 title = "I can finally choose static"
 
 +++
-We're stoked to announce that Forestry.io is going to be part of [Techstars NYC](http://www.techstars.com/startup-accelerator/).  The 90-day program runs from July until the end of September 2016.  
+We're stoked to announce that Forestry.io is going to be part of [Techstars NYC](http://www.techstars.com/startup-accelerator/).  The 90-day program runs from July until the end of September 2016.
 
 What this means for Forestry and our users:
 
@@ -36,5 +36,5 @@ What this means for Forestry and our users:
 
 We'll we're off to New York.
 
-![](/blog/forestryio/images/Forestry.io-in-NY.jpg)
+![](/forestryio/images/Forestry.io-in-NY.jpg)
 (The flight attendand gave us his selfie stick for this photo)
