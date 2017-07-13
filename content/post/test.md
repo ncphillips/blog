@@ -12,6 +12,12 @@ tags = []
 title = "test"
 twitter_card = ""
 [[author]]
+bio = ""
+img = ""
+link = ""
+name = ""
+twitter = ""
+[[author]]
 bio = "CEO and Co-founder of <a href='https://forestry.io' title='Forestry.io CMS'>Forestry.io</a>. Web developer, recovering freelancer."
 img = "/images/Scott_Gallant.jpg"
 name = "Scott Gallant"
