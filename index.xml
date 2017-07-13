@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Forestry Blog</title>
+    <link>https://forestry.io/blog/index.xml</link>
+    <description>Recent content on Forestry Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Apr 2017 11:46:07 +0000</lastBuildDate>
+    <atom:link href="https://forestry.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introducing Media Management</title>
+      <link>https://forestry.io/blog/post/introducing-media-management/</link>
+      <pubDate>Mon, 17 Apr 2017 11:46:07 +0000</pubDate>
+      
+      <guid>https://forestry.io/blog/post/introducing-media-management/</guid>
+      <description>
+
+&lt;p&gt;We all love working with Markdown but one of it&amp;rsquo;s biggest limitations is adding images to your content.  That&amp;rsquo;s why we&amp;rsquo;re happy to announce the &lt;a href=&#34;https://forestry.io&#34;&gt;Forestry.io&lt;/a&gt; Media Manager.  &lt;a href=&#34;https://twitter.com/ncphi&#34;&gt;Nolan&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/nichlaswa&#34; class=&#34;&#34;&gt;Nichlas&lt;/a&gt; put a lot of work into crafting an amazing UX for this, so we hope you like it &lt;img src=&#34;https://forestry.io//blog/images/fist-pump.png&#34; style=&#34;display: inline;max-width: 40px;margin: 0;vertical-align: middle;&#34;&gt;
+&lt;!--&lt;iframe width=&#34;853&#34; height=&#34;480&#34; src=&#34;https://www.youtube.com/embed/WI-bwB0esmk?rel=0&amp;amp;showinfo=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;&#34;&gt;&lt;/iframe&gt;--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;media-manager&#34;&gt;Media Manager&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/Forestry-media-manager.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;drag-multiple-files&#34;&gt;Drag multiple files&lt;/h2&gt;
+
+&lt;p&gt;Handy if you have large image galleries.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/drag-drop-multiple-images.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;manage-other-files&#34;&gt;Manage other files&lt;/h2&gt;
+
+&lt;p&gt;Also manage non-image files like PDFs, text files, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/Forestry-pdf.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;hold-shift-to-select-multiple-images&#34;&gt;Hold &lt;em&gt;shift&lt;/em&gt; to select multiple images&lt;/h2&gt;
+
+&lt;p&gt;Want to select multiple images at once? Just click on one, then hold Shift and click on another image. This will select all images between the two.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/select-multiple-images.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As always, we&amp;rsquo;d love to know what you think.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>March 27th Service Outage</title>
+      <link>https://forestry.io/blog/post/march-27th-service-outage/</link>
+      <pubDate>Mon, 27 Mar 2017 21:25:39 +0000</pubDate>
+      
+      <guid>https://forestry.io/blog/post/march-27th-service-outage/</guid>
+      <description>&lt;p&gt;As some of you may have noticed, Forestry was down for about 2.5 hours between 23:00 UTC March 27 until 01:30 UTC March 28. In the spirit of full disclosure I&amp;rsquo;d like to explain what happened and why.&lt;/p&gt;
+
+&lt;p&gt;Forestry is a Rails application and from time to time the number of migrations we have get unwieldy. Being an application under rapid development, things are constantly changing and migrations are created sometimes daily. To keep this every growing list of files at bay we use a tool called 
+&lt;a href=&#34;https://github.com/jalkoby/squasher&#34; style=&#34;font-size: 1rem; background-color: rgb(255, 255, 255);&#34;&gt;squasher&lt;/a&gt;
+&lt;span style=&#34;font-size: 1rem;&#34;&gt;&amp;nbsp;to squash our migrations into a single migration.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The way squasher works is by taking the current state of the database and adding it to a migration with a filename that reflects the most recent migration that has run. This prevents the squashed migration from running when the database is migrated. This migration shouldn&amp;rsquo;t run because, as it turns out, it will delete your entire database. The create_table statements are suffixed with &lt;code&gt;force: :cascade&lt;/code&gt; which drops the table and all the related tables then recreates them. I think you can see where I am going.&lt;/p&gt;
+
+&lt;p&gt;I ran squasher on our migrations in dry run mode (as I have done before) to ensure that everything looked ok. Dry run mode creates the new squashed migration so that it can be inspected. My mistake was that I forgot to delete the migration that the dry run created before I ran it for real. On the subsequent run squasher picked up on the new migration, which didn&amp;rsquo;t have a record in the database because it had never been run. The new squashed migration now had a name that did not exist in our production database and so when it ran, wiped our entire production database clean. The migration was run in development, but it was on a clean database so the issue wasn&amp;rsquo;t noticed. And frankly, I wasn&amp;rsquo;t worried because &amp;ldquo;I&amp;rsquo;ve done this before&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;But&amp;hellip; this is why we have backups. Our production database runs on 
+&lt;a href=&#34;https://aws.amazon.com/rds/&#34; style=&#34;font-size: 1rem; background-color: rgb(255, 255, 255);&#34;&gt;Amazon&amp;nbsp;RDS&lt;/a&gt;
+&lt;span style=&#34;font-size: 1rem;&#34;&gt;&amp;nbsp;in a multi-az deployment. By the time the issue was noticed, the changes had already propagated to the failover instance so we had to go back to a point-in-time restore. So we took the site offline and searched our logs to find the most recent successful API request (this was the longest part). Once we found that, it was just a few clicks (and some waiting) to get a restored copy of the database back up and running. All in all, we lost &amp;lt; 1min worth of data.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Once service was restored, we had a backlog jobs that needed to be processed. You may have experienced slow publish/preview/import times while we churned through them. After about 30 mins of Forestry coming back online everything was back to normal.&lt;/p&gt;
+
+&lt;p&gt;TLDR; Accidentally deleted our production database by way of a bad migration so we had to restore from a backup.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: .8em;&#34;&gt;&lt;em&gt;Thanks to
+&lt;a href=&#34;https://thenounproject.com/rockicon/&#34;&gt;Rockicon&lt;/a&gt; for the great DB icon on this post!&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s new in Jekyll 3.4.0</title>
+      <link>https://forestry.io/blog/post/what-s-new-in-jekyll-3-4-0/</link>
+      <pubDate>Mon, 20 Feb 2017 10:06:00 -0400</pubDate>
+      
+      <guid>https://forestry.io/blog/post/what-s-new-in-jekyll-3-4-0/</guid>
+      <description>
+
+&lt;p&gt;Jekyll 3.4.0 was release on the 27th of January 2017 with some noteworthy enhancements that I&amp;rsquo;d like to share with you.&lt;/p&gt;
+
+&lt;p&gt;So what&amp;rsquo;s new?&lt;/p&gt;
+
+&lt;h2 id=&#34;add-connector-param-to-array-to-sentence-string-filter&#34;&gt;Add connector param to ‘array_to_sentence_string’ filter&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;array&lt;/strong&gt; - The list of strings to join.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;string&lt;/strong&gt; - A string can be any text inside quotes. In this example I will use Jekyll tags.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;connector&lt;/strong&gt; - The word placed before the last word in the array. The default connector Jekyll uses is the word “and”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Still with me?&lt;/p&gt;
+
+&lt;p&gt;Here is a real world example. Our post has the following tags.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tags:
+	- one
+	- two
+	- three
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can then create an &lt;code&gt;_include&lt;/code&gt; file for our post tags using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ page.tags | array_to_sentence_string }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will output our tags&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;one, two, and three
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Easy right?&lt;/p&gt;
+
+&lt;p&gt;Now Jekyll 3.4.0 allows you to change the default connector to use other terms such as &amp;ldquo;or” like so.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ page.tags | array_to_sentence_string: &#39;or&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;one, two, or three
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;group-an-array-s-items-using-a-liquid-expression-filter&#34;&gt;Group an array&amp;rsquo;s items using a Liquid expression filter&lt;/h2&gt;
+
+&lt;p&gt;Jekyll previously allowed you to group your content by a given property using the &lt;code&gt;group_by&lt;/code&gt; filter. As an example let’s group all site members working for each company.&lt;/p&gt;
+
+&lt;p&gt;Our Jekyll site’s &lt;code&gt;_config.yml&lt;/code&gt; includes the following members.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;members:
+- name: &amp;quot;Scott&amp;quot;
+  company: &amp;quot;Forestry&amp;quot;
+- name: &amp;quot;Jordan&amp;quot;
+  company: &amp;quot;Forestry&amp;quot;
+- name: &amp;quot;Parker&amp;quot;
+  company: &amp;quot;Github&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jekyll can apply the &lt;code&gt;group_by&lt;/code&gt; filter with company as the parameter using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ site.members | group_by:&amp;quot;company&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Site members names are collected into an array which outputs the following information&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{“name”=&amp;gt;”Forestry”, “items”=&amp;gt;[{“name”=&amp;gt;”Scott”, “company”=&amp;gt;”Forestry”}, {“name”=&amp;gt;”Jordan”, “company”=&amp;gt;”Forestry”}], “size”=&amp;gt;2}{“name”=&amp;gt;”Github”, “items”=&amp;gt;[{“name”=&amp;gt;”Parker”, “company”=&amp;gt;”Github”}], “size”=&amp;gt;1}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To make this information more useful, we can now create a list of members grouped by their company name&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% assign groups = site.members | group_by: &amp;quot;company&amp;quot; %}
+{% for group in groups %}
+    &amp;lt;h3&amp;gt;{{ group.name }}&amp;lt;/h3&amp;gt;
+    &amp;lt;ul&amp;gt;
+    {% for item in group.items %}
+        &amp;lt;li&amp;gt;{{item.name}}&amp;lt;/li&amp;gt;
+    {%endfor%}
+    &amp;lt;/ul&amp;gt;
+{%endfor%}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will output the following list of site members organised by the company they work for.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;Forestry&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;Scott&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;Jordan&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;h3&amp;gt;Github&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;Parker&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jekyll 3.4.0 introduced the &lt;code&gt;group_by_exp&lt;/code&gt; filter which allows you to group an array of items using a Liquid expression.&lt;/p&gt;
+
+&lt;p&gt;Now, we have the following data about our company software.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+software:
+- name: &amp;quot;New shiny software&amp;quot;
+  version: &amp;quot;0.4&amp;quot;
+- name: &amp;quot;ABC software&amp;quot;
+  version: &amp;quot;1.2&amp;quot;
+- name: &amp;quot;XYZ software&amp;quot;
+  version: &amp;quot;1.9&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can apply the &lt;code&gt;group_by_exp&lt;/code&gt; filter to group our software by &lt;em&gt;major&lt;/em&gt; version number.  For major version we are not concerned with the decimal places (just 1.x, 2.x, 3.x, etc).  So our expression will use the &lt;strong&gt;slice&lt;/strong&gt; filter. Like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ page.software | group_by_exp:&amp;quot;item&amp;quot;, &amp;quot;item.version | slice: 0&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This outputs the following information&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{“name”=&amp;gt;”0”, “items”=&amp;gt;[{“name”=&amp;gt;”New shiny software”, “version”=&amp;gt;”0.4”}], “size”=&amp;gt;1}{“name”=&amp;gt;”1”, “items”=&amp;gt;[{“name”=&amp;gt;”ABC software”, “version”=&amp;gt;”1.2”}, {“name”=&amp;gt;”XYZ software”, “version”=&amp;gt;”1.9”}], “size”=&amp;gt;2}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We will group our software by version&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% assign groups = page.software | group_by_exp:&amp;quot;item&amp;quot;, &amp;quot;item.version | slice: 0&amp;quot; %}
+{% for group in groups %}
+    &amp;lt;h3&amp;gt;Major version number {{ group.name }}&amp;lt;/h3&amp;gt;
+
+    &amp;lt;ul&amp;gt;
+    {% for item in group.items %}
+        &amp;lt;li&amp;gt;{{item.name}}&amp;lt;/li&amp;gt;
+    {%endfor%}
+    &amp;lt;/ul&amp;gt;
+{%endfor%}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This gives us the following output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;Major version number 0&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;New shiny software&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+&amp;lt;h3&amp;gt;Major version number 1&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;ABC software&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;XYZ software&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In conclusion we can also use the &lt;code&gt;group_by_exp&lt;/code&gt; filter to output different information such as site members names by changing the Liquid expression.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ site.members | group_by_exp:&amp;quot;item&amp;quot;, &amp;quot;item.name&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Scott&amp;quot;, &amp;quot;items&amp;quot;=&amp;gt;[{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Scott&amp;quot;, &amp;quot;company&amp;quot;=&amp;gt;&amp;quot;Forestry&amp;quot;, &amp;quot;age&amp;quot;=&amp;gt;&amp;quot;32&amp;quot;}], &amp;quot;size&amp;quot;=&amp;gt;1}{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Jordan&amp;quot;, &amp;quot;items&amp;quot;=&amp;gt;[{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Jordan&amp;quot;, &amp;quot;company&amp;quot;=&amp;gt;&amp;quot;Forestry&amp;quot;, &amp;quot;age&amp;quot;=&amp;gt;&amp;quot;33&amp;quot;}], &amp;quot;size&amp;quot;=&amp;gt;1}{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Parker&amp;quot;, &amp;quot;items&amp;quot;=&amp;gt;[{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Parker&amp;quot;, &amp;quot;company&amp;quot;=&amp;gt;&amp;quot;Github&amp;quot;, &amp;quot;age&amp;quot;=&amp;gt;&amp;quot;31&amp;quot;}], &amp;quot;size&amp;quot;=&amp;gt;1}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can create a list of site members names like so&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% assign groups = site.members | group_by_exp: &amp;quot;item&amp;quot;, &amp;quot;item.name&amp;quot; %}
+{% for group in groups %}
+    &amp;lt;h3&amp;gt;{{ group.name }}&amp;lt;/h3&amp;gt;
+{%endfor%}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;Scott&amp;lt;/h3&amp;gt;
+&amp;lt;h3&amp;gt;Jordan&amp;lt;/h3&amp;gt;
+&amp;lt;h3&amp;gt;Parker&amp;lt;/h3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;documentation-updates&#34;&gt;Documentation updates&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Jekyll’s plugin page now showcases the most &lt;a href=&#34;http://jekyllrb.com/docs/plugins/#available-plugins/&#34;&gt;popular plugins&lt;/a&gt; .&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The quick-start guide was updated so there’s never been a better time to &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;try Jekyll&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;jekyll-warnings&#34;&gt;Jekyll warnings&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Jekyll now notifies you when you have an error in an &lt;code&gt;_include&lt;/code&gt; file. This should save you some time tracking down bugs.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Jekyll now prevents double forward slash errors. In this case Jekyll will not append a forward slash to &lt;code&gt;url:&lt;/code&gt; because the &lt;code&gt;baseurl:&lt;/code&gt; input already contains ‘/‘.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;url: &amp;quot;http://example.com&amp;quot;
+baseurl: &amp;quot;/blog&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jekyll docs recommend ruby version 2.0 or above. If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is a Jekyll dependancy and will be fixed in an upcoming release. For now you can just ignore those warnings. You haven&amp;rsquo;t done anything wrong.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let me know if you found these tutorials helpful.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Customize the UI with Front Matter Templates</title>
+      <link>https://forestry.io/blog/post/front-matter-templates/</link>
+      <pubDate>Mon, 13 Feb 2017 10:47:46 -0500</pubDate>
+      
+      <guid>https://forestry.io/blog/post/front-matter-templates/</guid>
+      <description>
+
+&lt;p&gt;Does the following sound familiar?  You set up a WP site, hand it off to a non-dev, and then they point to some unused part of the UI and say:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;What does this do?&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To which you sheepishly reply:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Oh, that doesn&amp;rsquo;t do anything&amp;hellip;just ignore it.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A CMS often feels like a work-around, designed for some other purpose.&lt;/p&gt;
+
+&lt;h2 id=&#34;front-matter-templates-fmts&#34;&gt;Front Matter Templates (FMTs)&lt;/h2&gt;
+
+&lt;p&gt;FMTs allow you to customize the presentation of your UI fields in your CMS.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re building a hackable CMS for Jekyll and Hugo sites. A CMS that allows you to strip out the non-essential clutter from your UI and &lt;a href=&#34;https://forestry.io/docs/setting-up-a-site/front-matter-templates/&#34;&gt;Front Matter Templates&lt;/a&gt; are the first step in this direction. This is handy if your pages use a lot of &lt;a href=&#34;https://jekyllrb.com/docs/frontmatter/&#34;&gt;front&lt;/a&gt; &lt;a href=&#34;https://gohugo.io/content/front-matter/&#34;&gt;matter&lt;/a&gt; fields.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-you-can-do-with-fmts&#34;&gt;What you can do with FMTs&lt;/h2&gt;
+
+&lt;p&gt;The following page makes use of a variety of front matter:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&#34;image-wrapper media-wrapper&#34; contenteditable=&#34;false&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&#34;image-wrapper media-wrapper&#34; contenteditable=&#34;false&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/front-matter-templates-1.jpg&#34; alt=&#34;Forestry front matter demo&#34; class=&#34;wider-than-text&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title: Astronomy
+layout: astronomy
+order: 5
+banner: /images/mars.jpg
+bio: Astronomy compels the soul to look upward...
+images:
+- &amp;quot;/images/rover2.png&amp;quot;
+- &amp;quot;/images/earth.jpg&amp;quot;
+- &amp;quot;/images/rocket.jpg&amp;quot;
+- &amp;quot;/images/aurora.jpg&amp;quot;
+- &amp;quot;/images/nebula.jpg&amp;quot;
+- &amp;quot;/images/rover.jpg&amp;quot;
+- &amp;quot;/images/galaxy.jpg&amp;quot;
+- &amp;quot;/images/rover3.png&amp;quot;
+email: astronomy@gmail.com
+phone: (555) 555-5555
+permalink: /astronomy/
+
+---
+Astronomy compels the soul to look upward, and leads us from this world to another.
+Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With Front Matter Templates, you can do things like:&lt;/p&gt;
+
+&lt;h3 id=&#34;hide-fields-from-your-editors&#34;&gt;Hide fields from your editors&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/hidden-field-3.gif&#34; alt=&#34;/blog/images/hidden-field-3.gif&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;change-the-field-type-in-the-ui&#34;&gt;Change the field type in the UI&lt;/h3&gt;
+
+&lt;p&gt;For example, change type from a list of tags to an image gallery. &lt;a href=&#34;https://forestry.io/docs/setting-up-a-site/front-matter-templates/#field-types&#34;&gt;See full list of available fields&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/field-type-1.gif&#34; alt=&#34;change field type&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;required-fields&#34;&gt;Required fields&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/required.gif&#34; alt=&#34;set field as required&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;reorder-the-fields-in-the-ui&#34;&gt;Reorder the fields in the UI&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/reorder-fields-1.gif&#34; alt=&#34;reorder front matter fields&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;add-help-text&#34;&gt;Add help text&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/help-text.png&#34; alt=&#34;add help text to front matter fields&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;set-default-values-and-much-more&#34;&gt;Set default values and much more.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/default-values.png&#34; alt=&#34;set a default value&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;what-s-next&#34;&gt;What&amp;rsquo;s Next?&lt;/h2&gt;
+
+&lt;p&gt;This is just the beginning. Soon we&amp;rsquo;ll be adding more field types and more customizability.&lt;/p&gt;
+
+&lt;h3 id=&#34;coming-soon-image-resizing-and-cropping&#34;&gt;Coming soon: image resizing and cropping&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/image-upload-4.gif&#34; alt=&#34;/blog/images/image-upload-4.gif&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;coming-soon-advanced-ui-fields&#34;&gt;Coming soon: advanced UI fields&lt;/h3&gt;
+
+&lt;p&gt;Like color pickers, google map location picker, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/images/color-picker-forestry.png&#34; alt=&#34;/blog/images/color-picker-forestry.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;coming-soon-related-fields&#34;&gt;Coming soon: related fields&lt;/h3&gt;
+
+&lt;p&gt;Select data from your elsewhere in your site. For example, choose a related post, or choose an author from a data file.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://forestry.io/docs/setting-up-a-site/front-matter-templates/&#34;&gt;Front Matter Templates&lt;/a&gt; allow you to customize the presentation of the fields in your CMS.  You can set up a template to be used for a single page or for a collection of pages (posts, projects, etc).  Customize the UI so non-developers aren&amp;rsquo;t confused.&lt;/p&gt;
+
+&lt;p&gt;As always, if you have any thoughts or feedback, we&amp;rsquo;d love to hear from you!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The New Forestry.io</title>
+      <link>https://forestry.io/blog/post/the-new-forestry-io/</link>
+      <pubDate>Tue, 01 Nov 2016 19:36:26 -0400</pubDate>
+      
+      <guid>https://forestry.io/blog/post/the-new-forestry-io/</guid>
+      <description>
+
+&lt;p&gt;We&amp;rsquo;re happy to announce some huge improvements to &lt;a href=&#34;http://Forestry.io&#34;&gt;Forestry.io&lt;/a&gt;, our CMS for Jekyll and Hugo sites.&lt;/p&gt;
+
+&lt;p&gt;Before I outline what&amp;rsquo;s new, I want to thank everyone who has been testing this while it was in beta (you know who you are). Your help was crucial and we&amp;rsquo;re going to continue to build an awesome CMS that you love. 👊&lt;/p&gt;
+
+&lt;h2 id=&#34;what-s-new&#34;&gt;What&amp;rsquo;s new:&lt;/h2&gt;
+
+&lt;h3 id=&#34;new-editor&#34;&gt;New Editor&lt;/h3&gt;
+
+&lt;p&gt;We totally rebuilt our WYSIWYG editor (inspired by Medium.com).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Flip between Markdown (or HTML) and WYSIWYG.&lt;/li&gt;
+&lt;li&gt;Drag and drop images&lt;/li&gt;
+&lt;li&gt;Highlight text to change formatting&lt;/li&gt;
+&lt;li&gt;Clean and simple interface&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/Forestry-io-editor.png&#34; alt=&#34;&#34; /&gt;{:style=&amp;ldquo;width: 95%; margin: 2em auto; border: 1px solid rgba(0, 0, 0, 0.12); box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);&amp;ldquo;}&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;https://envygeeks.io/&#34;&gt;@envygeeks&lt;/a&gt; for all of his hard work on this.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;redesigned-ui&#34;&gt;Redesigned UI&lt;/h3&gt;
+
+&lt;p&gt;Our UI has been completely redesigned and is now mobile friendly.  We&amp;rsquo;re not going to stop until this is the slickest CMS on the planet. Thanks to &lt;a href=&#34;https://twitter.com/nichlaswa&#34;&gt;Nichlas&lt;/a&gt; for his amazing design chops here. I designed V1 of Forestry and I&amp;rsquo;m happy to say that Nichlas has warped us to level 3.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/new-forestry-io-cms-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;remote-admin&#34;&gt;Remote Admin&lt;/h3&gt;
+
+&lt;p&gt;Remote Admin is a single html file that you drop into your static site and it allows you to access your CMS from mysite.com/admin/. We think this is pretty cool. It&amp;rsquo;s like WordPress, but instead of 100&amp;rsquo;s of PHP files, it&amp;rsquo;s just a single HTML file that doesn&amp;rsquo;t require any updates.  Thanks to &lt;a href=&#34;https://twitter.com/ncphi&#34;&gt;Nolan&lt;/a&gt; who flawlessly guided this project.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/forestry-remote.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;custom-branding&#34;&gt;Custom Branding&lt;/h3&gt;
+
+&lt;p&gt;With Remote, you can also customize the branding and replace the Forestry logo with your own.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/forestry-white-label.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;automatic-building-and-deploying&#34;&gt;Automatic Building and Deploying&lt;/h3&gt;
+
+&lt;p&gt;You can tell Forestry to watch Jekyll or Hugo repo and build your site when you commit to that repo. Forestry can also deploy your built site to your host (S3, FTP, Git branch, etc). Like continuous integration for static sites.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/xQ36lylOK6.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;pricing-and-billing&#34;&gt;Pricing and Billing&lt;/h3&gt;
+
+&lt;p&gt;We changed our pricing to build a better, more sustainable service. Forestry will be free to use for personal projects (1 user), but we&amp;rsquo;ll be charging medium and larger teams. Also, soon you&amp;rsquo;ll be able to set up client billing if you want your client to handle the payment. &lt;a href=&#34;https://github.com/volgorean&#34;&gt;Peter&lt;/a&gt; has been heading this up while juggling countless support requests.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;what-s-next&#34;&gt;What&amp;rsquo;s next?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hosting - we&amp;rsquo;re building a hosting platform on top of a blazing-fast, global CDN. If you&amp;rsquo;re a paying Forestry customer, you can host with us for no additional cost.&lt;/li&gt;
+&lt;li&gt;Better control over the UI
+
+&lt;ul&gt;
+&lt;li&gt;Support for new front matter fields like photo galleries&lt;/li&gt;
+&lt;li&gt;Customize the CMS interface (hide stuff, move stuff, etc)&lt;/li&gt;
+&lt;li&gt;Jekyll nav menus (Hugo already supports this)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Media manager&lt;/li&gt;
+&lt;li&gt;Image editing (cropping, resizing, etc)&lt;/li&gt;
+&lt;li&gt;Support for more static site generators&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We&amp;rsquo;re super excited to get this into your hands. We&amp;rsquo;re absolutely convinced this is the future of the web and we&amp;rsquo;re dead-set on making the best tools for it. As always, let us know what you&amp;rsquo;d like to see improved.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Forestry &#43; GitLab </title>
+      <link>https://forestry.io/blog/post/forestry-gitlab/</link>
+      <pubDate>Tue, 06 Sep 2016 23:45:00 +0000</pubDate>
+      
+      <guid>https://forestry.io/blog/post/forestry-gitlab/</guid>
+      <description>
+
+&lt;p&gt;Now you can add a &lt;a href=&#34;https://forestry.io&#34;&gt;Forestry.io CMS&lt;/a&gt; to your &lt;a href=&#34;https://gitlab.com&#34;&gt;GitLab.com&lt;/a&gt; static site (Jekyll or Hugo).&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been a &lt;a href=&#34;https://gitlab.com&#34;&gt;GitLab&lt;/a&gt; user since their very first release in Oct of 2011. I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation. I remember submitting a few bugs and &lt;a href=&#34;https://twitter.com/dzaporozhets&#34;&gt;Dmitriy&lt;/a&gt; was quick to fix them. We loved GitLab then, and still do today.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve watched GitLab grow since their humble beginnings to become one of the best solutions in the version control space. Here at Forestry, GitLab syncing has been one of the most requested features.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-a-gitlab-site&#34;&gt;Setting up a GitLab site&lt;/h2&gt;
+
+&lt;p&gt;Select GitLab from the list of Git services.  Then Choose your repo and branch.
+&lt;img src=&#34;https://forestry.io/blog/forestryio/images/Gitlab-forestry.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Forestry will import your site and automatically build a CMS
+&lt;img src=&#34;https://forestry.io/blog/forestryio/images/importing-gitlab-site.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Forestry will automatically commit changes back to your repo but you can also have it build and deploy your site (Amazon S3, FTP, etc).&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re letting GitLab build your site, choose &lt;strong&gt;Commit to source repo only&lt;/strong&gt;.
+&lt;img src=&#34;https://forestry.io/blog/forestryio/images/Gitlab-hosting.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;💥  Boom! Now you&amp;rsquo;re ready to rock.&lt;/p&gt;
+
+&lt;p&gt;The Forestry CMS will commit changes back to your GitLab repo and pull in changes if you push to it.  All of your content and code under version control!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>I can finally choose static</title>
+      <link>https://forestry.io/blog/post/choose-static/</link>
+      <pubDate>Tue, 02 Aug 2016 01:06:00 +0000</pubDate>
+      
+      <guid>https://forestry.io/blog/post/choose-static/</guid>
+      <description>
+
+&lt;p&gt;When it comes to the Internet, content is king. A site that has well written content concisely tells the story behind a brand, helps to inform customers about a business&amp;rsquo; products or services and helps guide a user navigate to the information that they seek.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve worked with various organizations in helping them choose the technology that is used to publish content onto their sites. When it came down to making a choice, the publishing platform options were often slimmed down by the need for non-technical users to easily publish content.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve written on &lt;a href=&#34;https://michaelsoolee.com&#34;&gt;my personal site&lt;/a&gt; for several years using a static-site generator called Jekyll. It’s my go-to choice for publishing content on my site. What a static-site generator does is simply takes text files — think plain .txt or even markdown files — wraps them in a template and converts them into static HTML pages.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;ve never used a static-site generator, you might be wondering at this point, what are the benefits of using a static-site generator over a more traditional content management system (CMS) like Wordpress or Drupal?&lt;/p&gt;
+
+&lt;h2 id=&#34;the-good&#34;&gt;The Good&lt;/h2&gt;
+
+&lt;p&gt;Let me list a few of the benefits that has me hooked on static-site generators:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;There is no database.&lt;/strong&gt; All your posts are simple text files, which means there is no need for a database. No database means, you don&amp;rsquo;t have to worry about data corruption and moving your data is a lot easier. Heck you can even stick your text files up on Dropbox and you&amp;rsquo;ll have them with you all the time.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Don&amp;rsquo;t have to worry about viruses.&lt;/strong&gt; Your site is generated entirely on your machine. For this reason, there is no outdated code to worry about or the need to worry about downloading the latest version of a plugin. Just publish and rest easy at night.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cost to host is cheap.&lt;/strong&gt; Since all you&amp;rsquo;re hosting are static assets, the cost to host is super cheap. I&amp;rsquo;m currently hosting on Digital Ocean, a service that provides VPS hosting run on SSDs, so it is blazing fast. Cost to host per month, just $5 dollars. And that includes SSL since I use &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;letsencrypt&lt;/a&gt; on the server.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If $5 is still steep, you could even host your site on Amazon&amp;rsquo;s AWS and your monthly bill will be cents. You read that right, cents! Pair that with their CDN service and you&amp;rsquo;ve got yourself a killer hosting solution.&lt;/p&gt;
+
+&lt;p&gt;And if that’s still too much, save your spare change for pizza and host your site on &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; completely free!&lt;/p&gt;
+
+&lt;h2 id=&#34;the-not-so-good&#34;&gt;The Not So Good&lt;/h2&gt;
+
+&lt;p&gt;Are you saying, hey that sounds awesome! Sign me up? Well before you jump the gun and hail static-site generators as your go-to content management solution, let me share some of the roadblocks for static-site generators and afterwards share how these roadblocks are quickly fading with a happy ending.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/s_014709C68DCDF8BD80F107957FB4E50CA386A18CEB650506B2E665212EA1F89F_1471055146622_save-draft-publish.gif&#34; class=&#34;right small&#34;&gt;- &lt;strong&gt;Friction to produce content.&lt;/strong&gt; As awesome as static-site generators are, there is friction to creating content. On a traditional publishing platform, you log in, click a few buttons and you&amp;rsquo;re presented with a text box to write your content and publish.&lt;/p&gt;
+
+&lt;p&gt;With static-site generators, you have to create a file that will be used for your page or blog post, after writing your content, you&amp;rsquo;ll have to build the entire website, then push up your site to your host. If you&amp;rsquo;re versioning your site — you are versioning your site right? — that adds a few more steps; you have to commit your post, push it to the repo and then have your host server build your site.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Technical by nature.&lt;/strong&gt; As pointed out above, you have to be a little tech savvy to run a site with a static-site generator. But you&amp;rsquo;re saying often content creators aren&amp;rsquo;t technically savvy at all&amp;hellip;they&amp;rsquo;re writers and marketers. The learning curve is too steep to get them onboard with using a static-site generator.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;It isn&amp;rsquo;t sexy.&lt;/strong&gt; To be honest, as someone using a static-site generator, I&amp;rsquo;ll tell you compared to their CMS counterparts, they just aren&amp;rsquo;t sexy. I&amp;rsquo;m often in my command-line or text editor of choice, both of which are great for coding and stuff. But isn&amp;rsquo;t so conducive to writing.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;the-happy-ending&#34;&gt;The Happy Ending&lt;/h2&gt;
+
+&lt;p&gt;Sorry to burst your bubble a little with the not so good list of things about static-site generators, but like I said earlier, there really is a happy ending. As the title of this post states, I can finally choose static, and I&amp;rsquo;m going to tell you why I&amp;rsquo;m excited about this and why I can finally (still) choose static even with the list of not so good things.&lt;/p&gt;
+
+&lt;p&gt;Forestry. Forestry is a CMS for your statically generated sites. Your immediate thoughts might be, great another layer that I need to add to my tech stack. Well hold your horses, let me share with you what you gain from using Forestry.&lt;/p&gt;
+
+&lt;p&gt;First you gain the benefits I listed above (here&amp;rsquo;s the link to the list if you need a reminder) for static-site generators, second it remedies the &amp;ldquo;not so good&amp;rdquo; things about static-site generators and if you&amp;rsquo;ve already got a statically generated site, the folks behind Forestry have made it über easy to integrate with Forestry.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No more friction to produce.&lt;/strong&gt; With Forestry much like a traditional CMS, users login and are presented with a way to create pages and posts. Once the content is written, they can either save a draft or publish with a click of a button.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the background, Forestry commits the necessary changes to your repo (if you’re using GitHub or Bitbucket) and will deploy your compiled site to your host.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Simple by nature.&lt;/strong&gt; If the content creators have ever used any modern content management system, they&amp;rsquo;ll feel right at home. WYSIWYG editor? Check. Asset upload? Check.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Oh so sexy.&lt;/strong&gt; Let the screenshot below do the talking here. Just eye-candy. Want more? Take &lt;a href=&#34;https://forestry.io&#34;&gt;Forestry&lt;/a&gt; for a test drive.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/screenshot-white-matt.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So the next time you&amp;rsquo;re faced with setting up a website or a blog and you don&amp;rsquo;t want to go with the traditional CMS options. You can finally choose the much better technology choice of going with a static-site generator for you, but choose a user-friendly &lt;strong&gt;and&lt;/strong&gt; sexy CMS for your content producers with &lt;a href=&#34;https://forestry.io&#34;&gt;Forestry.io&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Forestry.io &#43; Techstars 2016</title>
+      <link>https://forestry.io/blog/post/forestryio-techstars-2016/</link>
+      <pubDate>Wed, 06 Jul 2016 19:03:00 +0000</pubDate>
+      
+      <guid>https://forestry.io/blog/post/forestryio-techstars-2016/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re stoked to announce that Forestry.io is going to be part of &lt;a href=&#34;http://www.techstars.com/startup-accelerator/&#34;&gt;Techstars NYC&lt;/a&gt;.  The 90-day program runs from July until the end of September 2016.&lt;/p&gt;
+
+&lt;p&gt;What this means for Forestry and our users:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We&amp;rsquo;re going to be surrounded by some of the brightest minds in New York tech&lt;/li&gt;
+&lt;li&gt;We get to focus intensly on making Forestry awesome for our users. Stoked to be working 15-hour days!&lt;/li&gt;
+&lt;li&gt;Over $1,000,000 in &lt;a href=&#34;http://www.techstars.com/startup-accelerator/&#34;&gt;amazing &amp;ldquo;perks&amp;rdquo;&lt;/a&gt; (free stuff) from companies such as Amazon, Digital Ocean, Microsoft, Google, Sendgrid, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We&amp;rsquo;ll we&amp;rsquo;re off to New York.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/Forestry.io-in-NY.jpg&#34; alt=&#34;&#34; /&gt;
+(The flight attendand gave us his selfie stick for this photo)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why we built Forestry</title>
+      <link>https://forestry.io/blog/post/why-we-built-forestry/</link>
+      <pubDate>Mon, 27 Jun 2016 11:49:00 +0000</pubDate>
+      
+      <guid>https://forestry.io/blog/post/why-we-built-forestry/</guid>
+      <description>
+
+&lt;p&gt;My friend, Emily, needed a simple website for her restaurant.  She&amp;rsquo;s a chef and didn&amp;rsquo;t want to deal with the hassle of DNS, hosting, design, etc.  As a recovering freelancer, I offered to help.&lt;/p&gt;
+
+&lt;p&gt;Normally, I would use WordPress for a site like this, but I was fed up with the headaches that comes with maintaining a WordPress site.  So, I took an evening and cranked out a simple 1-page static site.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-response-to-amazon-web-services&#34;&gt;A Response to Amazon Web Services&lt;/h2&gt;
+
+&lt;p&gt;My friend (and business partner), Jordan, asked me where I was going to host it but I didn&amp;rsquo;t know.  I wanted to throw it on S3, but didn&amp;rsquo;t want to be tied to her S3 bucket for the rest of my life. And I knew Emily would never be able to navigate the nightmare-interface that is AWS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/aws-console-puke.png&#34; alt=&#34;AWS interface&#34;&gt;
+ &lt;p style=&#34;text-align: center; margin-bottom: 2em;&#34;&gt;Amazon&amp;rsquo;s cluttered UI (it reminds me of C-Panel).&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;We decided to build a more user-friendly interface that allowed us to easily host sites on S3. So we could hand it off to Emily.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/admin1-1.png&#34; alt=&#34;&#34; /&gt;
+ &lt;p style=&#34;text-align: center; margin-bottom: 2em;&#34;&gt;Our system for  of hosting static sites S3&lt;/p&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;feedback-from-hn&#34;&gt;Feedback from HN&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/cms2.png&#34; class=&#34;small right&#34;&gt;We shared this project on &lt;a href=&#34;https://news.ycombinator.com/item?id=10062939&#34;&gt;Hackernews&lt;/a&gt; and to our surprise, it got a lot of interest and went to the homepage.  What people were most excited for was this little CMS feature we had on the side.  It wasn&amp;rsquo;t really built, but we described our plan with some screenshots and said it was &amp;ldquo;coming soon&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;hosting-platform-vs-cms&#34;&gt;Hosting Platform Vs CMS&lt;/h2&gt;
+
+&lt;p&gt;We decided to run a simple test comparing the two directions we could take focus on Hosting or focus on a CMS.  Our guts told us there was a bigger need for a CMS and data backed that up (slightly).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/fb_cms2.png&#34; alt=&#34;&#34; /&gt;
+ &lt;p style=&#34;text-align: center; margin-bottom: 2em;&#34;&gt;StatikCMS - The ad for our fake CMS platform&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://forestry.io/blog/forestryio/images/fb_host.png&#34; alt=&#34;&#34; /&gt;
+ &lt;p style=&#34;text-align: center; margin-bottom: 2em;&#34;&gt;StatikHost - The ad for our fake hosting platform&lt;/p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;months-of-hard-work&#34;&gt;Months of hard work&lt;/h2&gt;
+
+&lt;p&gt;We focused on our favorite tools (&lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; and &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;), we worked like dogs for months and finally got a working MVP online.  So far we&amp;rsquo;re getting a lot of great feedback from the dev community.
+&lt;img src=&#34;https://forestry.io/blog/forestryio/images/screenshot-white-matt.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Forestry Blog</title>
+    <link>https://forestry.io/blog/tags/index.xml</link>
+    <description>Recent content on Forestry Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://forestry.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>March 27th Service Outage</title>
+      <link>https://forestry.io/blog/post/march-27th-service-outage/</link>
+      <pubDate>Mon, 27 Mar 2017 21:25:39 +0000</pubDate>
+      
+      <guid>https://forestry.io/blog/post/march-27th-service-outage/</guid>
+      <description>&lt;p&gt;As some of you may have noticed, Forestry was down for about 2.5 hours between 23:00 UTC March 27 until 01:30 UTC March 28. In the spirit of full disclosure I&amp;rsquo;d like to explain what happened and why.&lt;/p&gt;
+
+&lt;p&gt;Forestry is a Rails application and from time to time the number of migrations we have get unwieldy. Being an application under rapid development, things are constantly changing and migrations are created sometimes daily. To keep this every growing list of files at bay we use a tool called 
+&lt;a href=&#34;https://github.com/jalkoby/squasher&#34; style=&#34;font-size: 1rem; background-color: rgb(255, 255, 255);&#34;&gt;squasher&lt;/a&gt;
+&lt;span style=&#34;font-size: 1rem;&#34;&gt;&amp;nbsp;to squash our migrations into a single migration.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The way squasher works is by taking the current state of the database and adding it to a migration with a filename that reflects the most recent migration that has run. This prevents the squashed migration from running when the database is migrated. This migration shouldn&amp;rsquo;t run because, as it turns out, it will delete your entire database. The create_table statements are suffixed with &lt;code&gt;force: :cascade&lt;/code&gt; which drops the table and all the related tables then recreates them. I think you can see where I am going.&lt;/p&gt;
+
+&lt;p&gt;I ran squasher on our migrations in dry run mode (as I have done before) to ensure that everything looked ok. Dry run mode creates the new squashed migration so that it can be inspected. My mistake was that I forgot to delete the migration that the dry run created before I ran it for real. On the subsequent run squasher picked up on the new migration, which didn&amp;rsquo;t have a record in the database because it had never been run. The new squashed migration now had a name that did not exist in our production database and so when it ran, wiped our entire production database clean. The migration was run in development, but it was on a clean database so the issue wasn&amp;rsquo;t noticed. And frankly, I wasn&amp;rsquo;t worried because &amp;ldquo;I&amp;rsquo;ve done this before&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;But&amp;hellip; this is why we have backups. Our production database runs on 
+&lt;a href=&#34;https://aws.amazon.com/rds/&#34; style=&#34;font-size: 1rem; background-color: rgb(255, 255, 255);&#34;&gt;Amazon&amp;nbsp;RDS&lt;/a&gt;
+&lt;span style=&#34;font-size: 1rem;&#34;&gt;&amp;nbsp;in a multi-az deployment. By the time the issue was noticed, the changes had already propagated to the failover instance so we had to go back to a point-in-time restore. So we took the site offline and searched our logs to find the most recent successful API request (this was the longest part). Once we found that, it was just a few clicks (and some waiting) to get a restored copy of the database back up and running. All in all, we lost &amp;lt; 1min worth of data.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Once service was restored, we had a backlog jobs that needed to be processed. You may have experienced slow publish/preview/import times while we churned through them. After about 30 mins of Forestry coming back online everything was back to normal.&lt;/p&gt;
+
+&lt;p&gt;TLDR; Accidentally deleted our production database by way of a bad migration so we had to restore from a backup.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: .8em;&#34;&gt;&lt;em&gt;Thanks to
+&lt;a href=&#34;https://thenounproject.com/rockicon/&#34;&gt;Rockicon&lt;/a&gt; for the great DB icon on this post!&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s new in Jekyll 3.4.0</title>
+      <link>https://forestry.io/blog/post/what-s-new-in-jekyll-3-4-0/</link>
+      <pubDate>Mon, 20 Feb 2017 10:06:00 -0400</pubDate>
+      
+      <guid>https://forestry.io/blog/post/what-s-new-in-jekyll-3-4-0/</guid>
+      <description>
+
+&lt;p&gt;Jekyll 3.4.0 was release on the 27th of January 2017 with some noteworthy enhancements that I&amp;rsquo;d like to share with you.&lt;/p&gt;
+
+&lt;p&gt;So what&amp;rsquo;s new?&lt;/p&gt;
+
+&lt;h2 id=&#34;add-connector-param-to-array-to-sentence-string-filter&#34;&gt;Add connector param to ‘array_to_sentence_string’ filter&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;array&lt;/strong&gt; - The list of strings to join.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;string&lt;/strong&gt; - A string can be any text inside quotes. In this example I will use Jekyll tags.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;connector&lt;/strong&gt; - The word placed before the last word in the array. The default connector Jekyll uses is the word “and”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Still with me?&lt;/p&gt;
+
+&lt;p&gt;Here is a real world example. Our post has the following tags.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tags:
+	- one
+	- two
+	- three
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can then create an &lt;code&gt;_include&lt;/code&gt; file for our post tags using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ page.tags | array_to_sentence_string }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will output our tags&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;one, two, and three
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Easy right?&lt;/p&gt;
+
+&lt;p&gt;Now Jekyll 3.4.0 allows you to change the default connector to use other terms such as &amp;ldquo;or” like so.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ page.tags | array_to_sentence_string: &#39;or&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;one, two, or three
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;group-an-array-s-items-using-a-liquid-expression-filter&#34;&gt;Group an array&amp;rsquo;s items using a Liquid expression filter&lt;/h2&gt;
+
+&lt;p&gt;Jekyll previously allowed you to group your content by a given property using the &lt;code&gt;group_by&lt;/code&gt; filter. As an example let’s group all site members working for each company.&lt;/p&gt;
+
+&lt;p&gt;Our Jekyll site’s &lt;code&gt;_config.yml&lt;/code&gt; includes the following members.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;members:
+- name: &amp;quot;Scott&amp;quot;
+  company: &amp;quot;Forestry&amp;quot;
+- name: &amp;quot;Jordan&amp;quot;
+  company: &amp;quot;Forestry&amp;quot;
+- name: &amp;quot;Parker&amp;quot;
+  company: &amp;quot;Github&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jekyll can apply the &lt;code&gt;group_by&lt;/code&gt; filter with company as the parameter using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ site.members | group_by:&amp;quot;company&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Site members names are collected into an array which outputs the following information&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{“name”=&amp;gt;”Forestry”, “items”=&amp;gt;[{“name”=&amp;gt;”Scott”, “company”=&amp;gt;”Forestry”}, {“name”=&amp;gt;”Jordan”, “company”=&amp;gt;”Forestry”}], “size”=&amp;gt;2}{“name”=&amp;gt;”Github”, “items”=&amp;gt;[{“name”=&amp;gt;”Parker”, “company”=&amp;gt;”Github”}], “size”=&amp;gt;1}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To make this information more useful, we can now create a list of members grouped by their company name&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% assign groups = site.members | group_by: &amp;quot;company&amp;quot; %}
+{% for group in groups %}
+    &amp;lt;h3&amp;gt;{{ group.name }}&amp;lt;/h3&amp;gt;
+    &amp;lt;ul&amp;gt;
+    {% for item in group.items %}
+        &amp;lt;li&amp;gt;{{item.name}}&amp;lt;/li&amp;gt;
+    {%endfor%}
+    &amp;lt;/ul&amp;gt;
+{%endfor%}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will output the following list of site members organised by the company they work for.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;Forestry&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;Scott&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;Jordan&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;h3&amp;gt;Github&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;Parker&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jekyll 3.4.0 introduced the &lt;code&gt;group_by_exp&lt;/code&gt; filter which allows you to group an array of items using a Liquid expression.&lt;/p&gt;
+
+&lt;p&gt;Now, we have the following data about our company software.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+software:
+- name: &amp;quot;New shiny software&amp;quot;
+  version: &amp;quot;0.4&amp;quot;
+- name: &amp;quot;ABC software&amp;quot;
+  version: &amp;quot;1.2&amp;quot;
+- name: &amp;quot;XYZ software&amp;quot;
+  version: &amp;quot;1.9&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can apply the &lt;code&gt;group_by_exp&lt;/code&gt; filter to group our software by &lt;em&gt;major&lt;/em&gt; version number.  For major version we are not concerned with the decimal places (just 1.x, 2.x, 3.x, etc).  So our expression will use the &lt;strong&gt;slice&lt;/strong&gt; filter. Like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ page.software | group_by_exp:&amp;quot;item&amp;quot;, &amp;quot;item.version | slice: 0&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This outputs the following information&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{“name”=&amp;gt;”0”, “items”=&amp;gt;[{“name”=&amp;gt;”New shiny software”, “version”=&amp;gt;”0.4”}], “size”=&amp;gt;1}{“name”=&amp;gt;”1”, “items”=&amp;gt;[{“name”=&amp;gt;”ABC software”, “version”=&amp;gt;”1.2”}, {“name”=&amp;gt;”XYZ software”, “version”=&amp;gt;”1.9”}], “size”=&amp;gt;2}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We will group our software by version&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% assign groups = page.software | group_by_exp:&amp;quot;item&amp;quot;, &amp;quot;item.version | slice: 0&amp;quot; %}
+{% for group in groups %}
+    &amp;lt;h3&amp;gt;Major version number {{ group.name }}&amp;lt;/h3&amp;gt;
+
+    &amp;lt;ul&amp;gt;
+    {% for item in group.items %}
+        &amp;lt;li&amp;gt;{{item.name}}&amp;lt;/li&amp;gt;
+    {%endfor%}
+    &amp;lt;/ul&amp;gt;
+{%endfor%}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This gives us the following output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;Major version number 0&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;New shiny software&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+&amp;lt;h3&amp;gt;Major version number 1&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;ABC software&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;XYZ software&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In conclusion we can also use the &lt;code&gt;group_by_exp&lt;/code&gt; filter to output different information such as site members names by changing the Liquid expression.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ site.members | group_by_exp:&amp;quot;item&amp;quot;, &amp;quot;item.name&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Scott&amp;quot;, &amp;quot;items&amp;quot;=&amp;gt;[{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Scott&amp;quot;, &amp;quot;company&amp;quot;=&amp;gt;&amp;quot;Forestry&amp;quot;, &amp;quot;age&amp;quot;=&amp;gt;&amp;quot;32&amp;quot;}], &amp;quot;size&amp;quot;=&amp;gt;1}{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Jordan&amp;quot;, &amp;quot;items&amp;quot;=&amp;gt;[{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Jordan&amp;quot;, &amp;quot;company&amp;quot;=&amp;gt;&amp;quot;Forestry&amp;quot;, &amp;quot;age&amp;quot;=&amp;gt;&amp;quot;33&amp;quot;}], &amp;quot;size&amp;quot;=&amp;gt;1}{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Parker&amp;quot;, &amp;quot;items&amp;quot;=&amp;gt;[{&amp;quot;name&amp;quot;=&amp;gt;&amp;quot;Parker&amp;quot;, &amp;quot;company&amp;quot;=&amp;gt;&amp;quot;Github&amp;quot;, &amp;quot;age&amp;quot;=&amp;gt;&amp;quot;31&amp;quot;}], &amp;quot;size&amp;quot;=&amp;gt;1}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can create a list of site members names like so&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% assign groups = site.members | group_by_exp: &amp;quot;item&amp;quot;, &amp;quot;item.name&amp;quot; %}
+{% for group in groups %}
+    &amp;lt;h3&amp;gt;{{ group.name }}&amp;lt;/h3&amp;gt;
+{%endfor%}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;Scott&amp;lt;/h3&amp;gt;
+&amp;lt;h3&amp;gt;Jordan&amp;lt;/h3&amp;gt;
+&amp;lt;h3&amp;gt;Parker&amp;lt;/h3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;documentation-updates&#34;&gt;Documentation updates&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Jekyll’s plugin page now showcases the most &lt;a href=&#34;http://jekyllrb.com/docs/plugins/#available-plugins/&#34;&gt;popular plugins&lt;/a&gt; .&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The quick-start guide was updated so there’s never been a better time to &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;try Jekyll&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;jekyll-warnings&#34;&gt;Jekyll warnings&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Jekyll now notifies you when you have an error in an &lt;code&gt;_include&lt;/code&gt; file. This should save you some time tracking down bugs.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Jekyll now prevents double forward slash errors. In this case Jekyll will not append a forward slash to &lt;code&gt;url:&lt;/code&gt; because the &lt;code&gt;baseurl:&lt;/code&gt; input already contains ‘/‘.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;url: &amp;quot;http://example.com&amp;quot;
+baseurl: &amp;quot;/blog&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jekyll docs recommend ruby version 2.0 or above. If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is a Jekyll dependancy and will be fixed in an upcoming release. For now you can just ignore those warnings. You haven&amp;rsquo;t done anything wrong.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let me know if you found these tutorials helpful.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,402 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Forestry.io Blog</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://forestry.io/docs/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="icon" type="image/png" href="https://forestry.io/docs/images/favicon.png-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="https://forestry.io/docs/images/favicon-16x16.png" sizes="16x16" />
+  <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+  
+  <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+  
+  <link rel="stylesheet" href="https://forestry.io/blog//css/main.css">
+  <script src="https://use.fonticons.com/b6f38602.js"></script>
+
+  
+
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@forestryio">
+  <meta name="twitter:creator" content="@scottgallant">
+  <meta name="twitter:title" content="What&#39;s new in Jekyll 3.4.0">
+  <meta name="twitter:description" content="Jekyll 3.4.0 was released last month with some noteworthy enhancements that I’d like to share with you.">
+  <meta name="twitter:image" content="https://forestry.io/blog//images/jekyll-3.4.0-2.png">
+
+  
+  <meta property="og:url" content="https://forestry.io/blog/post/what-s-new-in-jekyll-3-4-0/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What&#39;s new in Jekyll 3.4.0" />
+  <meta property="og:description" content="Jekyll 3.4.0 was released last month with some noteworthy enhancements that I’d like to share with you." />
+  <meta property="og:image" content="https://forestry.io/blog//images/jekyll-3.4.0-2.png" />
+  <meta property="fb:app_id" content="1628812937372396" />
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo"><a href="https://forestry.io">Forestry.io</a></h1>
+    <nav class="main-nav">
+      <ul id="menu">
+        <li><a href="https://forestry.io/plans">Pricing</a></li>
+        <li><a href="https://forestry.io/docs/">Docs</a></li>
+        <li class="current"><a href="https://forestry.io/blog/">Blog</a></li>
+        <li><a href="https://forestry.io/login">Login</a></li>
+        <li><a href="https://forestry.io/signup">Sign up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+<div class="container pure-g  single-post">
+	<div class="pure-u-1 banner-container">
+		
+			
+			
+			
+					<div class="profile-img">
+						<img src="https://forestry.io/blog//images/colin-garvey.jpg" alt="Colin Garvey ">
+					</div>
+			
+		
+		<div class="post-banner-image">
+			<img src="https://forestry.io/blog/images/jekyll-3.4.0-1.png" alt="What&#39;s new in Jekyll 3.4.0">
+		</div>
+	</div>
+	<div class="pure-u-1 main-column">
+		<header class="post-header">
+		<h1>What&#39;s new in Jekyll 3.4.0</h1>
+		
+			
+			
+			
+			<div class="author-date"><a href="https://desiredpersona.com/about/" target="_blank">Colin Garvey </a> Feb 20 2017</div>
+			
+		
+		</header>
+		<div class="content">
+			
+			
+			
+
+			<h2></h2>
+
+			
+
+<p>Jekyll 3.4.0 was release on the 27th of January 2017 with some noteworthy enhancements that I&rsquo;d like to share with you.</p>
+
+<p>So what&rsquo;s new?</p>
+
+<h2 id="add-connector-param-to-array-to-sentence-string-filter">Add connector param to ‘array_to_sentence_string’ filter</h2>
+
+<ul>
+<li><strong>array</strong> - The list of strings to join.</li>
+<li><strong>string</strong> - A string can be any text inside quotes. In this example I will use Jekyll tags.</li>
+<li><strong>connector</strong> - The word placed before the last word in the array. The default connector Jekyll uses is the word “and”.</li>
+</ul>
+
+<p>Still with me?</p>
+
+<p>Here is a real world example. Our post has the following tags.</p>
+
+<pre><code>tags:
+	- one
+	- two
+	- three
+</code></pre>
+
+<p>We can then create an <code>_include</code> file for our post tags using</p>
+
+<pre><code>{{ page.tags | array_to_sentence_string }}
+</code></pre>
+
+<p>This will output our tags</p>
+
+<pre><code>one, two, and three
+</code></pre>
+
+<p>Easy right?</p>
+
+<p>Now Jekyll 3.4.0 allows you to change the default connector to use other terms such as &ldquo;or” like so.</p>
+
+<pre><code>{{ page.tags | array_to_sentence_string: 'or' }}
+</code></pre>
+
+<p>This will output</p>
+
+<pre><code>one, two, or three
+</code></pre>
+
+<h2 id="group-an-array-s-items-using-a-liquid-expression-filter">Group an array&rsquo;s items using a Liquid expression filter</h2>
+
+<p>Jekyll previously allowed you to group your content by a given property using the <code>group_by</code> filter. As an example let’s group all site members working for each company.</p>
+
+<p>Our Jekyll site’s <code>_config.yml</code> includes the following members.</p>
+
+<pre><code>members:
+- name: &quot;Scott&quot;
+  company: &quot;Forestry&quot;
+- name: &quot;Jordan&quot;
+  company: &quot;Forestry&quot;
+- name: &quot;Parker&quot;
+  company: &quot;Github&quot;
+</code></pre>
+
+<p>Jekyll can apply the <code>group_by</code> filter with company as the parameter using</p>
+
+<pre><code>{{ site.members | group_by:&quot;company&quot; }}
+</code></pre>
+
+<p>Site members names are collected into an array which outputs the following information</p>
+
+<pre><code>{“name”=&gt;”Forestry”, “items”=&gt;[{“name”=&gt;”Scott”, “company”=&gt;”Forestry”}, {“name”=&gt;”Jordan”, “company”=&gt;”Forestry”}], “size”=&gt;2}{“name”=&gt;”Github”, “items”=&gt;[{“name”=&gt;”Parker”, “company”=&gt;”Github”}], “size”=&gt;1}
+</code></pre>
+
+<p>To make this information more useful, we can now create a list of members grouped by their company name</p>
+
+<pre><code>{% assign groups = site.members | group_by: &quot;company&quot; %}
+{% for group in groups %}
+    &lt;h3&gt;{{ group.name }}&lt;/h3&gt;
+    &lt;ul&gt;
+    {% for item in group.items %}
+        &lt;li&gt;{{item.name}}&lt;/li&gt;
+    {%endfor%}
+    &lt;/ul&gt;
+{%endfor%}
+</code></pre>
+
+<p>This will output the following list of site members organised by the company they work for.</p>
+
+<pre><code>&lt;h3&gt;Forestry&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scott&lt;/li&gt;
+  &lt;li&gt;Jordan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Github&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Parker&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>Jekyll 3.4.0 introduced the <code>group_by_exp</code> filter which allows you to group an array of items using a Liquid expression.</p>
+
+<p>Now, we have the following data about our company software.</p>
+
+<pre><code>
+software:
+- name: &quot;New shiny software&quot;
+  version: &quot;0.4&quot;
+- name: &quot;ABC software&quot;
+  version: &quot;1.2&quot;
+- name: &quot;XYZ software&quot;
+  version: &quot;1.9&quot;
+</code></pre>
+
+<p>We can apply the <code>group_by_exp</code> filter to group our software by <em>major</em> version number.  For major version we are not concerned with the decimal places (just 1.x, 2.x, 3.x, etc).  So our expression will use the <strong>slice</strong> filter. Like so:</p>
+
+<pre><code>{{ page.software | group_by_exp:&quot;item&quot;, &quot;item.version | slice: 0&quot; }}
+</code></pre>
+
+<p>This outputs the following information</p>
+
+<pre><code>{“name”=&gt;”0”, “items”=&gt;[{“name”=&gt;”New shiny software”, “version”=&gt;”0.4”}], “size”=&gt;1}{“name”=&gt;”1”, “items”=&gt;[{“name”=&gt;”ABC software”, “version”=&gt;”1.2”}, {“name”=&gt;”XYZ software”, “version”=&gt;”1.9”}], “size”=&gt;2}
+</code></pre>
+
+<p>We will group our software by version</p>
+
+<pre><code>{% assign groups = page.software | group_by_exp:&quot;item&quot;, &quot;item.version | slice: 0&quot; %}
+{% for group in groups %}
+    &lt;h3&gt;Major version number {{ group.name }}&lt;/h3&gt;
+
+    &lt;ul&gt;
+    {% for item in group.items %}
+        &lt;li&gt;{{item.name}}&lt;/li&gt;
+    {%endfor%}
+    &lt;/ul&gt;
+{%endfor%}
+</code></pre>
+
+<p>This gives us the following output</p>
+
+<pre><code>&lt;h3&gt;Major version number 0&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;New shiny software&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Major version number 1&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;ABC software&lt;/li&gt;
+  &lt;li&gt;XYZ software&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>In conclusion we can also use the <code>group_by_exp</code> filter to output different information such as site members names by changing the Liquid expression.</p>
+
+<pre><code>{{ site.members | group_by_exp:&quot;item&quot;, &quot;item.name&quot; }}
+</code></pre>
+
+<p>This will output</p>
+
+<pre><code>{&quot;name&quot;=&gt;&quot;Scott&quot;, &quot;items&quot;=&gt;[{&quot;name&quot;=&gt;&quot;Scott&quot;, &quot;company&quot;=&gt;&quot;Forestry&quot;, &quot;age&quot;=&gt;&quot;32&quot;}], &quot;size&quot;=&gt;1}{&quot;name&quot;=&gt;&quot;Jordan&quot;, &quot;items&quot;=&gt;[{&quot;name&quot;=&gt;&quot;Jordan&quot;, &quot;company&quot;=&gt;&quot;Forestry&quot;, &quot;age&quot;=&gt;&quot;33&quot;}], &quot;size&quot;=&gt;1}{&quot;name&quot;=&gt;&quot;Parker&quot;, &quot;items&quot;=&gt;[{&quot;name&quot;=&gt;&quot;Parker&quot;, &quot;company&quot;=&gt;&quot;Github&quot;, &quot;age&quot;=&gt;&quot;31&quot;}], &quot;size&quot;=&gt;1}
+</code></pre>
+
+<p>We can create a list of site members names like so</p>
+
+<pre><code>{% assign groups = site.members | group_by_exp: &quot;item&quot;, &quot;item.name&quot; %}
+{% for group in groups %}
+    &lt;h3&gt;{{ group.name }}&lt;/h3&gt;
+{%endfor%}
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code>&lt;h3&gt;Scott&lt;/h3&gt;
+&lt;h3&gt;Jordan&lt;/h3&gt;
+&lt;h3&gt;Parker&lt;/h3&gt;
+</code></pre>
+
+<h2 id="documentation-updates">Documentation updates</h2>
+
+<ul>
+<li><p>Jekyll’s plugin page now showcases the most <a href="http://jekyllrb.com/docs/plugins/#available-plugins/">popular plugins</a> .</p></li>
+
+<li><p>The quick-start guide was updated so there’s never been a better time to <a href="https://jekyllrb.com/">try Jekyll</a>.</p></li>
+</ul>
+
+<h2 id="jekyll-warnings">Jekyll warnings</h2>
+
+<ul>
+<li><p>Jekyll now notifies you when you have an error in an <code>_include</code> file. This should save you some time tracking down bugs.</p></li>
+
+<li><p>Jekyll now prevents double forward slash errors. In this case Jekyll will not append a forward slash to <code>url:</code> because the <code>baseurl:</code> input already contains ‘/‘.</p></li>
+</ul>
+
+<pre><code>url: &quot;http://example.com&quot;
+baseurl: &quot;/blog&quot;
+</code></pre>
+
+<ul>
+<li>Jekyll docs recommend ruby version 2.0 or above. If you have updated to ruby 2.4.0 you may have noticed the warnings “Bignum is deprecated” and “Fixnum is deprecated”. These warning come from the activesupport gem which is a Jekyll dependancy and will be fixed in an upcoming release. For now you can just ignore those warnings. You haven&rsquo;t done anything wrong.</li>
+</ul>
+
+<p>Let me know if you found these tutorials helpful.</p>
+
+
+			
+			
+			
+
+			
+				
+				
+				<div class="author-block media">
+					<div class="left">
+						<div class="profile-img">
+							<img src="https://forestry.io/blog//images/colin-garvey.jpg" alt="Colin Garvey ">
+						</div>
+					</div>
+					<div class="right">
+						<h2><span>Author</span> Colin Garvey </h2>
+						<p>
+							Marketer. Developer. Founder of <a href='https://desiredpersona.com/' target='_blank'>Desired Persona</a>
+						</p>
+					</div>
+				</div>
+				
+			
+
+			
+				<div class="newsletter-block">
+  <h2>Nerd out on Static</h2>
+  <p class="subtitle">
+    Join 3000+ other geeks and get the newsletter
+  </p>
+  <form action="//Forestry.us11.list-manage.com/subscribe/post?u=258a7a7e66229ee7fff436898&amp;id=377858cce3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter pure-form" target="_blank" novalidate>
+    <input type="email" placeholder="Email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+    <div id="mce-responses" class="clear">
+  		<div class="response" id="mce-error-response" style="display:none"></div>
+  		<div class="response" id="mce-success-response" style="display:none"></div>
+  	</div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_258a7a7e66229ee7fff436898_377858cce3" tabindex="-1" value=""></div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary">
+  </form>
+</div>
+
+			
+
+			
+				<div class="disqus">
+					<div id="disqus_thread"></div>
+						<script>
+
+						
+
+						
+
+						(function() { 
+						    var d = document, s = d.createElement('script');
+						    s.src = '//forestry-io.disqus.com/embed.js';
+						    s.setAttribute('data-timestamp', +new Date());
+						    (d.head || d.body).appendChild(s);
+						})();
+						</script>
+				</div>
+			
+		</div>
+	</div>
+	
+
+</div>
+<footer class="site-footer">
+<p>forestry.io, the CMS for static sites</p>
+<p><a href="#">Terms of service</a> &bull; <a href="#">Privacy policy</a></p>
+<p>
+  <a href="https://forestry.io/blog/admin/"><span class="icon icon-key"></span> Edit</a>
+</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://forestry.io/blog//js/main.min.js"></script>
+<script id="dsq-count-scr" src="//forestry-io.disqus.com/count.js" async></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39666952-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1628812937372396',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57b123938427fbd8"></script>
+</body>
+</html>
+

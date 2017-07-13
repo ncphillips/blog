@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://forestry.io/blog/post/introducing-media-management/</loc>
+    <lastmod>2017-04-17T11:46:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/march-27th-service-outage/</loc>
+    <lastmod>2017-03-27T21:25:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/what-s-new-in-jekyll-3-4-0/</loc>
+    <lastmod>2017-02-20T10:06:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/front-matter-templates/</loc>
+    <lastmod>2017-02-13T10:47:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/the-new-forestry-io/</loc>
+    <lastmod>2016-11-01T19:36:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/forestry-gitlab/</loc>
+    <lastmod>2016-09-06T23:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/choose-static/</loc>
+    <lastmod>2016-08-02T01:06:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/forestryio-techstars-2016/</loc>
+    <lastmod>2016-07-06T19:03:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/why-we-built-forestry/</loc>
+    <lastmod>2016-06-27T11:49:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/tags/</loc>
+    <lastmod>2017-03-27T21:25:39+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/categories/</loc>
+    <lastmod>2017-03-27T21:25:39+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/</loc>
+    <lastmod>2017-04-17T11:46:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/post/</loc>
+    <lastmod>2017-04-17T11:46:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://forestry.io/blog/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
