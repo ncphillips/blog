@@ -3,7 +3,6 @@ Categories = []
 banner = ""
 date = "2016-11-15T09:29:51-05:00"
 description = ""
-draft = true
 excerpt = ""
 show_author = true
 show_comments = true
